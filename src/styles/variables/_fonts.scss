@@ -1,0 +1,123 @@
+/*----- VARIABLES : FONTS ----- */
+
+@import url("https://use.typekit.net/kzs6ilf.css");
+@import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:300,700');
+
+
+$body-font: 'arboria', sans-serif;
+$headers-font: 'arboria', sans-serif;
+$accent-font: 'Frank Ruhl Libre', serif;
+
+body {
+  font-family: $body-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headers-font;
+  color: $primary-color;
+}
+
+.accent-text, em {
+  font-family: $accent-font;
+}
+
+h1 {
+  font-size: 4.8rem;
+
+}
+
+h2 {
+  font-size: 4rem;
+
+}
+
+h3 {
+  font-size: 3.2rem;
+
+}
+
+h4 {
+  font-size: 2.4rem;
+
+}
+
+h5 {
+  font-size: 2rem;
+
+}
+
+h6 {
+  font-size: 1.8rem;
+
+}
+
+
+p, a, li {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+// font weights
+
+.text-strong {
+  font-weight: 700;
+}
+
+.text-normal {
+  font-weight: 400;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+
+  h1 {
+    font-size: 5.6rem;
+
+  }
+
+  h2 {
+    font-size: 4.8rem;
+
+  }
+
+  h3 {
+    font-size: 4rem;
+
+  }
+
+  h4 {
+    font-size: 3.2rem;
+
+  }
+
+  h5 {
+    font-size: 2.4rem;
+
+  }
+
+  h6 {
+    font-size: 2rem;
+
+  }
+
+  p, a, li {
+    font-size: 1.8rem;
+  }
+
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px
+
+
+

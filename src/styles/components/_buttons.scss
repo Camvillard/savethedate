@@ -1,0 +1,14 @@
+/*----- COMPONENTS : BUTTONS ----- */
+
+
+@import "../variables/index";
+@import "../mixins/buttons";
+
+.button-blue {
+  @include button($primary-color, $primary-color, white);
+}
+
+.button-white {
+  @include button(white, $primary-color, $primary-color);
+}
+

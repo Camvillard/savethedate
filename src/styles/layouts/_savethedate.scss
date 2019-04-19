@@ -1,0 +1,124 @@
+/* ------ PAGES : SAVETHEDATE ------ */
+
+* {
+  margin: 0;
+}
+
+#main-content  {
+  height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// blobs
+
+#blob-one {
+  position: fixed;
+  top: 60px;
+  width: 148px;
+  height: 130px;
+  right: -40px;
+  z-index:1;
+}
+
+#blob-two {
+  position: fixed;
+  bottom: -10px;
+  width: 319px;
+  height: 230px;
+  left: -60px;
+  z-index:1;
+}
+
+
+#cam-alex {
+  z-index: 5;
+  color: $primary-color;
+  padding: 20px;
+
+  h6 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-top: 1rem;
+  }
+}
+
+.small-divider {
+  border-top: 1px solid $primary-color;
+  width: 10%;
+  margin-left: -22px;
+}
+
+
+#date {
+  z-index: 5;
+  position: relative;
+  text-align: center;
+  align-self: center;
+
+  h1 {
+    color: $primary-color;
+    margin-bottom: 0px;
+    font-family: $accent-font;
+  }
+
+  h5 {
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 1.6rem;
+    // margin-left: -10px;
+    font-size: 1.4rem;
+    color: $secondary-color;
+    padding-left: 20px;
+
+    span {
+      padding-bottom: 12px;
+      // border-bottom: 3px solid $secondary-color;
+    }
+  }
+}
+
+#links {
+  position: relative;
+  align-self: center;
+  padding: 20px;
+  color: $secondary-color;
+  a {
+    color: $secondary-color;
+  }
+}
+
+
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+
+@media (min-width: $lg-screen) {
+
+  #main-content {
+    // padding: 0 1vw;
+  }
+
+  #date {
+    h5 {
+      font-size: 1.8rem;
+      margin-left: -20%;
+    }
+  }
+
+
+} // end of lg-screen - 1200px
+
+
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px
