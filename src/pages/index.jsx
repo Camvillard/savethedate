@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 import SEO from "../components/seo";
+import Header from '../components/header';
 
 import '../styles/main.scss';
 import BlobOne from '../images/blobs-1.svg';
@@ -27,13 +28,7 @@ class IndexPage extends React.Component {
           <BlobOne id="blob-one"/>
           <BlobTwo id="blob-two"/>
 
-          {/* cam + alex */}
-          <div id="cam-alex">
-            <h6>cam + alex</h6>
-            <div className="small-divider"></div>
-            <p>plus d'infos à venir,<br/>genre bientôt.</p>
-          </div>
-          {/* cam + alex */}
+          <Header />
 
           {/* #date */}
           <div id="date">
