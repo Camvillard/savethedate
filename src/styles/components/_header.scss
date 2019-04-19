@@ -1,0 +1,45 @@
+/*----- COMPONENTS : HEADER ----- */
+
+
+#cam-alex {
+  z-index: 5;
+  color: $primary-color;
+  padding: 20px 20px 0px 20px;
+
+  h6 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+}
+
+p#header-tagline {
+  margin-top: 1rem;
+  color: $primary-color;
+  padding-left: 20px;
+}
+
+.small-divider {
+  border-top: 1px solid $primary-color;
+  width: 10%;
+  margin-left: -22px;
+}
+
+
+
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+
+@media (min-width: $lg-screen) {
+
+} // end of lg-screen - 1200px
+
+
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px

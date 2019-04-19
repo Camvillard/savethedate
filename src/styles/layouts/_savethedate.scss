@@ -32,29 +32,6 @@
   z-index:1;
 }
 
-
-#cam-alex {
-  z-index: 5;
-  color: $primary-color;
-  padding: 20px;
-
-  h6 {
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    margin-top: 1rem;
-  }
-}
-
-.small-divider {
-  border-top: 1px solid $primary-color;
-  width: 10%;
-  margin-left: -22px;
-}
-
-
 #date {
   z-index: 5;
   position: relative;
