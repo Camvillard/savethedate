@@ -20,8 +20,14 @@ export default () => {
         ne vous inquiétez pas si nous mettons plus de 48 heures à vous répondre,
         et relancez-nous si vraiment on vous a oublié au bout d'une semaine.</p>
       </div>
-      <form name="contactform" method="POST" data-netlify="true" action="/success">
-        <input type="hidden" name="contactform" value="contact" />
+      <form
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
         <input name="name" type="text" placeholder="name"/>
         <input name="name" type="email" placeholder="adresse mail"/>
         <input name="objet" type="text" placeholder="sujet"/>
@@ -36,3 +42,6 @@ export default () => {
     </div>
   )
 }
+
+
+
