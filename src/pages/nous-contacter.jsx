@@ -21,7 +21,7 @@ export default () => {
         et relancez-nous si vraiment on vous a oublié au bout d'une semaine.</p>
       </div>
       <form name="contactform" method="POST" data-netlify="true" action="/success">
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="contactform" value="contact" />
         <input name="name" type="text" placeholder="name"/>
         <input name="name" type="email" placeholder="adresse mail"/>
         <input name="objet" type="text" placeholder="sujet"/>

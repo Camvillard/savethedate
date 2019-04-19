@@ -9,6 +9,16 @@ import BlobOne from '../images/blobs-1.svg';
 import BlobTwo from '../images/blob-2.svg';
 
 
+'use strict';
+
+const {google} = require('googleapis');
+const sampleClient = require('../sampleclient');
+
+const gmail = google.gmail({
+  version: 'v1',
+  auth: sampleClient.oAuth2Client,
+});
+
 
 class IndexPage extends React.Component {
 
