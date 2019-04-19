@@ -8,14 +8,36 @@ import '../styles/main.scss';
 import BlobOne from '../images/blobs-1.svg';
 import BlobTwo from '../images/blob-2.svg';
 
-// const {google} = require('googleapis');
+import ApiCalendar from 'react-google-calendar-api';
 
 
 
 class IndexPage extends React.Component {
 
-  handleClick() {
+
+
+  handleSignIn() {
+    ApiCalendar.handleAuthClick();
     console.log('prout');
+    // this.createEvent();
+  }
+
+  handleSignOut() {
+    ApiCalendar.handleSignoutClick();
+    console.log('encore prout');
+  }
+
+  createEvent() {
+    const event = {
+      "end": {
+        "date": "2019-10-21"
+      },
+      "start": {
+        "date": "2019-10-18"
+      }
+    }
+    const calendar = 'cdltbisou@gmail.com';
+    ApiCalendar.createEvent(event, calendar)
   }
 
   render() {
@@ -43,9 +65,10 @@ class IndexPage extends React.Component {
 
           {/* links */}
           <div id="links">
-            <Link to="/" onClick={this.handleClick}>ajouter à mon agenda</Link>
+            <Link to="/" onClick={this.handleSignIn}>ajouter à mon agenda</Link>
             <span>{' // '}</span>
             <Link to="/nous-contacter">contact</Link>
+            <Link to="/" onClick={this.handleSignOut}>sign out</Link>
           </div>
           {/* links */}
 

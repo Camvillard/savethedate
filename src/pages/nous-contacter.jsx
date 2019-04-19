@@ -28,10 +28,10 @@ export default () => {
       >
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="contact" />
-        <input name="name" type="text" placeholder="name"/>
-        <input name="name" type="email" placeholder="adresse mail"/>
-        <input name="objet" type="text" placeholder="sujet"/>
-        <input name="message" type="textarea" placeholder="message"/>
+        <input className="basic-input" name="name" type="text" placeholder="name"/>
+        <input className="basic-input" name="name" type="email" placeholder="adresse mail"/>
+        <input className="basic-input" name="objet" type="text" placeholder="sujet"/>
+        <input className="basic-input" name="message" type="textarea" placeholder="message"/>
         <button className="button-send">envoyer le message</button>
       </form>
 
