@@ -14,30 +14,34 @@ import ApiCalendar from 'react-google-calendar-api';
 
 class IndexPage extends React.Component {
 
-
-
   handleSignIn() {
     ApiCalendar.handleAuthClick();
+    const calendar = ApiCalendar.setCalendar('cdltbisou@gmail.com');
     console.log('prout');
+    // this.hello();
     // this.createEvent();
-  }
-
-  handleSignOut() {
-    ApiCalendar.handleSignoutClick();
-    console.log('encore prout');
-  }
-
-  createEvent() {
     const event = {
       "end": {
         "date": "2019-10-21"
       },
       "start": {
-        "date": "2019-10-18"
-      }
+        "date": "2019-10-19"
+      },
+      "description": "magical wedding",
+      "colorId": "4"
     }
-    const calendar = 'cdltbisou@gmail.com';
-    ApiCalendar.createEvent(event, calendar)
+    // const calendar = 'cdltbisou@gmail.com';
+    const myEvent = ApiCalendar.createEvent(event, calendar);
+    console.log(myEvent);
+  }
+
+  hello = () => {
+    console.log('still prout');
+  }
+
+  handleSignOut() {
+    ApiCalendar.handleSignoutClick();
+    console.log('encore prout');
   }
 
   render() {
@@ -65,10 +69,10 @@ class IndexPage extends React.Component {
 
           {/* links */}
           <div id="links">
-            <Link to="/" onClick={this.handleSignIn}>ajouter à mon agenda</Link>
+            <Link to="#" onClick={this.handleSignIn}>ajouter à mon agenda</Link>
             <span>{' // '}</span>
             <Link to="/nous-contacter">contact</Link>
-            <Link to="/" onClick={this.handleSignOut}>sign out</Link>
+            <Link to="#" onClick={this.handleSignOut}>sign out</Link>
           </div>
           {/* links */}
 
