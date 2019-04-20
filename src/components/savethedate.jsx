@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import SEO from "../components/seo";
+// import SEO from "../components/seo";
 import Header from '../components/header';
 
 import '../styles/main.scss';
@@ -12,8 +12,19 @@ import BlobTwo from '../images/blob-2.svg';
 
 
 
-class SaveTheDateFr extends React.Component {
+class SaveTheDate extends React.Component {
 
+  displayDate = () => {
+    let date = ''
+    this.props.language === "fr-FR" ? date = 'dix neuf octobre' : date = 'october nineteenth';
+    return date
+  }
+
+  displayYear = () => {
+    let year = ''
+    this.props.language === "fr-FR" ? year = 'deux mille dix neuf' : year = 'two thousand nineteen';
+    return year
+  }
 
   render() {
     return (
@@ -24,13 +35,11 @@ class SaveTheDateFr extends React.Component {
           <BlobOne id="blob-one"/>
           <BlobTwo id="blob-two"/>
 
-          <Header />
-
           {/* #date */}
           <div id="date">
             <h5 id="savethedate"><span>save the date</span></h5>
-            <h2 id="cinq" className="text-strong accent-text">dix neuf octobre</h2>
-            <h2 id="annee" className="text-normal accent-text">deux mille dix neuf</h2>
+            <h2 id="cinq" className="text-strong accent-text">{this.displayDate()}</h2>
+            <h2 id="annee" className="text-normal accent-text">{this.displayYear()}</h2>
           </div>
           {/* /#date */}
 
@@ -53,4 +62,4 @@ class SaveTheDateFr extends React.Component {
 
 
 
-export default SaveTheDateFr
+export default SaveTheDate
