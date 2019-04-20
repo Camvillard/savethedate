@@ -9,6 +9,7 @@ import "../styles/main.scss";
 
 
 export default () => {
+
   return(
     <div id="contact-container">
       <SEO title="Nous contacter" id="contact" />

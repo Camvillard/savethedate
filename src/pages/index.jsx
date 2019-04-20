@@ -16,10 +16,7 @@ class IndexPage extends React.Component {
 
   handleSignIn() {
     ApiCalendar.handleAuthClick();
-    const calendar = ApiCalendar.setCalendar('cdltbisou@gmail.com');
-    console.log('prout');
-    // this.hello();
-    // this.createEvent();
+    console.log(ApiCalendar);
     const event = {
       "end": {
         "date": "2019-10-21"
@@ -28,21 +25,20 @@ class IndexPage extends React.Component {
         "date": "2019-10-19"
       },
       "description": "magical wedding",
-      "colorId": "4"
+      "colorId": "4",
+      "summary": "test_event"
     }
-    // const calendar = 'cdltbisou@gmail.com';
-    const myEvent = ApiCalendar.createEvent(event, calendar);
+    console.log('yellow');
+    const myEvent = ApiCalendar.createEvent(event);
     console.log(myEvent);
-  }
-
-  hello = () => {
-    console.log('still prout');
   }
 
   handleSignOut() {
     ApiCalendar.handleSignoutClick();
     console.log('encore prout');
   }
+
+
 
   render() {
     return (
