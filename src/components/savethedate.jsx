@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 // import SEO from "../components/seo";
-import Header from '../components/header';
+// import Header from '../components/header';
 
 import '../styles/main.scss';
 import BlobOne from '../images/blobs-1.svg';

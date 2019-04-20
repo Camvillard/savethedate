@@ -1,9 +1,9 @@
 import React from "react";
-// import { Link } from "gatsby";
+import { Link } from "gatsby";
 
 import SEO from "../components/seo";
 import Header from '../components/header';
-import Dropdown from "../components/dropdown";
+// import Dropdown from "../components/dropdown";
 
 import SaveTheDate from '../components/savethedate';
 
@@ -28,9 +28,8 @@ class IndexPage extends React.Component {
   }
 
   componentWillMount() {
-    console.log(navigator.language);
-    console.log(navigator.languages);
-    this.setLanguageVersion(navigator.language);
+    const language = window.navigator.language
+    this.setLanguageVersion(language);
   }
 
   //changes languages depending on the browser preferences
