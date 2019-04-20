@@ -4,9 +4,11 @@ import React from "react"
 
 class Header extends React.Component {
 
-  handleClick = () => {
-    const flags = this.props.flags;
-    console.log(flags)
+  displayInfos = (language) => {
+    const french = ['fr-FR', 'fr']
+    let infos
+    french.includes(language) ? infos = "plus d'infos à venir, genre plutôt bientôt" : infos = "more infos asap"
+    return infos
   }
 
   render() {
@@ -21,10 +23,8 @@ class Header extends React.Component {
         {/* cam + alex */}
       </Link>
       <p id="header-tagline">
-        plus d'infos à venir,<br/>
-        genre bientôt.
+      {this.displayInfos(this.props.language)}
       </p>
-      <div onClick={this.handleClick} id="change-lang">langue</div>
     </header>
 
     )

@@ -41,9 +41,11 @@ class IndexPage extends React.Component {
       })
   };
 
-  handleClick = () => {
-    console.log('prout')
-  }
+  // handleClick = () => {
+  //   this.setState({
+  //     language:
+  //   })
+  // }
 
 
   render() {
@@ -51,7 +53,7 @@ class IndexPage extends React.Component {
       <div>
         <SEO id="homepage" title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
-        <Dropdown title="changer de langue" list={this.state.flags}/>
+        {/* <Dropdown title="changer de langue" list={this.state.flags}/> */}
 
         <Header language={this.state.language} flags={this.state.flags} />
 

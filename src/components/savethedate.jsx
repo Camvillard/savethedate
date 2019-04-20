@@ -14,15 +14,17 @@ import BlobTwo from '../images/blob-2.svg';
 
 class SaveTheDate extends React.Component {
 
-  displayDate = () => {
+  displayDate = (language) => {
+    const french = ['fr-FR', 'fr']
     let date = ''
-    this.props.language === "fr-FR" ? date = 'dix neuf octobre' : date = 'october nineteenth';
+    french.includes(language) ? date = 'dix neuf octobre' : date = 'october nineteenth';
     return date
   }
 
-  displayYear = () => {
+  displayYear = (language) => {
+    const french = ['fr-FR', 'fr']
     let year = ''
-    this.props.language === "fr-FR" ? year = 'deux mille dix neuf' : year = 'two thousand nineteen';
+    french.includes(language) ? year = 'deux mille dix neuf' : year = 'two thousand nineteen';
     return year
   }
 
@@ -38,8 +40,8 @@ class SaveTheDate extends React.Component {
           {/* #date */}
           <div id="date">
             <h5 id="savethedate"><span>save the date</span></h5>
-            <h2 id="cinq" className="text-strong accent-text">{this.displayDate()}</h2>
-            <h2 id="annee" className="text-normal accent-text">{this.displayYear()}</h2>
+            <h2 id="cinq" className="text-strong accent-text">{this.displayDate(this.props.language)}</h2>
+            <h2 id="annee" className="text-normal accent-text">{this.displayYear(this.props.language)}</h2>
           </div>
           {/* /#date */}
 
