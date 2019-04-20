@@ -14,11 +14,12 @@ import BlobTwo from '../images/blob-2.svg';
 
 class IndexPage extends React.Component {
 
-  handleClick() {
-    console.log('prout');
-  }
 
   render() {
+    const eventName = "Magical Wedding"
+    const eventLocation = "on ne sait pas encore, environ pas trop loin de Montréal."
+    const eventDetails = "et bien nous allons nous marier."
+    const request = `https://calendar.google.com/calendar/r/eventedit?text=${eventName}&dates=20191019T170000Z/20191021T170000Z&location=${eventLocation}&sprop=name:Name&sprop=website:EventWebite&details=${eventDetails}&sf=true&output=xml`
     return (
       <div>
         <SEO id="homepage" title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -43,7 +44,7 @@ class IndexPage extends React.Component {
 
           {/* links */}
           <div id="links">
-            <Link to="/" onClick={this.handleClick}>ajouter à mon agenda</Link>
+            <a href={request}>ajouter à mon agenda</a>
             <span>{' // '}</span>
             <Link to="/nous-contacter">contact</Link>
           </div>
