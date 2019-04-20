@@ -13,6 +13,7 @@ export default () => (
       {/* cam + alex */}
     </Link>
     <p id="header-tagline">plus d'infos à venir,<br/>genre bientôt.</p>
+    <Link to="/october-nineteenth" id="change-lang">english version</Link>
   </header>
 )
 
