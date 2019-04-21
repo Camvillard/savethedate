@@ -1,14 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
 
-// import SEO from "../components/seo";
-// import Header from '../components/header';
+import content from '../data/content';
 
 import '../styles/main.scss';
 import BlobOne from '../images/blobs-1.svg';
 import BlobTwo from '../images/blob-2.svg';
-
-// const {google} = require('googleapis');
 
 
 
@@ -17,45 +14,44 @@ class SaveTheDate extends React.Component {
   displayDate = (language) => {
     const french = ['fr-FR', 'fr']
     let date = ''
-    french.includes(language) ? date = 'dix neuf octobre' : date = 'october nineteenth';
+    french.includes(language) ? date = content.fr.date : date = content.eng.date;
     return date
   }
 
   displayYear = (language) => {
     const french = ['fr-FR', 'fr']
     let year = ''
-    french.includes(language) ? year = 'deux mille dix neuf' : year = 'two thousand nineteen';
+    french.includes(language) ? year = content.fr.year : year = content.fr.year;
     return year
   }
 
   render() {
+    const requestFr = `https://calendar.google.com/calendar/r/eventedit?text=${content.fr.eventName}&dates=20191019T170000Z/20191021T170000Z&location=${content.fr.eventLocation}&sprop=name:Name&sprop=website:EventWebite&details=${content.fr.eventDetails}&sf=true&output=xml`
+    const requestEn = `https://calendar.google.com/calendar/r/eventedit?text=${content.fr.eventName}&dates=20191019T170000Z/20191021T170000Z&location=${content.fr.eventLocation}&sprop=name:Name&sprop=website:EventWebite&details=${content.fr.eventDetails}&sf=true&output=xml`
     return (
       <div>
-        <div id="main-content">
 
-          {/* blob one */}
-          <BlobOne id="blob-one"/>
-          <BlobTwo id="blob-two"/>
-
-          {/* #date */}
-          <div id="date">
-            <h5 id="savethedate"><span>save the date</span></h5>
-            <h2 id="cinq" className="text-strong accent-text">{this.displayDate(this.props.language)}</h2>
-            <h2 id="annee" className="text-normal accent-text">{this.displayYear(this.props.language)}</h2>
-          </div>
-          {/* /#date */}
-
-
-          {/* links */}
-          <div id="links">
-            <Link to="/" onClick={this.handleClick}>ajouter à mon agenda</Link>
-            <span>{' // '}</span>
-            <Link to="/nous-contacter">contact</Link>
-          </div>
-          {/* links */}
-
+        {/* #date */}
+        <div id="date">
+          <h5 id="savethedate"><span>save the date</span></h5>
+          <h2 id="cinq" className="text-strong accent-text">{this.displayDate(this.props.language)}</h2>
+          <h2 id="annee" className="text-normal accent-text">{this.displayYear(this.props.language)}</h2>
         </div>
-        {/* /#main-content */}
+        {/* /#date */}
+
+        {/* rsvp */}
+        <div id="rsvp-cta">
+          <h2>RSVP</h2>
+        </div>
+        {/* /#rsvp */}
+
+        {/* links */}
+        <div id="links">
+          <a href={requestFr}>ajouter à mon agenda</a>
+          <span>{' // '}</span>
+          <Link to="/nous-contacter">contact</Link>
+        </div>
+        {/* links */}
 
       </div>
     )

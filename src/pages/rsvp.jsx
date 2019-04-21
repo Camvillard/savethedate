@@ -1,5 +1,9 @@
 import React from 'react';
 
+import SEO from '../components/seo';
+
+import "../styles/main.scss"
+
 const Airtable = require('airtable');
 
 class RSVP extends React.Component {
@@ -20,11 +24,13 @@ class RSVP extends React.Component {
     base('rsvp').create({
       nom: rsvp.name,
       presence: rsvp.presence,
+      mail: rsvp.mail,
       nbre: rsvp.numberOfPeople,
       commentaire: rsvp.comment
     }, function(err, record) {
         if (err) { console.error(err); return; }
         console.log(record.getId());
+        window.location.href = "/"
     });
   }
 
@@ -48,18 +54,20 @@ class RSVP extends React.Component {
 
   render() {
     return(
-      <div>
-      <form onSubmit={this.handleSubmit}>
+      <div id="rsvp-container">
+      <SEO id="rsvp" title="RSVP" keywords={[`save the date`, `application`, `react`]} />
+      <h2>RSVP</h2>
+      <form onSubmit={this.handleSubmit} id="form-rsvp" action="/">
         <input type="text" placeholder="nom" ref="name"/>
-        <label htmlFor="oui">oui</label>
         <select name="presence" id="presence" ref="presence">
+          <option value="">serez-vous présent-e ?</option>
           <option value="oui">oui</option>
           <option value="non">non</option>
         </select>
         <input type="email" placeholder="adresse courriel" ref="mail"/>
         <input type="number" placeholder="nombre d'invités" ref="nbre"/>
         <input type="textarea" placeholder="commentaire" ref="comment"/>
-        <button>submit</button>
+        <button>RSVP</button>
       </form>
       </div>
     )
