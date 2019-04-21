@@ -40,7 +40,7 @@ module.exports = {
         tables: [
           {
             baseId: `appvBah3imDtdNXOz`,
-            tableName: `YOUR_TABLE_NAME`,
+            tableName: `dix neuf octobre`,
             tableView: `rsvp`, // optional
             // queryName: `OPTIONAL_NAME_TO_IDENTIFY_TABLE`, // optional
             // mapping: { `CASE_SENSITIVE_COLUMN_NAME`: `VALUE_FORMAT` }, // optional, e.g. "text/markdown", "fileNode"

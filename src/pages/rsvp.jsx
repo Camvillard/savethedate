@@ -14,6 +14,7 @@ class RSVP extends React.Component {
   }
 
   createAirtableRecord = (rsvp) => {
+    // const API_KEY = process.env.AIRTABLE_API;
     const base = new Airtable({apiKey: 'keyAOCtPMQ3gzQcWT'}).base('appvBah3imDtdNXOz');
 
     base('rsvp').create({
@@ -47,7 +48,6 @@ class RSVP extends React.Component {
   render() {
     return(
       <div>
-
       <form onSubmit={this.handleSubmit}>
         <input type="text" placeholder="nom" ref="name"/>
         <label htmlFor="oui">oui</label>
