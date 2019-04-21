@@ -12,11 +12,6 @@ import BlobOne from '../images/blobs-1.svg';
 import BlobTwo from '../images/blob-2.svg';
 
 
-
-// const {google} = require('googleapis');
-
-
-
 class IndexPage extends React.Component {
 
   constructor(props) {
@@ -27,7 +22,7 @@ class IndexPage extends React.Component {
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const language = window.navigator.language
     this.setLanguageVersion(language);
   }
