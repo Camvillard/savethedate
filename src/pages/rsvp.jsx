@@ -36,6 +36,7 @@ class RSVP extends React.Component {
     event.preventDefault();
     const rsvp = {
       name: this.refs.name.value,
+      mail: this.refs.mail.value,
       presence: this.refs.presence.value === "oui" ? true : false,
       numberOfPeople: parseInt(this.refs.nbre.value, 10) ,
       comment: this.refs.comment.value,
@@ -55,6 +56,7 @@ class RSVP extends React.Component {
           <option value="oui">oui</option>
           <option value="non">non</option>
         </select>
+        <input type="email" placeholder="adresse courriel" ref="mail"/>
         <input type="number" placeholder="nombre d'invités" ref="nbre"/>
         <input type="textarea" placeholder="commentaire" ref="comment"/>
         <button>submit</button>
