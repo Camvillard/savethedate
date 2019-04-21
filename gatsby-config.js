@@ -40,8 +40,8 @@ module.exports = {
         tables: [
           {
             baseId: `appvBah3imDtdNXOz`,
-            tableName: `dix neuf octobre`,
-            tableView: `rsvp`, // optional
+            tableName: `rsvp`,
+            // tableView: `rsvp`, // optional
             // queryName: `OPTIONAL_NAME_TO_IDENTIFY_TABLE`, // optional
             // mapping: { `CASE_SENSITIVE_COLUMN_NAME`: `VALUE_FORMAT` }, // optional, e.g. "text/markdown", "fileNode"
             // tableLinks: [`CASE`, `SENSITIVE`, `COLUMN`, `NAMES`] // optional, for deep linking to records across tables.
