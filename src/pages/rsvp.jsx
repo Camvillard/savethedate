@@ -4,6 +4,9 @@ import { graphql, Link } from 'gatsby';
 import SEO from '../components/seo';
 import Header from '../components/header'
 
+import content from '../data/content';
+import { defineContentLanguage } from '../helpers/helpers';
+
 import "../styles/main.scss"
 
 const Airtable = require('airtable');
@@ -14,8 +17,7 @@ class RSVP extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      language: '',
-      flags: []
+      language: ''
     }
   }
 
@@ -63,13 +65,13 @@ class RSVP extends React.Component {
   //changes languages depending on the browser preferences
   setLanguageVersion = (language) => {
       this.setState({
-        language: language,
-        flags: navigator.languages
+        language: language
       })
   };
 
 
   render() {
+    const data = defineContentLanguage(this.state.language, content);
     return(
       <div id="rsvp-container">
 
@@ -87,30 +89,24 @@ class RSVP extends React.Component {
         />
 
         <div className="contact-content">
-          <p>étant donné que les deux futurs mariés sont plutôt désorganisés, ce serait assez
-        génial de nous faciliter la tâche un tout petit peu et de nous donner une réponse avant le 15 mai.
-        tous les détails, lieu, etc, de la cérémonie seront bien entendu communiqués très très vite.
-        </p>
+          <p>{data.rsvpTagLine}</p>
         </div>
 
-
-
         <form onSubmit={this.handleSubmit} id="form-rsvp" action="/success">
-          <input type="text" placeholder="nom" ref="name"/>
+          <input type="text" placeholder={`${data.contactName}`} ref="name"/>
           <select name="presence" id="presence" ref="presence">
-            <option value="">serez-vous présent-e ?</option>
-            <option value="oui">oui</option>
-            <option value="non">non</option>
+            <option value="oui">{data.rsvpYes}</option>
+            <option value="non">{data.rsvpNo}</option>
           </select>
-          <input type="email" placeholder="adresse courriel" ref="mail"/>
-          <input type="number" placeholder="nombre d'invités" ref="nbre"/>
-          <input type="textarea" placeholder="commentaire" ref="comment"/>
+          <input type="email" placeholder={`${data.contactMail}`} ref="mail"/>
+          <input type="number" placeholder={`${data.rsvpNumber}`} ref="nbre"/>
+          <input type="textarea" placeholder={`${data.rsvpComment}`} ref="comment"/>
           <button className="button-send">RSVP</button>
         </form>
 
         <div id="footer-title">
           <h3>rsvp</h3>
-          <Link to="/">retour à l'accueil</Link>
+          <Link to="/">{data.backToSite}</Link>
         </div>
 
       </div>

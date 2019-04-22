@@ -6,6 +6,9 @@ import { Link } from 'gatsby';
 import SEO from "../components/seo";
 import Header from '../components/header';
 
+import content from '../data/content';
+import { defineContentLanguage } from '../helpers/helpers';
+
 // styles
 import "../styles/main.scss";
 
@@ -34,7 +37,6 @@ class ContactPage extends React.Component {
       })
   }
 
-
   createAirtableContactRecord = (message) => {
     const ApiKey = process.env.GATSBY_AIRTABLE_API_KEY;
     const base = new Airtable({apiKey: ApiKey}).base('appvBah3imDtdNXOz');
@@ -62,6 +64,7 @@ class ContactPage extends React.Component {
   }
 
   render() {
+    const data = defineContentLanguage(this.state.language, content);
     return(
       <div id="contact-container">
         <SEO title="Nous contacter" id="contact" />
@@ -74,32 +77,21 @@ class ContactPage extends React.Component {
         />
 
         <div className="contact-content">
-          <p className="text-normal">si vous avez des trucs à nous demander et que vous avez bien compris que
-          bon, le téléphone, c'est interdit, vous pouvez utiliser ce formulaire de contact.
-          étant donné qu'on est supposément débordés par la préparation de ce mariage,
-          ne vous inquiétez pas si nous mettons plus de 48 heures à vous répondre,
-          et relancez-nous si vraiment on vous a oublié au bout d'une semaine.</p>
+          <p className="text-normal">{data.contactTagline}</p>
         </div>
-        <form
-          // name="contact"
-          // method="post"
-          // data-netlify="true"
-          // data-netlify-honeypot="bot-field"
-          id="contact-form"
-          onSubmit={this.handleSubmit}
-        >
+        <form id="contact-form" onSubmit={this.handleSubmit}>
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
-          <input name="name" type="text" placeholder="name" ref="name"/>
-          <input name="name" type="email" placeholder="adresse mail" ref="mail"/>
-          <input name="objet" type="text" placeholder="sujet" ref="objet"/>
-          <input name="message" type="textarea" placeholder="message" ref="body"/>
-          <button className="button-send">envoyer le message</button>
+          <input name="name" type="text" placeholder={`${data.contactName}`} ref="name"/>
+          <input name="name" type="email" placeholder={`${data.contactMail}`} ref="mail"/>
+          <input name="objet" type="text" placeholder={`${data.contactSubject}`} ref="objet"/>
+          <input name="message" type="textarea" placeholder={`${data.contactBody}`} ref="body"/>
+          <button className="button-send">{data.contactSend}</button>
         </form>
 
         <div id="footer-title">
           <h3>contact</h3>
-          <Link to="/">retour à l'accueil</Link>
+          <Link to="/">{data.backToSite}</Link>
         </div>
 
       </div>

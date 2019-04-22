@@ -9,8 +9,19 @@ export default {
     successHeader: 'chic, chouette.',
     successTagline: 'vous recevrez environ bientôt toutes les infos nécessaires !',
     backToSite: "retour à l'accueil",
+    contactTagline: "si vous avez des trucs à nous demander et que vous avez bien compris que bon, le téléphone, c'est interdit, vous pouvez utiliser ce formulaire de contact. étant donné qu'on est supposément débordés par la préparation de ce mariage, ne vous inquiétez pas si nous mettons plus de 48 heures à vous répondre, et relancez-nous si vraiment on vous a oublié au bout d'une semaine.",
+    contactName: "nom, prénom, etc",
+    contactMail: "adresse mail",
+    contactSubject: "objet de ce message",
+    contactBody: "message",
+    contactSend: "envoyer le message",
     contactSuccess: "merci !",
-    contactContent: "on a bien reçu votre message, on s'en occupe dare-dare."
+    contactContent: "on a bien reçu votre message, on s'en occupe dare-dare.",
+    rsvpTagLine: "étant donné que les deux futurs mariés sont plutôt désorganisés, ce serait assez génial de nous faciliter la tâche un tout petit peu et de nous donner une réponse avant le 15 mai. tous les détails, lieu, etc, de la cérémonie seront bien entendu communiqués très très vite.",
+    rsvpYes: "je serai là",
+    rsvpNo: "je ne serai pas là",
+    rsvpNumber: "nombre de personnes",
+    rsvpComment: "commentaire pertinent éventuel"
   },
   eng: {
     date: 'october nineteenth',
@@ -22,7 +33,17 @@ export default {
     successHeader: 'yay, cool.',
     successTagline: "we'll send very very soon all the informations you need!",
     backToSite: "back to homepage",
+    contactTagline: "si vous avez des trucs à nous demander et que vous avez bien compris que bon, le téléphone, c'est interdit, vous pouvez utiliser ce formulaire de contact. étant donné qu'on est supposément débordés par la préparation de ce mariage, ne vous inquiétez pas si nous mettons plus de 48 heures à vous répondre, et relancez-nous si vraiment on vous a oublié au bout d'une semaine.",
+    contactSend: "send message",
+    contactName: "name, surname, or whatever.",
+    contactMail: "email address",
+    contactSubject: "subject",
+    contactBody: "message",
     contactSuccess: "thanks",
-    contactContent: "message well received, we'll get back to you very soon."
+    contactContent: "message well received, we'll get back to you very soon.",
+    rsvpYes: "I'll be there",
+    rsvpNo: "I won't be there",
+    rsvpNumber: "how many people ?",
+    rsvpComment: "any useful comment goes here."
   }
 }
