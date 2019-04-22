@@ -81,10 +81,11 @@
 }
 
 #footer-title {
+  // position: relative;
   h3 {
     opacity: 0.1;
     bottom: -28px;
-    left: -16px;
+    left: -12px;
     font-size: 10rem;
     position: fixed;
     color: white;
@@ -93,7 +94,7 @@
     color: white;
     bottom: 2rem;
     left: 20px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     position: fixed;
   }
 }
