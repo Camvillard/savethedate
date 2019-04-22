@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 import SEO from '../components/seo';
 import Header from '../components/header'
@@ -7,6 +7,7 @@ import Header from '../components/header'
 import "../styles/main.scss"
 
 const Airtable = require('airtable');
+// const ApiKey = process.env.AIRTABLE_API;
 
 class RSVP extends React.Component {
 
@@ -19,8 +20,10 @@ class RSVP extends React.Component {
   }
 
   createAirtableRecord = (rsvp) => {
-    // const API_KEY = process.env.AIRTABLE_API;
-    const base = new Airtable({apiKey: 'keyAOCtPMQ3gzQcWT'}).base('appvBah3imDtdNXOz');
+    const ApiKey = process.env.GATSBY_AIRTABLE_API_KEY;
+    const AirtableTable = process.env.AIRTABLE_TABLE_RSVP;
+    console.log(ApiKey);
+    const base = new Airtable({apiKey: ApiKey}).base('appvBah3imDtdNXOz');
 
     base('rsvp').create({
       nom: rsvp.name,
@@ -116,3 +119,4 @@ class RSVP extends React.Component {
 }
 
 export default RSVP;
+

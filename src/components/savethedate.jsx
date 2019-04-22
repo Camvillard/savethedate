@@ -41,7 +41,7 @@ class SaveTheDate extends React.Component {
 
         {/* rsvp */}
         <div id="rsvp-cta">
-          <Link to="rsvp">RSVP</Link>
+          <Link to="/rsvp">RSVP</Link>
         </div>
         {/* /#rsvp */}
 
