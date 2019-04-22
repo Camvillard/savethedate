@@ -46,7 +46,7 @@ class IndexPage extends React.Component {
       <div id="container">
         <SEO id="homepage" title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
-        <Header language={this.state.language} flags={this.state.flags} color="dark" tagline="plus d'infos très bientôt"/>
+        <Header language={this.state.language} flags={this.state.flags} color="dark" tagline="text"/>
 
         <div id="main-content">
 

@@ -73,7 +73,7 @@ class ContactPage extends React.Component {
           language={this.state.language}
           flags={this.state.flags}
           color="light"
-          tagline="19/10/2019"
+          tagline="date"
         />
 
         <div className="contact-content">

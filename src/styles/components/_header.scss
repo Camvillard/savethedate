@@ -3,12 +3,12 @@
 
 header {
   position: fixed;
-  top: 10px;
+  top: 0px;
   left: 0px;
 
   #cam-alex {
     z-index: 5;
-    padding: 20px 20px 0px 20px;
+    padding: 12px 20px 0px 20px;
 
     h6 {
       text-transform: uppercase;
@@ -25,6 +25,7 @@ header {
     margin-top: 1rem;
     padding-left: 20px;
     max-width: 120px;
+    font-size: 1.2rem;
   }
 
 }
@@ -74,6 +75,19 @@ header.light-header {
 
 
 @media (min-width: $lg-screen) {
+  header {
+    top: 10px;
+
+    #cam-alex {
+      padding: 20px 20px 0px 20px;
+    }
+
+    p {
+      max-width: 160px;
+      font-size: 1.6rem;
+    }
+
+  }
 
 } // end of lg-screen - 1200px
 

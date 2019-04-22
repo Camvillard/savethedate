@@ -9,4 +9,5 @@ const defineContentLanguage = (language, content) => {
   }
 }
 
+
 export {defineContentLanguage};

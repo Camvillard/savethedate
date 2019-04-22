@@ -1,5 +1,6 @@
 export default {
   fr: {
+    headerTagline: "plus d'infos bientôt, genre très bientôt",
     date: 'dix neuf octobre',
     year: 'deux mille dix neuf',
     calendar: 'ajouter à mon agenda',
@@ -9,7 +10,7 @@ export default {
     successHeader: 'chic, chouette.',
     successTagline: 'vous recevrez environ bientôt toutes les infos nécessaires !',
     backToSite: "retour à l'accueil",
-    contactTagline: "si vous avez des trucs à nous demander et que vous avez bien compris que bon, le téléphone, c'est interdit, vous pouvez utiliser ce formulaire de contact. étant donné qu'on est supposément débordés par la préparation de ce mariage, ne vous inquiétez pas si nous mettons plus de 48 heures à vous répondre, et relancez-nous si vraiment on vous a oublié au bout d'une semaine.",
+    contactTagline: "si vous avez des trucs à nous demander, ne soyez pas insolents, n'utilisez pas le téléphone (ou alors appelez Alex). Étant donné qu'on est supposément débordés par la préparation de ce mariage, ne vous inquiétez pas si nous mettons plus de 48 heures à vous répondre. Si toutefois vous n'avez pas de réponse au bout d'une semaine, vous êtes en droit de gentiment nous harceler.",
     contactName: "nom, prénom, etc",
     contactMail: "adresse mail",
     contactSubject: "objet de ce message",
@@ -24,6 +25,7 @@ export default {
     rsvpComment: "commentaire pertinent éventuel"
   },
   eng: {
+    headerTagline: "more infos asap",
     date: 'october nineteenth',
     year: 'two thousand nineteen',
     calendar: 'add to my calendar',
@@ -33,7 +35,7 @@ export default {
     successHeader: 'yay, cool.',
     successTagline: "we'll send very very soon all the informations you need!",
     backToSite: "back to homepage",
-    contactTagline: "si vous avez des trucs à nous demander et que vous avez bien compris que bon, le téléphone, c'est interdit, vous pouvez utiliser ce formulaire de contact. étant donné qu'on est supposément débordés par la préparation de ce mariage, ne vous inquiétez pas si nous mettons plus de 48 heures à vous répondre, et relancez-nous si vraiment on vous a oublié au bout d'une semaine.",
+    contactTagline: "if you need to ask us something, please don't be rude, don't use the phone (or call Alex). We're supposed to be busy organizing this wedding, so please don't be mad if we don't answer in the minute. Nevertheless, if after one week, you still don't have any answer, please feel free to gently harass us.",
     contactSend: "send message",
     contactName: "name, surname, or whatever.",
     contactMail: "email address",

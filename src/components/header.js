@@ -1,6 +1,8 @@
 import { Link } from "gatsby"
-// import PropTypes from "prop-types"
 import React from "react"
+
+import content from '../data/content';
+import { defineContentLanguage } from '../helpers/helpers';
 
 class Header extends React.Component {
 
@@ -12,6 +14,8 @@ class Header extends React.Component {
   }
 
   render() {
+    const data = defineContentLanguage(this.props.language, content);
+
     return(
     <header className={ this.props.color === "dark" ? "dark-header" : "light-header"}>
       <Link to="/">
@@ -23,7 +27,7 @@ class Header extends React.Component {
         {/* cam + alex */}
       </Link>
       <p id="header-tagline">
-      {this.props.tagline}
+      {this.props.tagline === "text" ? data.headerTagline : "19/10/2019"}
       </p>
     </header>
 

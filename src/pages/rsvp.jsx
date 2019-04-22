@@ -65,10 +65,16 @@ class RSVP extends React.Component {
   //changes languages depending on the browser preferences
   setLanguageVersion = (language) => {
       this.setState({
-        language: language
+        language: language,
+        inputState: ''
       })
   };
 
+  handleBlur = () => {
+    this.setState({
+      inputState: 'blur'
+    })
+  }
 
   render() {
     const data = defineContentLanguage(this.state.language, content);
@@ -85,7 +91,7 @@ class RSVP extends React.Component {
           language={this.state.language}
           flags={this.state.flags}
           color="light"
-          tagline="19/10/2019"
+          tagline="date"
         />
 
         <div className="contact-content">

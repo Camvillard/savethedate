@@ -36,6 +36,18 @@ form#form-rsvp {
     outline: none;
   }
 
+  // states for inputs
+  input:focus,
+  input:active,
+  input:hover,
+  input:visited {
+    background: $primary-color;
+    border: 2px solid $primary-color;
+    outline: none;
+    outline-offset: 0px;
+    font-family: $body-font;
+  }
+
   button{
     color: $secondary-color;
   }
