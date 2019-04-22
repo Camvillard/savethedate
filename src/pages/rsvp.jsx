@@ -95,7 +95,7 @@ class RSVP extends React.Component {
 
 
 
-        <form onSubmit={this.handleSubmit} id="form-rsvp" action="/">
+        <form onSubmit={this.handleSubmit} id="form-rsvp" action="/success">
           <input type="text" placeholder="nom" ref="name"/>
           <select name="presence" id="presence" ref="presence">
             <option value="">serez-vous présent-e ?</option>

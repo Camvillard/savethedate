@@ -17,6 +17,7 @@ form {
     border: 2px solid white;
     outline: none;
     padding-left: 10px;
+    color: white;
   }
 
   ::placeholder {
@@ -45,7 +46,7 @@ form {
   button.button-send {
     border-radius: 0px;
     width: 100%;
-    height: 3.6rem;
+    height: 3.8rem;
     text-align: right;
     font-family: $accent-font;
     color: $primary-color;
@@ -54,6 +55,10 @@ form {
     outline: none;
     border: none;
     border: 2px solid white;
+  }
+
+  button:hover {
+    cursor: pointer;
   }
 
 }

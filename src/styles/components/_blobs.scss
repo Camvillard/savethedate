@@ -1,19 +1,73 @@
 /*----- COMPONENTS : BLOBS ----- */
 
-#blob-one {
-  position: fixed;
-  top: 60px;
-  width: 148px;
-  height: 130px;
-  right: -40px;
-  z-index:1;
+#blob-lg-one {
+  display: none;
 }
 
-#blob-two {
-  position: fixed;
-  bottom: -10px;
-  width: 300px;
-  height: 217px;
-  left: -60px;
-  z-index:1;
+#blob-lg-two {
+  display: none;
 }
+
+
+#blob-sm-one {
+  width: 166px;
+  height: 150px;
+  position: fixed;
+  bottom: 40px;
+  left: -20px;
+}
+
+#blob-sm-rsvp {
+  position: fixed;
+  right: -20px;
+  top: 48vh;
+  z-index: 1;
+  width: 177px;
+  height: 153px;
+}
+
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+  #blob-sm-one, #blob-sm-rsvp {
+    display: none;
+  }
+
+  #blob-lg-one {
+    display: block;
+    position: fixed;
+    bottom: -20px;
+    left: 20px;
+    width: 400px;
+    height: 279px;
+    z-index:1;
+  }
+
+  #blob-lg-two {
+    display: block;
+    position: fixed;
+    top: 10vh;
+    right: 4vw;
+    width: 204px;
+    height: 180px;
+    z-index:1;
+  }
+
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+  #blob-lg-one {
+    display: block;
+    position: fixed;
+    bottom: -20px;
+    left: 20px;
+    width: 538px;
+    height: 375px;
+    z-index:1;
+  }
+} // end of hg-screen - 1440px

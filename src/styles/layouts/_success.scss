@@ -1,0 +1,33 @@
+/* ------ PAGES : SUCCESS ------ */
+
+#success-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $accent-color;
+
+  h1, h5 , a{
+    color: white;
+  }
+
+  a {
+    position: fixed;
+    bottom: 20px;
+  }
+}
+
+
+@media (min-width: $md-screen) {
+
+} // end of md-screen - 992px
+
+
+@media (min-width: $lg-screen) {
+
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px

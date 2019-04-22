@@ -9,6 +9,13 @@ import '../styles/main.scss';
 import BlobOne from '../images/blobs-1.svg';
 import BlobTwo from '../images/blob-2.svg';
 
+import BlobSmOne from '../images/blob-sm-1.svg';
+import BlobSmRsvp from '../images/blob-sm-rsvp.svg';
+
+import BlobLgOne from '../images/blob-lg-1.svg';
+import BlobLgTwo from '../images/blob-lg-2.svg';
+
+
 
 class IndexPage extends React.Component {
 
@@ -43,8 +50,10 @@ class IndexPage extends React.Component {
 
         <div id="main-content">
 
-          <BlobOne id="blob-one"/>
-          <BlobTwo id="blob-two"/>
+          <BlobSmOne id="blob-sm-one"/>
+          <BlobSmRsvp id="blob-sm-rsvp"/>
+          <BlobLgOne id="blob-lg-one"/>
+          <BlobLgTwo id="blob-lg-two"/>
 
           <SaveTheDate language={this.state.language} />
 

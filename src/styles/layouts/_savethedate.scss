@@ -47,16 +47,18 @@
 }
 
 #rsvp-cta {
+  z-index: 5;
   margin-top: 20px;
   margin-bottom: 100px;
   margin-right: 20px;
+  margin-left: 60%;
   background: $primary-color;
 
     a {
       display: block;
-      font-size: 6rem;
+      font-size: 2rem;
       color: white;
-      padding: 10px 10px 12px 10px;
+      padding: 10px 20px 12px 20px;
       text-align: right;
       margin-bottom: 0px;
     }
@@ -67,6 +69,7 @@
 }
 
 #links {
+  z-index: 5;
   position: fixed;
   bottom: 20px;
   padding: 20px;
@@ -115,8 +118,39 @@
 @media (min-width: $md-screen) {
 
   #rsvp-cta {
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-right: 20px;
+    background: $primary-color;
+
+      a {
+        display: block;
+        font-size: 3.2rem;
+        color: white;
+        padding: 10px 30px 12px 30px;
+        text-align: right;
+        margin-bottom: 0px;
+      }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
+
+  #links {
+    z-index: 5;
+    position: fixed;
+    transform: rotate(-90deg);
+    bottom: 140px;
+    right: -100px;
+    padding: 0px;
+    color: $secondary-color;
+    a {
+      color: $secondary-color;
+      cursor: pointer;
+    }
+  }
+
 
   #footer-title {
     h3 {
