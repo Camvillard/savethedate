@@ -29,7 +29,7 @@ class SaveTheDate extends React.Component {
     const requestFr = `https://calendar.google.com/calendar/r/eventedit?text=${content.fr.eventName}&dates=20191019T170000Z/20191021T170000Z&location=${content.fr.eventLocation}&sprop=name:Name&sprop=website:EventWebite&details=${content.fr.eventDetails}&sf=true&output=xml`
     const requestEn = `https://calendar.google.com/calendar/r/eventedit?text=${content.fr.eventName}&dates=20191019T170000Z/20191021T170000Z&location=${content.fr.eventLocation}&sprop=name:Name&sprop=website:EventWebite&details=${content.fr.eventDetails}&sf=true&output=xml`
     return (
-      <div>
+      <div id="savethdedate-content">
 
         {/* #date */}
         <div id="date">
@@ -41,13 +41,13 @@ class SaveTheDate extends React.Component {
 
         {/* rsvp */}
         <div id="rsvp-cta">
-          <h2>RSVP</h2>
+          <Link to="rsvp">RSVP</Link>
         </div>
         {/* /#rsvp */}
 
         {/* links */}
         <div id="links">
-          <a href={requestFr}>ajouter à mon agenda</a>
+          <a target="_blank" href={requestFr}>ajouter à mon agenda</a>
           <span>{' // '}</span>
           <Link to="/nous-contacter">contact</Link>
         </div>

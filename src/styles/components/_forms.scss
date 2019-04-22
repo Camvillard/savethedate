@@ -1,1 +1,80 @@
 /*----- COMPONENTS : FORMS ----- */
+
+
+form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  input {
+    padding: 0;
+    width: 100%;
+    height: 3.6rem;
+    margin: 1.2rem auto;
+    border: none;
+    transition: all 0.2s ease;
+    border: 2px solid white;
+    outline: none;
+    padding-left: 10px;
+  }
+
+  ::placeholder {
+    line-height: 3.2;
+    font-family: $accent-font;
+    font-weight: 300;
+    font-size: 1.4rem;
+  }
+
+  input[type="textarea"] {
+    height: 8rem;
+  }
+
+
+  // states for inputs
+
+  input:focus,
+  input:active,
+  input:hover,
+  input:visited {
+    outline: none;
+    outline-offset: 0px;
+    font-family: $body-font;
+  }
+
+  button.button-send {
+    border-radius: 0px;
+    width: 100%;
+    height: 3.6rem;
+    text-align: right;
+    font-family: $accent-font;
+    color: $primary-color;
+    font-weight: 700;
+    font-size: 2rem;
+    outline: none;
+    border: none;
+    border: 2px solid white;
+  }
+
+}
+
+@media (min-width: $sm-screen) {
+  // content
+  form {
+    width: 65%;
+  }
+
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+
+  form {
+    width: 50%;
+  }
+} // end of md-screen - 992px
+
+
+@media (min-width: $lg-screen) {
+
+
+} // end of lg-screen - 1200px

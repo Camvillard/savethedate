@@ -4,26 +4,6 @@
   margin: 0;
 }
 
-// blobs
-
-#blob-one {
-  position: fixed;
-  top: 60px;
-  width: 148px;
-  height: 130px;
-  right: -40px;
-  z-index:1;
-}
-
-#blob-two {
-  position: fixed;
-  bottom: -10px;
-  width: 319px;
-  height: 230px;
-  left: -60px;
-  z-index:1;
-}
-
 #container {
   height: 100vh;
   display: flex;
@@ -31,13 +11,13 @@
   justify-content: space-between;
 }
 
-#main-content  {
-  height: 80vh;
-  max-width: 100vw;
-  display: flex;
+#savethdedate-content {
+  height: 100vh;
+  width: 100vw;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  display: flex;
 }
 
 #date {
@@ -56,25 +36,30 @@
     text-transform: uppercase;
     text-align: left;
     margin-bottom: 1.6rem;
-    // margin-left: -10px;
     font-size: 1.4rem;
     color: $secondary-color;
     padding-left: 20px;
 
     span {
       padding-bottom: 12px;
-      // border-bottom: 3px solid $secondary-color;
     }
   }
 }
 
 #rsvp-cta {
+  margin-top: 20px;
+  margin-bottom: 100px;
+  margin-right: 20px;
   background: $primary-color;
-  h2 {
-  color: white;
-  padding: 22px;
-  text-align: center;
-  }
+
+    a {
+      display: block;
+      font-size: 6rem;
+      color: white;
+      padding: 10px 10px 12px 10px;
+      text-align: right;
+      margin-bottom: 0px;
+    }
 
   &:hover {
     cursor: pointer;
@@ -82,41 +67,115 @@
 }
 
 #links {
-  position: relative;
-  align-self: center;
+  position: fixed;
+  bottom: 20px;
   padding: 20px;
   color: $secondary-color;
   a {
     color: $secondary-color;
+    cursor: pointer;
+  }
+}
+
+#footer-title {
+  h3 {
+    opacity: 0.1;
+    bottom: -28px;
+    left: -16px;
+    font-size: 10rem;
+    position: fixed;
+    color: white;
+  }
+  a {
+    color: white;
+    bottom: 2rem;
+    left: 20px;
+    font-size: 1.6rem;
+    position: fixed;
   }
 }
 
 
 
 @media (min-width: $sm-screen) {
+  #footer-title {
+    h3 {
+      bottom: -40px;
+      left: -16px;
+      font-size: 18rem;
+    }
+    a {
+      bottom: 4rem;
+      left: 40px;
+      font-size: 2rem;
+    }
+  }
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
+
+  #rsvp-cta {
+    margin-bottom: 20px;
+  }
+
+  #footer-title {
+    h3 {
+      bottom: -54px;
+      left: -24px;
+      font-size: 24rem;
+    }
+    a {
+      bottom: 4rem;
+      left: 40px;
+      font-size: 2.2rem;
+    }
+  }
 } // end of md-screen - 992px
 
 
 @media (min-width: $lg-screen) {
 
-  #main-content {
-    // padding: 0 1vw;
-  }
-
   #date {
+    z-index: 5;
+    position: relative;
+    text-align: center;
+    align-self: center;
+
+    h2 {
+      font-size: 10rem;
+    }
+
     h5 {
-      font-size: 1.8rem;
-      margin-left: -20%;
+      margin-bottom: 1.8rem;
+      font-size: 1.4rem;
+      padding-left: -20%;
+
+      span {
+        padding-bottom: 12px;
+        // border-bottom: 3px solid $secondary-color;
+      }
     }
   }
 
+  #rsvp-cta {
+    margin-bottom: 10px;
+  }
 
 } // end of lg-screen - 1200px
 
 
 
 @media (min-width: $hg-screen) {
+  #footer-title {
+    h3 {
+      bottom: -64px;
+      left: -30px;
+      font-size: 28rem;
+    }
+    a {
+      bottom: 5rem;
+      left: 40px;
+      font-size: 2.2rem;
+    }
+  }
 } // end of hg-screen - 1440px

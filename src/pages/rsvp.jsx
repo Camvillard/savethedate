@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import SEO from '../components/seo';
+import Header from '../components/header'
 
 import "../styles/main.scss"
 
@@ -11,9 +13,8 @@ class RSVP extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      presence: true,
-      comment: ''
+      language: '',
+      flags: []
     }
   }
 
@@ -51,24 +52,64 @@ class RSVP extends React.Component {
     this.createAirtableRecord(rsvp);
   }
 
+  componentDidMount() {
+    // set the language accordingly with the browsers language
+    this.setLanguageVersion(window.navigator.language);
+  }
+
+  //changes languages depending on the browser preferences
+  setLanguageVersion = (language) => {
+      this.setState({
+        language: language,
+        flags: navigator.languages
+      })
+  };
+
 
   render() {
     return(
       <div id="rsvp-container">
-      <SEO id="rsvp" title="RSVP" keywords={[`save the date`, `application`, `react`]} />
-      <h2>RSVP</h2>
-      <form onSubmit={this.handleSubmit} id="form-rsvp" action="/">
-        <input type="text" placeholder="nom" ref="name"/>
-        <select name="presence" id="presence" ref="presence">
-          <option value="">serez-vous présent-e ?</option>
-          <option value="oui">oui</option>
-          <option value="non">non</option>
-        </select>
-        <input type="email" placeholder="adresse courriel" ref="mail"/>
-        <input type="number" placeholder="nombre d'invités" ref="nbre"/>
-        <input type="textarea" placeholder="commentaire" ref="comment"/>
-        <button>RSVP</button>
-      </form>
+
+        <SEO
+          id="rsvp"
+          title="RSVP"
+          keywords={[`save the date`, `application`, `react`]}
+        />
+
+        <Header
+          language={this.state.language}
+          flags={this.state.flags}
+          color="light"
+          tagline="19/10/2019"
+        />
+
+        <div className="contact-content">
+          <p>étant donné que les deux futurs mariés sont plutôt désorganisés, ce serait assez
+        génial de nous faciliter la tâche un tout petit peu et de nous donner une réponse avant le 15 mai.
+        tous les détails, lieu, etc, de la cérémonie seront bien entendu communiqués très très vite.
+        </p>
+        </div>
+
+
+
+        <form onSubmit={this.handleSubmit} id="form-rsvp" action="/">
+          <input type="text" placeholder="nom" ref="name"/>
+          <select name="presence" id="presence" ref="presence">
+            <option value="">serez-vous présent-e ?</option>
+            <option value="oui">oui</option>
+            <option value="non">non</option>
+          </select>
+          <input type="email" placeholder="adresse courriel" ref="mail"/>
+          <input type="number" placeholder="nombre d'invités" ref="nbre"/>
+          <input type="textarea" placeholder="commentaire" ref="comment"/>
+          <button className="button-send">RSVP</button>
+        </form>
+
+        <div id="footer-title">
+          <h3>rsvp</h3>
+          <Link to="/">retour à l'accueil</Link>
+        </div>
+
       </div>
     )
   }

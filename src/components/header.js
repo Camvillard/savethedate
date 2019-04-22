@@ -13,7 +13,7 @@ class Header extends React.Component {
 
   render() {
     return(
-    <header>
+    <header className={ this.props.color === "dark" ? "dark-header" : "light-header"}>
       <Link to="/">
         {/* cam + alex */}
         <div id="cam-alex">
@@ -23,7 +23,7 @@ class Header extends React.Component {
         {/* cam + alex */}
       </Link>
       <p id="header-tagline">
-      {this.displayInfos(this.props.language)}
+      {this.props.tagline}
       </p>
     </header>
 

@@ -14,7 +14,6 @@ body#contact {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // width: 80vw;
   margin: auto;
 }
 
@@ -40,31 +39,14 @@ body#contact {
 
 // form styling
 
-form {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box !important;
+form#contact-form {
 
   input {
-    padding: 0;
-    width: 100%;
-    height: 3rem;
-    margin: 1.2rem auto;
-    border: none;
-    border: 2px solid white;
     background: $primary-color;
-    transition: all 0.2s ease;
-    outline: none;
   }
 
   ::placeholder {
     color: white;
-    font-family: $accent-font;
-    font-weight: 300;
-    font-size: 1.4rem;
-    padding-left: 10px;
   }
 
   input[type="textarea"] {
@@ -82,41 +64,23 @@ form {
     border: 2px solid $secondary-color;
     outline: none;
     outline-offset: 0px;
-    font-family: $accent-font;
+    font-family: $body-font;
   }
 
-  button.button-send {
-    border-radius: 0px;
-    width: 100%;
-    height: 3.6rem;
-    background: white;
-    text-align: right;
-    font-family: $accent-font;
+  button {
     color: $primary-color;
-    font-weight: 700;
-    font-size: 2rem;
-    outline: none;
-    border: none;
-    border: 2px solid white;
   }
-
-  button:hover {
-    cursor: url(https://res.cloudinary.com/camvillard/image/upload/v1555620171/blobs_1.png), pointer;
-  }
-
 
 }
 
-@media (min-width: $sm-screen) {
-} // end of sm-screen - 768px
+
+
 
 @media (min-width: $md-screen) {
   .contact-content {
     width: 50%;
   }
-  form {
-    width: 50%;
-  }
+
 } // end of md-screen - 992px
 
 

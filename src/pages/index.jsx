@@ -39,11 +39,10 @@ class IndexPage extends React.Component {
       <div id="container">
         <SEO id="homepage" title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
-        <Header language={this.state.language} flags={this.state.flags} />
+        <Header language={this.state.language} flags={this.state.flags} color="dark" tagline="plus d'infos très bientôt"/>
 
         <div id="main-content">
 
-          {/* blob one */}
           <BlobOne id="blob-one"/>
           <BlobTwo id="blob-two"/>
 

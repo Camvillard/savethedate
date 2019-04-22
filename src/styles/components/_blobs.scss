@@ -1,0 +1,19 @@
+/*----- COMPONENTS : BLOBS ----- */
+
+#blob-one {
+  position: fixed;
+  top: 60px;
+  width: 148px;
+  height: 130px;
+  right: -40px;
+  z-index:1;
+}
+
+#blob-two {
+  position: fixed;
+  bottom: -10px;
+  width: 300px;
+  height: 217px;
+  left: -60px;
+  z-index:1;
+}
