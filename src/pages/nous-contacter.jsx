@@ -9,6 +9,8 @@ import Header from '../components/header';
 // styles
 import "../styles/main.scss";
 
+const Airtable = require('airtable');
+
 class ContactPage extends React.Component {
 
   constructor(props) {
@@ -30,7 +32,34 @@ class ContactPage extends React.Component {
         language: language,
         flags: navigator.languages
       })
-  };
+  }
+
+
+  createAirtableContactRecord = (message) => {
+    const ApiKey = process.env.GATSBY_AIRTABLE_API_KEY;
+    const base = new Airtable({apiKey: ApiKey}).base('appvBah3imDtdNXOz');
+
+    base('contact').create({
+      name: message.name,
+      mail: message.mail,
+      message: message.body
+    }, function(err, record) {
+        if (err) { console.error(err); return; }
+        console.log(record.getId());
+        window.location.href = "/merci"
+    });
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    const contact = {
+      name: this.refs.name.value,
+      mail: this.refs.mail.value,
+      body: this.refs.body.value
+    }
+    console.log(contact)
+    this.createAirtableContactRecord(contact);
+  }
 
   render() {
     return(
@@ -52,18 +81,19 @@ class ContactPage extends React.Component {
           et relancez-nous si vraiment on vous a oublié au bout d'une semaine.</p>
         </div>
         <form
-          name="contact"
-          method="post"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
+          // name="contact"
+          // method="post"
+          // data-netlify="true"
+          // data-netlify-honeypot="bot-field"
           id="contact-form"
+          onSubmit={this.handleSubmit}
         >
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
-          <input name="name" type="text" placeholder="name"/>
-          <input name="name" type="email" placeholder="adresse mail"/>
-          <input name="objet" type="text" placeholder="sujet"/>
-          <input name="message" type="textarea" placeholder="message"/>
+          <input name="name" type="text" placeholder="name" ref="name"/>
+          <input name="name" type="email" placeholder="adresse mail" ref="mail"/>
+          <input name="objet" type="text" placeholder="sujet" ref="objet"/>
+          <input name="message" type="textarea" placeholder="message" ref="body"/>
           <button className="button-send">envoyer le message</button>
         </form>
 

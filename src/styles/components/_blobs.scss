@@ -1,29 +1,55 @@
 /*----- COMPONENTS : BLOBS ----- */
 
-#blob-lg-one {
-  display: none;
+
+#main-content {
+  #blob-lg-one {
+    display: none;
+  }
+
+  #blob-lg-two {
+    display: none;
+  }
+
+
+  #blob-sm-one {
+    width: 166px;
+    height: 150px;
+    position: fixed;
+    bottom: 40px;
+    left: -20px;
+  }
+
+  #blob-sm-rsvp {
+    position: fixed;
+    right: -20px;
+    top: 48vh;
+    z-index: 1;
+    width: 177px;
+    height: 153px;
+  }
 }
 
-#blob-lg-two {
-  display: none;
-}
+#thanks-page {
+  #blob-sm-one {
+    position: fixed;
+    top: 30px;
+    left: -50px;
+    width: 330px;
+    height: 298px;
+  }
 
+  #blob-sm-rsvp {
+    position: fixed;
+    right: -20px;
+    bottom: 0;
+    z-index: 1;
+    width: 177px;
+    height: 153px;
+  }
 
-#blob-sm-one {
-  width: 166px;
-  height: 150px;
-  position: fixed;
-  bottom: 40px;
-  left: -20px;
-}
-
-#blob-sm-rsvp {
-  position: fixed;
-  right: -20px;
-  top: 48vh;
-  z-index: 1;
-  width: 177px;
-  height: 153px;
+  #blob-lg-one, #blob-lg-two {
+    display: none;
+  }
 }
 
 
@@ -31,29 +57,59 @@
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
-  #blob-sm-one, #blob-sm-rsvp {
-    display: none;
+
+  #main-content {
+    #blob-sm-one, #blob-sm-rsvp {
+      display: none;
+    }
+
+    #blob-lg-one {
+      display: block;
+      position: fixed;
+      bottom: -20px;
+      left: 20px;
+      width: 400px;
+      height: 279px;
+      z-index:1;
+    }
+
+    #blob-lg-two {
+      display: block;
+      position: fixed;
+      top: 10vh;
+      right: 4vw;
+      width: 204px;
+      height: 180px;
+      z-index:1;
+    }
+
   }
 
-  #blob-lg-one {
-    display: block;
-    position: fixed;
-    bottom: -20px;
-    left: 20px;
-    width: 400px;
-    height: 279px;
-    z-index:1;
+  #thanks-page {
+    #blob-sm-one {
+      display: none;
+    }
+
+    #blob-sm-rsvp {
+      display: none;
+    }
+
+    #blob-lg-one {
+      display: block;
+      position: fixed;
+      top: -10px;
+      right: -20px;
+      transform: rotate(180deg);
+    }
+
+    #blob-lg-two {
+      display: block;
+      position: fixed;
+      bottom: 20px;
+      left: 30px;
+    }
   }
 
-  #blob-lg-two {
-    display: block;
-    position: fixed;
-    top: 10vh;
-    right: 4vw;
-    width: 204px;
-    height: 180px;
-    z-index:1;
-  }
 
 } // end of md-screen - 992px
 
@@ -61,13 +117,16 @@
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {
-  #blob-lg-one {
-    display: block;
-    position: fixed;
-    bottom: -20px;
-    left: 20px;
-    width: 538px;
-    height: 375px;
-    z-index:1;
+  #main-content {
+
+    #blob-lg-one {
+      display: block;
+      position: fixed;
+      bottom: -20px;
+      left: 20px;
+      width: 538px;
+      height: 375px;
+      z-index:1;
+    }
   }
 } // end of hg-screen - 1440px

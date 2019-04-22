@@ -9,6 +9,8 @@ export default {
     successHeader: 'chic, chouette.',
     successTagline: 'vous recevrez environ bientôt toutes les infos nécessaires !',
     backToSite: "retour à l'accueil",
+    contactSuccess: "merci !",
+    contactContent: "on a bien reçu votre message, on s'en occupe dare-dare."
   },
   eng: {
     date: 'october nineteenth',
@@ -20,5 +22,7 @@ export default {
     successHeader: 'yay, cool.',
     successTagline: "we'll send very very soon all the informations you need!",
     backToSite: "back to homepage",
+    contactSuccess: "thanks",
+    contactContent: "message well received, we'll get back to you very soon."
   }
 }

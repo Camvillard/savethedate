@@ -21,7 +21,7 @@ class RSVP extends React.Component {
 
   createAirtableRecord = (rsvp) => {
     const ApiKey = process.env.GATSBY_AIRTABLE_API_KEY;
-    const AirtableTable = process.env.AIRTABLE_TABLE_RSVP;
+    const AirtableTable = process.env.AIRTABLE_TABLE_19;
     console.log(ApiKey);
     const base = new Airtable({apiKey: ApiKey}).base('appvBah3imDtdNXOz');
 
