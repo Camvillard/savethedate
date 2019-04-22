@@ -2,72 +2,72 @@
 
 
 header {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-
-  #cam-alex {
-    z-index: 5;
-    padding: 12px 20px 0px 20px;
-
-    h6 {
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-  }
-
-  .small-divider {
-    width: 40px;
-    margin-left: -22px;
-  }
-
-  p {
-    margin-top: 1rem;
-    padding-left: 20px;
-    max-width: 120px;
-    font-size: 1.2rem;
-  }
-
+  display: none;
 }
-
-header.dark-header {
-
-  #cam-alex h6 {
-    color: $primary-color;
-  }
-
-  .small-divider {
-    border-top: 1px solid $primary-color;
-  }
-
-  p#header-tagline {
-    color: $primary-color;
-  }
-
-}
-
-header.light-header {
-
-  #cam-alex h6 {
-    color: white;
-  }
-
-  .small-divider {
-    border-top: 1px solid white;
-  }
-
-  #header-tagline {
-    color: white;
-  }
-
-}
-
-
-
-
-
 
 @media (min-width: $sm-screen) {
+  header {
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    #cam-alex {
+      z-index: 5;
+      padding: 12px 20px 0px 20px;
+
+      h6 {
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .small-divider {
+      width: 40px;
+      margin-left: -22px;
+    }
+
+    p {
+      margin-top: 1rem;
+      padding-left: 20px;
+      max-width: 120px;
+      font-size: 1.2rem;
+    }
+
+  }
+
+  header.dark-header {
+
+    #cam-alex h6 {
+      color: $primary-color;
+    }
+
+    .small-divider {
+      border-top: 1px solid $primary-color;
+    }
+
+    p#header-tagline {
+      color: $primary-color;
+    }
+
+  }
+
+  header.light-header {
+
+    #cam-alex h6 {
+      color: white;
+    }
+
+    .small-divider {
+      border-top: 1px solid white;
+    }
+
+    #header-tagline {
+      color: white;
+    }
+
+  }
+
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {

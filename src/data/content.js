@@ -27,7 +27,7 @@ export default {
   eng: {
     headerTagline: "more infos asap",
     date: 'october nineteenth',
-    year: 'two thousand nineteen',
+    year: 'twenty nineteen',
     calendar: 'add to my calendar',
     eventName: 'Magical Wedding',
     eventLocation: "we don't really know yet, but well, we'll figure it out soon",
