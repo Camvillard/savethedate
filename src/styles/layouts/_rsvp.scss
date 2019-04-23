@@ -48,6 +48,10 @@ form#form-rsvp {
     font-family: $body-font;
   }
 
+  ::placeholder{
+    color: white;
+  }
+
   button{
     color: $secondary-color;
     align-self: flex-end;
