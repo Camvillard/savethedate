@@ -5,8 +5,6 @@ import content from '../data/content';
 import { defineContentLanguage } from '../helpers/helpers';
 
 import '../styles/main.scss';
-import BlobOne from '../images/blobs-1.svg';
-import BlobTwo from '../images/blob-2.svg';
 
 
 
@@ -28,8 +26,7 @@ class SaveTheDate extends React.Component {
 
   render() {
     const data = defineContentLanguage(this.props.language, content);
-    const requestFr = `https://calendar.google.com/calendar/r/eventedit?text=${data.eventName}&dates=20191019T170000Z/20191021T170000Z&location=${data.eventLocation}&sprop=name:Name&sprop=website:EventWebite&details=${data.eventDetails}&sf=true&output=xml`
-    const requestEn = `https://calendar.google.com/calendar/r/eventedit?text=${data.eventName}&dates=20191019T170000Z/20191021T170000Z&location=${data.eventLocation}&sprop=name:Name&sprop=website:EventWebite&details=${data.eventDetails}&sf=true&output=xml`
+    const request = `https://calendar.google.com/calendar/r/eventedit?text=${data.eventName}&dates=20191019T170000Z/20191021T170000Z&location=${data.eventLocation}&sprop=name:Name&sprop=website:EventWebite&details=${data.eventDetails}&sf=true&output=xml`
     return (
       <div id="savethdedate-content">
 
@@ -49,7 +46,13 @@ class SaveTheDate extends React.Component {
 
         {/* links */}
         <div id="links">
-          <a target="_blank" href={requestFr}>{data.calendar}</a>
+          <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href={request}
+          >
+            {data.calendar}
+          </a>
           <span>{' // '}</span>
           <Link to="/nous-contacter">contact</Link>
         </div>

@@ -31,7 +31,7 @@ class SuccessPage extends React.Component {
   render() {
     const data = defineContentLanguage(this.state.language, content);
     return(
-      <div id="success-page">
+      <div id="landing-page">
         <SEO id="success" title="bien reçu !" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
 
         <BlobSmOne id="blob-sm-one"/>

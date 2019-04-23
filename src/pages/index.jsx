@@ -6,8 +6,6 @@ import Header from '../components/header';
 import SaveTheDate from '../components/savethedate';
 
 import '../styles/main.scss';
-import BlobOne from '../images/blobs-1.svg';
-import BlobTwo from '../images/blob-2.svg';
 
 import BlobSmOne from '../images/blob-sm-1.svg';
 import BlobSmRsvp from '../images/blob-sm-rsvp.svg';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { Link } from 'gatsby';
 
 import SEO from '../components/seo';
 import Header from '../components/header'
@@ -23,7 +23,7 @@ class RSVP extends React.Component {
 
   createAirtableRecord = (rsvp) => {
     const ApiKey = process.env.GATSBY_AIRTABLE_API_KEY;
-    const AirtableTable = process.env.AIRTABLE_TABLE_19;
+    // const AirtableTable = process.env.AIRTABLE_TABLE_19;
     console.log(ApiKey);
     const base = new Airtable({apiKey: ApiKey}).base('appvBah3imDtdNXOz');
 
@@ -36,7 +36,7 @@ class RSVP extends React.Component {
     }, function(err, record) {
         if (err) { console.error(err); return; }
         console.log(record.getId());
-        window.location.href = "/"
+        window.location.href = rsvp.presence ? "/success" : "/sadness"
     });
   }
 
