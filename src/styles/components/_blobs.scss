@@ -54,6 +54,26 @@
 
 
 @media (min-width: $sm-screen) {
+  #main-content {
+
+    #blob-sm-one {
+      width: 475px;
+      height: 430px;
+      position: fixed;
+      bottom: 10px;
+      left: -20px;
+    }
+
+    #blob-sm-rsvp {
+      position: fixed;
+      right: -40px;
+      top: 40vh;
+      z-index: 1;
+      width: 288px;
+      height: 249px;
+    }
+  }
+
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
