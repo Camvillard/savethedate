@@ -20,7 +20,7 @@ body#contact {
 // content
 .contact-content {
   color: white;
-  max-width: 80%;
+  width: 80%;
   font-weight: 300;
 }
 
@@ -41,16 +41,13 @@ body#contact {
 
 form#contact-form {
 
-  input {
+  input,
+  textarea {
     background: $primary-color;
   }
 
   ::placeholder {
     color: white;
-  }
-
-  input[type="textarea"] {
-    height: 8rem;
   }
 
 
@@ -59,7 +56,11 @@ form#contact-form {
   input:focus,
   input:active,
   input:hover,
-  input:visited {
+  input:visited,
+  textarea:focus,
+  textarea:active,
+  textarea:hover,
+  textarea:visited {
     background: $secondary-color;
     border: 2px solid $secondary-color;
     outline: none;
@@ -73,6 +74,13 @@ form#contact-form {
 
 }
 
+@media (min-width: $sm-screen) {
+  // content
+  .contact-content {
+    width: 65%;
+  }
+
+} // end of sm-screen - 768px
 
 
 

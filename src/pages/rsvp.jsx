@@ -31,6 +31,7 @@ class RSVP extends React.Component {
       nom: rsvp.name,
       presence: rsvp.presence,
       mail: rsvp.mail,
+      addresse: rsvp.address,
       nbre: rsvp.numberOfPeople,
       commentaire: rsvp.comment
     }, function(err, record) {
@@ -49,6 +50,7 @@ class RSVP extends React.Component {
     const rsvp = {
       name: this.refs.name.value,
       mail: this.refs.mail.value,
+      address: this.refs.address.value,
       presence: this.refs.presence.value === "oui" ? true : false,
       numberOfPeople: parseInt(this.refs.nbre.value, 10) ,
       comment: this.refs.comment.value,
@@ -105,8 +107,9 @@ class RSVP extends React.Component {
             <option value="non">{data.rsvpNo}</option>
           </select>
           <input type="email" placeholder={`${data.contactMail}`} ref="mail"/>
+          <input type="email" placeholder={`${data.contactAddress}`} ref="address"/>
           <input type="number" placeholder={`${data.rsvpNumber}`} ref="nbre"/>
-          <input type="textarea" placeholder={`${data.rsvpComment}`} ref="comment"/>
+          <textarea name="msg" ref="comment" placeholder={`${data.rsvpComment}`}></textarea>
           <button className="button-send">RSVP</button>
         </form>
 

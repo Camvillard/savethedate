@@ -85,7 +85,7 @@ class ContactPage extends React.Component {
           <input name="name" type="text" placeholder={`${data.contactName}`} ref="name"/>
           <input name="name" type="email" placeholder={`${data.contactMail}`} ref="mail"/>
           <input name="objet" type="text" placeholder={`${data.contactSubject}`} ref="objet"/>
-          <input name="message" type="textarea" placeholder={`${data.contactBody}`} ref="body"/>
+          <textarea name="msg" placeholder={`${data.contactBody}`} ref="body"></textarea>
           <button className="button-send">{data.contactSend}</button>
         </form>
 

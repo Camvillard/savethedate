@@ -2,15 +2,17 @@
 
 
 form {
-  width: 80%;
+  width: 80vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  input {
+  input,
+  select,
+  textarea {
     padding: 0;
     width: 100%;
-    height: 3.6rem;
+    min-height: 3.6rem;
     margin: 1.2rem auto;
     border: none;
     transition: all 0.2s ease;
@@ -20,29 +22,34 @@ form {
     color: white;
   }
 
+  textarea {
+    min-height: 12rem;
+    padding-top: 12px;
+  }
+
   ::placeholder{
     font-family: $accent-font;
     font-weight: 300;
     font-size: 1.4rem;
   }
 
-  input[type="textarea"] {
-    height: 8rem;
-  }
-
-
   // states for inputs
 
   input:focus,
   input:active,
   input:hover,
-  input:visited {
+  input:visited,
+  textarea:focus,
+  textarea:active,
+  textarea:hover,
+  textarea:visited {
     outline: none;
     outline-offset: 0px;
     font-family: $body-font;
   }
 
   button.button-send {
+    align-self: flex-end;
     border-radius: 0px;
     width: 100%;
     height: 3.8rem;
@@ -66,7 +73,7 @@ form {
 @media (min-width: $sm-screen) {
   // content
   form {
-    width: 65%;
+    width: 65vw;
   }
 
 } // end of sm-screen - 768px
@@ -74,7 +81,7 @@ form {
 @media (min-width: $md-screen) {
 
   form {
-    width: 50%;
+    width: 50vw;
   }
 } // end of md-screen - 992px
 
