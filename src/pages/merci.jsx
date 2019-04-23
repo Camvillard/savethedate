@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import SEO from "../components/seo";
+import Header from "../components/header"
 import { defineContentLanguage } from '../helpers/helpers';
+
 
 import content from '../data/content';
 import BlobSmOne from '../images/blob-sm-1.svg';
@@ -39,14 +41,23 @@ class Merci extends React.Component {
       <div id="landing-page">
         <SEO id="merci" title="Merci beaucoup" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
 
+        <Header language={this.state.language} color="dark" tagline="text"/>
+
 
         <BlobSmOne id="blob-sm-one"/>
         <BlobSmRsvp id="blob-sm-rsvp"/>
         <BlobLgOne id="blob-lg-one"/>
         <BlobLgTwo id="blob-lg-two"/>
+
         <h1>{data.contactSuccess}</h1>
         <h5>{data.contactContent}</h5>
-        <Link to="/">{data.backToSite}</Link>
+
+        {/* links */}
+        <div id="links">
+          <Link to="/">{data.backToSite}</Link>
+        </div>
+        {/* links */}
+
       </div>
     )
   }

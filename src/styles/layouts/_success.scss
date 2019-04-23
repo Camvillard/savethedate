@@ -9,8 +9,22 @@
   justify-content: center;
   text-align: center;
 
-  h1, h5 , a{
-    color: $accent-color;
+  h1, h5 {
+    color: $primary-color;
+    font-family: $accent-font;
+  }
+
+  h1 {
+    font-weight: 700;
+  }
+
+  h5 {
+    font-weight: 300;
+  }
+
+
+  a{
+    color: $secondary-color;
   }
 
   // a {

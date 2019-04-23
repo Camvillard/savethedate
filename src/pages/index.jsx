@@ -20,8 +20,7 @@ class IndexPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      language: '',
-      flags: []
+      language: ''
     }
   }
 
@@ -44,7 +43,7 @@ class IndexPage extends React.Component {
       <div id="container">
         <SEO id="homepage" title="save the date" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
 
-        <Header language={this.state.language} flags={this.state.flags} color="dark" tagline="text"/>
+        <Header language={this.state.language} color="dark" tagline="text"/>
 
         <div id="main-content">
 

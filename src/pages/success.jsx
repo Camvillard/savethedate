@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import content from '../data/content';
 import { defineContentLanguage } from '../helpers/helpers'
 import SEO from "../components/seo";
+import Header from "../components/header"
 
 import BlobSmOne from '../images/blob-sm-1.svg';
 import BlobSmRsvp from '../images/blob-sm-rsvp.svg';
@@ -34,6 +35,8 @@ class SuccessPage extends React.Component {
     return(
       <div id="landing-page">
         <SEO id="success" title="bien reçu !" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
+
+        <Header language={this.state.language} color="dark" tagline="text"/>
 
         <BlobSmOne id="blob-sm-one"/>
         <BlobSmRsvp id="blob-sm-rsvp"/>

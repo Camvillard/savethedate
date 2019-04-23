@@ -141,9 +141,11 @@
   #links {
     z-index: 5;
     position: fixed;
-    transform: rotate(-90deg);
-    bottom: 200px;
-    right: -100px;
+    // transform: rotate(-90deg);
+    text-align: center;
+    bottom: 10px;
+    left: 0;
+    right: 0;
     padding: 0px;
     color: $secondary-color;
     a {
