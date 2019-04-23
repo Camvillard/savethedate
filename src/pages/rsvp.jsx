@@ -31,7 +31,7 @@ class RSVP extends React.Component {
       nom: rsvp.name,
       presence: rsvp.presence,
       mail: rsvp.mail,
-      addresse: rsvp.address,
+      adresse: rsvp.address,
       nbre: rsvp.numberOfPeople,
       commentaire: rsvp.comment
     }, function(err, record) {
