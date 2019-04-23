@@ -7,16 +7,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 
   h1, h5 , a{
     color: $accent-color;
   }
 
-  a {
-    position: fixed;
-    bottom: 20px;
-  }
+  // a {
+  //   position: fixed;
+  //   bottom: 20px;
+  // }
 }
+
 
 
 @media (min-width: $md-screen) {
