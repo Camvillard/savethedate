@@ -4,11 +4,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const NotFoundPage = () => (
-  <Layout>
+  <div>
     <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
+    <h1>404</h1>
+    <p>La page demandée n'existe pas, plus, ou bien vous avez une petite faut d'orthographe dans l'url.</p>
+  </div>
 )
 
 export default NotFoundPage

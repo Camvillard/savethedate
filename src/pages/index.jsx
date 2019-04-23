@@ -44,7 +44,7 @@ class IndexPage extends React.Component {
 
     return (
       <div id="container">
-        <SEO id="homepage" title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO id="homepage" title="save the date" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
 
         <Header language={this.state.language} flags={this.state.flags} color="dark" tagline="text"/>
 

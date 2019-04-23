@@ -26,6 +26,7 @@ class SuccessPage extends React.Component {
     const data = defineContentLanguage(this.state.language, content);
     return(
       <div id="success-page">
+        <SEO id="success" title="bien reçu !" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
         <h1>{data.successHeader}</h1>
         <h5>{data.successTagline}</h5>
         <Link to="/">{data.backToSite}</Link>

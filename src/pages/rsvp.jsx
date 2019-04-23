@@ -84,7 +84,7 @@ class RSVP extends React.Component {
         <SEO
           id="rsvp"
           title="RSVP"
-          keywords={[`save the date`, `application`, `react`]}
+          keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
         />
 
         <Header
