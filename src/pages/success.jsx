@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 
 import content from '../data/content';
 import { defineContentLanguage } from '../helpers/helpers'
+import SEO from "../components/seo";
 
 import '../styles/main.scss'
 

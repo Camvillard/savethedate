@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import content from '../data/content';
+import SEO from "../components/seo";
 import { defineContentLanguage } from '../helpers/helpers';
 
+import content from '../data/content';
 import BlobSmOne from '../images/blob-sm-1.svg';
 import BlobSmRsvp from '../images/blob-sm-rsvp.svg';
-
 import BlobLgOne from '../images/blob-lg-1.svg';
 import BlobLgTwo from '../images/blob-lg-2.svg';
 

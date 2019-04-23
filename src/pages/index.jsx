@@ -1,7 +1,7 @@
 import React from "react";
 
 import SEO from "../components/seo";
-import Dropdown from '../components/dropdown';
+// import Dropdown from '../components/dropdown';
 import Header from '../components/header';
 import SaveTheDate from '../components/savethedate';
 
