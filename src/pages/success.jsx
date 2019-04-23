@@ -5,7 +5,12 @@ import content from '../data/content';
 import { defineContentLanguage } from '../helpers/helpers'
 import SEO from "../components/seo";
 
-import '../styles/main.scss'
+import BlobSmOne from '../images/blob-sm-1.svg';
+import BlobSmRsvp from '../images/blob-sm-rsvp.svg';
+import BlobLgOne from '../images/blob-lg-1.svg';
+import BlobLgTwo from '../images/blob-lg-2.svg';
+
+import '../styles/main.scss';
 
 class SuccessPage extends React.Component {
 
@@ -28,6 +33,12 @@ class SuccessPage extends React.Component {
     return(
       <div id="success-page">
         <SEO id="success" title="bien reçu !" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
+
+        <BlobSmOne id="blob-sm-one"/>
+        <BlobSmRsvp id="blob-sm-rsvp"/>
+        <BlobLgOne id="blob-lg-one"/>
+        <BlobLgTwo id="blob-lg-two"/>
+
         <h1>{data.successHeader}</h1>
         <h5>{data.successTagline}</h5>
         <Link to="/">{data.backToSite}</Link>

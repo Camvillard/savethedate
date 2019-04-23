@@ -7,10 +7,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: $accent-color;
 
   h1, h5 , a{
-    color: white;
+    color: $accent-color;
   }
 
   a {
