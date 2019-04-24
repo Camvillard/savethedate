@@ -31,12 +31,11 @@ class RSVP extends React.Component {
       nom: rsvp.name,
       presence: rsvp.presence,
       mail: rsvp.mail,
-      address: rsvp.address,
+      adresse: rsvp.address,
       nbre: rsvp.numberOfPeople,
       commentaire: rsvp.comment
     }, function(err, record) {
         if (err) { console.error(err); return; }
-        // console.log(record.getId());
         window.location.href = rsvp.presence ? "/success" : "/sadness"
     });
   }
@@ -47,6 +46,7 @@ class RSVP extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    event.preventDefault();
     const rsvp = {
       name: this.refs.name.value,
       mail: this.refs.mail.value,
@@ -55,7 +55,6 @@ class RSVP extends React.Component {
       numberOfPeople: parseInt(this.refs.nbre.value, 10) ,
       comment: this.refs.comment.value,
     }
-    // console.log(rsvp);
     this.createAirtableRecord(rsvp);
   }
 
