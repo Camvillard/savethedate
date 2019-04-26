@@ -33,22 +33,22 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-source-airtable`,
-      options: {
-        apiKey: `keyAOCtPMQ3gzQcWT`, // may instead specify via env, see below
-        tables: [
-          {
-            baseId: `appvBah3imDtdNXOz`,
-            tableName: `rsvp`,
-            // tableView: `rsvp`, // optional
-            // queryName: `OPTIONAL_NAME_TO_IDENTIFY_TABLE`, // optional
-            // mapping: { `CASE_SENSITIVE_COLUMN_NAME`: `VALUE_FORMAT` }, // optional, e.g. "text/markdown", "fileNode"
-            // tableLinks: [`CASE`, `SENSITIVE`, `COLUMN`, `NAMES`] // optional, for deep linking to records across tables.
-          }
-        ]
-      }
-    },
+    // {
+    //   resolve: `gatsby-source-airtable`,
+    //   options: {
+    //     apiKey: `${process.env.GATSBY_AIRTABLE_API_KEY}`, // may instead specify via env, see below
+    //     tables: [
+    //       {
+    //         baseId: `appvBah3imDtdNXOz`,
+    //         tableName: `rsvp`,
+    //         // tableView: `rsvp`, // optional
+    //         // queryName: `OPTIONAL_NAME_TO_IDENTIFY_TABLE`, // optional
+    //         // mapping: { `CASE_SENSITIVE_COLUMN_NAME`: `VALUE_FORMAT` }, // optional, e.g. "text/markdown", "fileNode"
+    //         // tableLinks: [`CASE`, `SENSITIVE`, `COLUMN`, `NAMES`] // optional, for deep linking to records across tables.
+    //       }
+    //     ]
+    //   }
+    // },
     // allows use to use svg as components
     // import $Name from $relative_path
     // use it with <Name />
