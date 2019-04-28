@@ -22,9 +22,8 @@ class RSVP extends React.Component {
   }
 
   createAirtableRecord = (rsvp) => {
+    // for each new rsvp received, create a new record
     const ApiKey = process.env.GATSBY_AIRTABLE_API_KEY;
-    // const AirtableTable = process.env.AIRTABLE_TABLE_19;
-    console.log(ApiKey);
     const base = new Airtable({apiKey: ApiKey}).base('appvBah3imDtdNXOz');
 
     base('rsvp').create({
@@ -36,13 +35,15 @@ class RSVP extends React.Component {
       commentaire: rsvp.comment
     }, function(err, record) {
         if (err) { console.error(err); return; }
+        // redirect to a yay or not yay page
+        // depending on the given answer
         window.location.href = rsvp.presence ? "/success" : "/sadness"
     });
   }
 
-  handleClick = () => {
-    console.log('prout')
-  }
+  // handleClick = () => {
+  //   console.log('prout')
+  // }
 
   handleSubmit = (event) => {
     event.preventDefault();

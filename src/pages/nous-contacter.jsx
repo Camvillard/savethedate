@@ -33,11 +33,12 @@ class ContactPage extends React.Component {
   setLanguageVersion = (language) => {
       this.setState({
         language: language,
-        flags: navigator.languages
+        // flags: navigator.languages
       })
   }
 
   createAirtableContactRecord = (message) => {
+    // creates a new record in airtable 'contact' base
     const ApiKey = process.env.GATSBY_AIRTABLE_API_KEY;
     const base = new Airtable({apiKey: ApiKey}).base('appvBah3imDtdNXOz');
 
@@ -47,7 +48,7 @@ class ContactPage extends React.Component {
       message: message.body
     }, function(err, record) {
         if (err) { console.error(err); return; }
-        console.log(record.getId());
+        // redirect to a thank you page
         window.location.href = "/merci"
     });
   }
@@ -71,7 +72,7 @@ class ContactPage extends React.Component {
 
         <Header
           language={this.state.language}
-          flags={this.state.flags}
+          // flags={this.state.flags}
           color="light"
           tagline="date"
         />

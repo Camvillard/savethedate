@@ -33,7 +33,7 @@ class IndexPage extends React.Component {
   setLanguageVersion = (language) => {
       this.setState({
         language: language,
-        flags: navigator.languages
+        // flags: navigator.languages
       })
   };
 
