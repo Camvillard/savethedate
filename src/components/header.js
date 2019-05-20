@@ -1,20 +1,13 @@
 import { Link } from "gatsby"
 import React from "react"
 
-import content from '../data/content';
 import { defineContentLanguage } from '../helpers/helpers';
 
 class Header extends React.Component {
 
-  displayInfos = (language) => {
-    const french = ['fr-FR', 'fr']
-    let infos
-    french.includes(language) ? infos = "plus d'infos à venir, genre plutôt bientôt" : infos = "more infos asap"
-    return infos
-  }
-
   render() {
-    const data = defineContentLanguage(this.props.language, content);
+    const data = defineContentLanguage(this.props.language).savethedate;
+    console.log(data)
 
     return(
     <header className={ this.props.color === "dark" ? "dark-header" : "light-header"}>

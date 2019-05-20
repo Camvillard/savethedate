@@ -1,11 +1,16 @@
-const defineContentLanguage = (language, content) => {
+import contentFr from '../data/contentFr';
+import contentEng from '../data/contentEng';
+
+const defineContentLanguage = (language) => {
   const french = ['fr-FR', 'fr']
   if (french.includes(language)) {
     // grab the french data
-    return content.fr
+    console.log('prout fr')
+    return contentFr
   } else {
     // grab english data
-    return content.eng
+    console.log('prout eng')
+    return contentEng
   }
 }
 

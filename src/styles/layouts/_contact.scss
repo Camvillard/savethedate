@@ -2,7 +2,7 @@
 
 
 body#contact {
-  background: $primary-color;
+  background: $forest-green;
 }
 
 // page
@@ -28,11 +28,11 @@ body#contact {
   position: absolute;
   bottom: 0;
   width: 100vw;
-  background: $secondary-color;
+  background: $jaune-moutarde;
   text-align: center;
   a {
     width: 100%;
-    color: $primary-color;
+    color: $forest-green;
   }
 }
 
@@ -43,7 +43,7 @@ form#contact-form {
 
   input,
   textarea {
-    background: $primary-color;
+    background: $forest-green;
   }
 
   ::placeholder {
@@ -61,15 +61,15 @@ form#contact-form {
   textarea:active,
   textarea:hover,
   textarea:visited {
-    background: $secondary-color;
-    border: 2px solid $secondary-color;
+    background: $jaune-moutarde;
+    border: 2px solid $jaune-moutarde;
     outline: none;
     outline-offset: 0px;
     font-family: $body-font;
   }
 
   button {
-    color: $primary-color;
+    color: $forest-green;
   }
 
 }

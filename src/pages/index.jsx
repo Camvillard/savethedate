@@ -20,25 +20,11 @@ class IndexPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      language: ''
+      language: navigator.language
     }
   }
 
-  componentDidMount() {
-    // set the language accordingly with the browsers language
-    this.setLanguageVersion(window.navigator.language);
-  }
-
-  //changes languages depending on the browser preferences
-  setLanguageVersion = (language) => {
-      this.setState({
-        language: language,
-        // flags: navigator.languages
-      })
-  };
-
   render() {
-
     return (
       <div id="container">
         <SEO id="homepage" title="save the date" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />

@@ -1,9 +1,6 @@
 /*----- COMPONENTS : HEADER ----- */
 
 
-header {
-  display: none;
-}
 
 @media (min-width: $sm-screen) {
   header {
@@ -39,15 +36,15 @@ header {
   header.dark-header {
 
     #cam-alex h6 {
-      color: $primary-color;
+      color: $forest-green;
     }
 
     .small-divider {
-      border-top: 1px solid $primary-color;
+      border-top: 1px solid $forest-green;
     }
 
     p#header-tagline {
-      color: $primary-color;
+      color: $forest-green;
     }
 
   }

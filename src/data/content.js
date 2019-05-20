@@ -25,7 +25,25 @@ export default {
     rsvpYes: "je serai là",
     rsvpNo: "je ne serai pas là",
     rsvpNumber: "nombre de personnes",
-    rsvpComment: "commentaire pertinent éventuel"
+    rsvpComment: "commentaire pertinent éventuel",
+    informations: {
+      organisation: {
+        title: 'organisation',
+        content: "à venir"
+      },
+      sleeping: {
+        title: "hébergement",
+        content: "à venir",
+      },
+      dressCode: {
+        title: "dress code",
+        content: "à venir",
+      },
+      gifts: {
+        title: "cadeaux (lol)",
+        content: "à venir",
+      },
+    },
   },
   eng: {
     headerTagline: "more infos asap",
@@ -50,6 +68,24 @@ export default {
     rsvpYes: "I'll be there",
     rsvpNo: "I won't be there",
     rsvpNumber: "how many people ?",
-    rsvpComment: "any useful comment goes here."
-  }
+    rsvpComment: "any useful comment goes here.",
+    informations: {
+      organisation: {
+        title: 'organisation',
+        content: "à venir"
+      },
+      sleeping: {
+        title: "hébergement",
+        content: "à venir",
+      },
+      dressCode: {
+        title: "dress code",
+        content: "à venir",
+      },
+      gifts: {
+        title: "cadeaux (lol)",
+        content: "à venir",
+      },
+    },
+  },
 }
