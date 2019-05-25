@@ -33,7 +33,7 @@ export default {
       },
       sleeping: {
         title: "hébergement",
-        content: "à venir",
+        content: "",
       },
       dressCode: {
         title: "dress code",

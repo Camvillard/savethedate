@@ -1,59 +1,48 @@
 /*----- COMPONENTS : BLOBS ----- */
 
-
-#main-content {
-  #blob-lg-one {
+#homepage {
+  .blob-lg-one,
+  .blob-lg-two {
     display: none;
   }
 
-  #blob-lg-two {
-    display: none;
-  }
-
-
-  #blob-sm-one {
-    width: 166px;
-    height: 150px;
+  .blob-sm-one {
+    width: 118px;
+    // height: 114px;
     position: fixed;
-    bottom: 40px;
-    left: -20px;
+    bottom: 16px;
+    left: -16px;
   }
 
-  #blob-sm-rsvp {
+  .blob-sm-two {
+    width: 100px;
+    height: 85px;
     position: fixed;
-    right: -20px;
-    top: 48vh;
-    z-index: 1;
-    width: 177px;
-    height: 153px;
-  }
-}
-
-#landing-page {
-  #blob-sm-one {
-    position: fixed;
-    top: 30px;
-    left: -50px;
-    width: 330px;
-    height: 298px;
-  }
-
-  #blob-sm-rsvp {
-    position: fixed;
-    right: -20px;
-    bottom: 0;
-    z-index: 1;
-    width: 177px;
-    height: 153px;
-  }
-
-  #blob-lg-one, #blob-lg-two {
-    display: none;
+    top: 24px;
+    right: 32px;
   }
 }
 
 
 @media (min-width: $sm-screen) {
+
+  #homepage {
+
+    .blob-sm-one {
+      width: 270px;
+      height: 240px;
+      bottom: 32px;
+      left: -24px;
+    }
+
+    .blob-sm-two {
+      width: 183px;
+      height: 155px;
+      top: 24px;
+      right: 32px;
+    }
+  }
+
   #main-content {
 
     #blob-sm-one {
@@ -78,6 +67,7 @@
 
 @media (min-width: $md-screen) {
 
+
   #main-content {
     #blob-sm-one, #blob-sm-rsvp {
       display: none;
@@ -90,7 +80,7 @@
       left: 20px;
       width: 400px;
       height: 279px;
-      z-index:1;
+      z-index: -1;
     }
 
     #blob-lg-two {
@@ -100,7 +90,7 @@
       right: 4vw;
       width: 204px;
       height: 180px;
-      z-index:1;
+      z-index: -1;
     }
 
   }
@@ -133,7 +123,45 @@
 
 } // end of md-screen - 992px
 
+@media (min-width: $md-screen) and (orientation: portrait) {
+  #homepage {
+
+    .blob-sm-one {
+      width: 370px;
+      height: 330px;
+      bottom: 32px;
+      left: -24px;
+    }
+
+    .blob-sm-two {
+      width: 270px;
+      height: 230px;
+      top: 24px;
+      right: 32px;
+    }
+  }
+
+} // end of md-screen - 992px & portrait
+
+
 @media (min-width: $lg-screen) {
+  #homepage {
+
+    .blob-sm-one {
+      width: 270px;
+      height: 240px;
+      bottom: 16px;
+      left: -16px;
+    }
+
+    .blob-sm-two {
+      width: 183px;
+      height: 155px;
+      top: 24px;
+      right: 32px;
+    }
+  }
+
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {

@@ -7,7 +7,7 @@ import SEO from "../components/seo";
 import Header from "../components/header"
 
 import BlobSmOne from '../images/blob-sm-1.svg';
-import BlobSmRsvp from '../images/blob-sm-rsvp.svg';
+import BlobSmTwo from '../images/blob-sm-2.svg';
 import BlobLgOne from '../images/blob-lg-1.svg';
 import BlobLgTwo from '../images/blob-lg-2.svg';
 
@@ -38,7 +38,7 @@ class SuccessPage extends React.Component {
         <Header language={this.state.language} color="dark" tagline="text"/>
 
         <BlobSmOne id="blob-sm-one"/>
-        <BlobSmRsvp id="blob-sm-rsvp"/>
+        <BlobSmTwo id="blob-sm-rsvp"/>
         <BlobLgOne id="blob-lg-one"/>
         <BlobLgTwo id="blob-lg-two"/>
 

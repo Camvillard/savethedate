@@ -1,25 +1,23 @@
 /*----- PAGES : INFORMATIONS ----- */
 
-#infos-page {
 
+#infos-page .fullwidth-container {
+  margin-top: 64px;
 }
-
 
 .infos-container {
   margin-bottom: 40px;
+
   .blob {
     position: relative;
-    width: 100vw;
+    // width: 100vw;
   }
 
   h2 {
     position: absolute;
     color: white;
     font-size: 10.5rem;
-  }
-
-  svg {
-    position: absolute;
+    margin: 0 auto;
   }
 
   h4.infos-title span {
@@ -39,6 +37,9 @@
   height: 190px;
 
   svg {
+    position: absolute;
+    width: 189px;
+    height: 190px;
     top: 0;
     left: -32px;
   }
@@ -61,6 +62,9 @@
   height: 208px;
 
   svg {
+    position: absolute;
+    width: 207px;
+    height: 204px;
     top: 0;
     right: 24px;
   }
@@ -84,6 +88,9 @@
   height: 204px;
 
   svg {
+    position: absolute;
+    width: 206px;
+    height: 206px ;
     top: 0;
     left: 40px;
   }
@@ -106,6 +113,9 @@
   height: 189px;
 
   svg {
+    position: absolute;
+    width: 191px;
+    height: 189px;
     top: 16px;
     right: 8px;
   }
@@ -117,38 +127,83 @@
 
   h4.infos-title span {
     top: 24px;
-    left: 64px;
+    right: 34px;
     background: $taupe;
     padding-left: 32px;
     padding-right: 16px;
   }
 }
 
-.infos-content#organisation {
+#sleeping {
+
+  .links-decorated {
+    padding: 0px 24px;
+    margin-top: 8px;
+    position: relative;
+  }
+
+  svg.link-decoration {
+    position: absolute;
+    top: 0;
+    left: 14px;
+    transition: 0.3s;
+  }
+
+  a {
+    padding-top: 12px;
+  }
+
+  a:hover svg.link-decoration {
+    transform: translate(20px, 0);
+  }
 }
-
-
-
-// #organisation {
-//   margin-top: 200px;
-// }
-
-
-// #blob-one {
-//   svg {
-//     top: 0;
-//     left: -20px;
-//   }
-//   h2 {
-//     color: white;
-//   }
-// }
 
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
+  #infos-page .fullwidth-container {
+    margin-top: 164px;
+  }
+
+  .infos-container {
+    h2 {
+      font-size: 14rem;
+    }
+  }
+
+  #infos-page {
+    .main-container {
+      max-width: 560px;
+    }
+  }
+
+  #blob-one {
+    height: 190px;
+
+    svg {
+      // width: 300px !important;
+      width:298px;
+      height:300px;
+      top: 0;
+      left: -32px;
+    }
+
+    h2 {
+      top: 20px;
+      left: 30px;
+    }
+
+    h4.infos-title span {
+      top: 20px;
+      left: 92px;
+      background: $jaune-moutarde;
+      padding-left: 16px;
+      padding-right: 32px;
+    }
+  }
+
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
