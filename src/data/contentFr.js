@@ -78,4 +78,10 @@ export default {
       content: "à venir",
     },
   },
+  reserver: {
+    name: "qui êtes-vous ?",
+    places: 'nombre de places ?',
+    mail: 'adresse mail ?',
+    message: 'toute information utile sera la bienvenue'
+  },
 }
