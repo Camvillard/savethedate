@@ -1,11 +1,15 @@
+// external libs
 import React from 'react';
 import { Link } from 'gatsby'
 
-import content from '../data/content';
-import { defineContentLanguage } from '../helpers/helpers'
+// internal stuff
 import SEO from "../components/seo";
-import Header from "../components/header"
+import Header from "../components/header";
+import Footer from '../components/footer';
 
+import { defineContentLanguage } from '../helpers/helpers'
+
+// style & assets
 import BlobSmOne from '../images/blob-sm-1.svg';
 import BlobSmTwo from '../images/blob-sm-2.svg';
 import BlobLgOne from '../images/blob-lg-1.svg';
@@ -18,46 +22,29 @@ class SuccessPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      language: ''
+      language: navigator.language
     }
   }
 
-  componentDidMount() {
-    // first things first, we define the global language accordingly to the browser
-    this.setState({
-      language: navigator.language
-    })
-  }
 
   render() {
-    const data = defineContentLanguage(this.state.language, content);
-    const request = `https://calendar.google.com/calendar/r/eventedit?text=${data.eventName}&dates=20191019T170000Z/20191021T170000Z&location=${data.eventLocation}&sprop=name:Name&sprop=website:EventWebite&details=${data.eventDetails}&sf=true&output=xml`
+    const data = defineContentLanguage(this.state.language).success;
     return(
       <div id="landing-page">
         <SEO id="success" title="bien reçu !" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
 
-        <Header language={this.state.language} color="dark" tagline="text"/>
+        <Header language={this.state.language} color="dark" position="fixed"/>
 
         <BlobSmOne id="blob-sm-one"/>
         <BlobSmTwo id="blob-sm-rsvp"/>
         <BlobLgOne id="blob-lg-one"/>
         <BlobLgTwo id="blob-lg-two"/>
 
-        <h1>{data.successHeader}</h1>
-        <h5>{data.successTagline}</h5>
+        <h1>{data.header}</h1>
+        <h5>{data.content}</h5>
 
         {/* links */}
-        <div id="links">
-          <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href={request}
-          >
-            {data.calendar}
-          </a>
-          <span>{' // '}</span>
-          <Link to="/">{data.backToSite}</Link>
-        </div>
+        <Footer />
         {/* links */}
 
       </div>

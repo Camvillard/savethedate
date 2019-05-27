@@ -44,21 +44,21 @@ export default {
     backToSite: "retour à l'accueil",
   },
   contact: {
-    contactTagline: "si vous avez des trucs à nous demander, ne soyez pas insolents, n'utilisez pas le téléphone (ou alors appelez Alex). Étant donné qu'on est supposément débordés par la préparation de ce mariage, ne vous inquiétez pas si nous mettons plus de 48 heures à vous répondre. Si toutefois vous n'avez pas de réponse au bout d'une semaine, vous êtes en droit de gentiment nous harceler.",
-    contactName: "nom, prénom, etc",
-    contactMail: "adresse mail",
-    contactAddress: 'adresse postale',
-    contactSubject: "objet de ce message",
-    contactBody: "message",
-    contactSend: "envoyer le message",
-    contactSuccess: "merci !",
-    contactContent: "on a bien reçu votre message, on s'en occupe dare-dare.",
+    tagline: "si vous avez des trucs à nous demander, ne soyez pas insolents, n'utilisez pas le téléphone (ou alors appelez Alex). Étant donné qu'on est supposément débordés par la préparation de ce mariage, ne vous inquiétez pas si nous mettons plus de 48 heures à vous répondre. Si toutefois vous n'avez pas de réponse au bout d'une semaine, vous êtes en droit de gentiment nous harceler.",
+    name: "nom, prénom, etc",
+    mail: "adresse mail",
+    address: 'adresse postale',
+    subject: "objet de ce message",
+    body: "message",
+    send: "envoyer le message",
+    success: "merci !",
+    content: "on a bien reçu votre message, on s'en occupe dare-dare.",
   },
   footer: {
     calendar: "ajouter au calendrier",
     eventName: 'Magical Wedding',
     eventDetails: 'et bien, nous allons nous marier',
-    eventLocation: 'on ne sait pas encore, mais environ pas trop loin de Montréal'
+    eventLocation: "Saint Adolphe d'Howard, Québec"
   },
   informations: {
     organisation: {
@@ -83,5 +83,9 @@ export default {
     places: 'nombre de places ?',
     mail: 'adresse mail ?',
     message: 'toute information utile sera la bienvenue'
+  },
+  success: {
+    header: 'bien reçu !',
+    content: "payer"
   },
 }

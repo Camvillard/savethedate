@@ -4,7 +4,8 @@ import { Link } from 'gatsby';
 
 // internal stuff
 import SEO from '../components/seo';
-import Header from '../components/header'
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 import { defineContentLanguage } from '../helpers/helpers';
 
@@ -36,7 +37,7 @@ class ReservationPage extends React.Component {
     }, function(err, record) {
         if (err) { console.error(err); return; }
         // redirect to a success page + possible paiement
-        window.location.href = "/"
+        window.location.href = "/success"
     });
   }
 

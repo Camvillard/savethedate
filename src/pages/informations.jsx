@@ -66,7 +66,7 @@ class InformationsPage extends React.Component {
               <div className="infos-content" id="sleeping">
                 <p>{data.sleeping.content}</p>
                 <div className="links-decorated">
-                  <Link to="/nous-contacter"className="text-strong link-block">
+                  <Link to="/reserver" className="text-strong link-block">
                     <Arrow className="link-decoration"/>
                     nous faire signe pour un hébergement
                   </Link>

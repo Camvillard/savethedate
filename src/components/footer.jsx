@@ -3,6 +3,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 // internal stuff
+import AddToCalendar from "./add-to-calendar";
 import { defineContentLanguage } from '../helpers/helpers';
 
 const Footer = (props) => {
@@ -10,12 +11,7 @@ const Footer = (props) => {
   return(
   <footer>
     <div className="footer-links">
-      <a
-      rel="noopener noreferrer"
-      target="_blank"
-      href="#">
-      {data.calendar}
-      </a>
+      <AddToCalendar />
       <span> // </span>
       <Link to="/nous-contacter">contact</Link>
     </div>

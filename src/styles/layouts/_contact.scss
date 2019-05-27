@@ -9,18 +9,14 @@ body#contact {
 
 #contact-container {
   width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: auto;
 }
 
 // content
-.contact-content {
+.contact-content p{
   color: white;
   width: 80%;
+  margin: auto;
   font-weight: 300;
 }
 
@@ -40,6 +36,7 @@ body#contact {
 // form styling
 
 form#contact-form {
+  margin: auto;
 
   input,
   textarea {
@@ -49,7 +46,6 @@ form#contact-form {
   ::placeholder {
     color: white;
   }
-
 
   // states for inputs
 

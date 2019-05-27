@@ -34,12 +34,11 @@ class IndexPage extends React.Component {
     const content = data.homepage
     const event = data.event
     return (
-      <div className="container" id="homepage">
+      <div id="homepage">
         <SEO title="save the date" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
+        <Header language={this.state.language} color="dark" position="fixed"/>
 
-        <Header language={this.state.language} color="dark" tagline="text"/>
-
-        <div id="main-content">
+        <div className="container-fullheight" >
 
           <div id="date">
             <h1 className="accent-text ">{content.date}</h1>
@@ -69,9 +68,8 @@ class IndexPage extends React.Component {
           <BlobLgTwo className="blob-lg-two"/>
 
         </div>
-        {/* /#main-content */}
-
       </div>
+
     )
   }
 }

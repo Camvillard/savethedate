@@ -2,6 +2,7 @@
 
 
 header {
+  margin-top: 24px;
 
   #cam-alex {
     z-index: 5;
@@ -23,6 +24,16 @@ header {
     margin: .8rem 0 0 1.6rem;
     font-size: 1.2rem;
   }
+
+}
+
+header.fixed-header {
+  position: fixed;
+  top: 24px;
+  left: 0px;
+}
+
+header.regular-header {
 
 }
 

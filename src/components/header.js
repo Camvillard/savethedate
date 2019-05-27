@@ -10,7 +10,7 @@ class Header extends React.Component {
   render() {
     const data = defineContentLanguage(this.props.language).header;
     return(
-    <header className={this.props.color === "dark" ? "dark-header" : "light-header"}>
+    <header className={`${this.props.color}-header ${this.props.position}-header`} >
       <Link to="/">
         {/* cam + alex */}
         <div id="cam-alex">
