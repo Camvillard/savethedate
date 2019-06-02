@@ -20,7 +20,7 @@ import BlobLgTwo from '../images/blob-lg-2.svg';
 
 
 
-class IndexPage extends React.Component {
+class FrenchPeople extends React.Component {
 
   constructor(props) {
     super(props);
@@ -34,31 +34,16 @@ class IndexPage extends React.Component {
     const content = data.homepage
     const event = data.event
     return (
-      <div id="homepage">
+      <div id="french-people">
         <SEO title="save the date" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
         <Header language={this.state.language} color="dark" position="fixed"/>
 
         <div className="container-fullheight" >
 
-          <div id="date">
-            <h1 className="accent-text ">{content.date}</h1>
-            <h1 className="text-light accent-text">{content.year}</h1>
-          </div>
+          <h1 className="accent-text">chers amis, chères famille, </h1>
+          <h3 className="accent-text text-light">chers vous tous qui venez de France,</h3>
+          <p>en plus de vous astreindre à quelques heures d'avion pour venir nous voir, comme on est un tout petit peu relous et exigeants, ce serait fabuleux si vous pouviez glisser dans vos valises un fromage (celui ou celle qui apportera de la mimolette aura des points bonus) + une bouteille de vin.</p>
 
-          <ul id="actions">
-            <li>
-              <Link to="/#" className="text-strong">{content.where}</Link>
-            </li>
-            <li>
-              <Link to="/informations" className="text-strong">{content.how}</Link>
-            </li>
-            <li>
-              <Link to="/french-people" className="text-strong">{content.frenchPeople}</Link>
-            </li>
-            <li>
-              <Link to="/#" className="text-strong">{content.goodToKnow}</Link>
-            </li>
-          </ul>
 
           <Footer language={this.state.language} />
 
@@ -76,4 +61,4 @@ class IndexPage extends React.Component {
 
 
 
-export default IndexPage
+export default FrenchPeople

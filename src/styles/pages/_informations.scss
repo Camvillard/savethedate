@@ -25,7 +25,9 @@
     color: white;
     line-height: 1.25;
     padding-top: 0px;
-    padding-bottom:4px;
+    padding-bottom: 4px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
@@ -33,7 +35,7 @@
   margin-top: 16px;
 }
 
-#blob-one {
+#infos-blob-one {
   height: 190px;
 
   svg {
@@ -53,12 +55,10 @@
     top: 20px;
     left: 92px;
     background: $jaune-moutarde;
-    padding-left: 16px;
-    padding-right: 32px;
   }
 }
 
-#blob-two {
+#infos-blob-two {
   height: 208px;
 
   svg {
@@ -79,12 +79,10 @@
     bottom: 48px;
     right: 64px;
     background: $forest-green;
-    padding-left: 32px;
-    padding-right: 16px;
   }
 }
 
-#blob-three {
+#infos-blob-three {
   height: 204px;
 
   svg {
@@ -104,12 +102,10 @@
     top: 130px;
     left: 64px;
     background: $forest-green;
-    padding-left: 16px;
-    padding-right: 32px;
   }
 }
 
-#blob-four {
+#infos-blob-four {
   height: 189px;
 
   svg {
@@ -129,8 +125,6 @@
     top: 24px;
     right: 34px;
     background: $taupe;
-    padding-left: 32px;
-    padding-right: 16px;
   }
 }
 
@@ -169,7 +163,12 @@
 
   .infos-container {
     h2 {
-      font-size: 14rem;
+      font-size: 16rem;
+    }
+
+    h4.infos-title span {
+      padding-left: 40px;
+      padding-right: 40px;
     }
   }
 
@@ -179,11 +178,10 @@
     }
   }
 
-  #blob-one {
-    height: 190px;
+  #infos-blob-one {
+    height: 126px;
 
     svg {
-      // width: 300px !important;
       width:298px;
       height:300px;
       top: 0;
@@ -198,11 +196,90 @@
     h4.infos-title span {
       top: 20px;
       left: 92px;
-      background: $jaune-moutarde;
-      padding-left: 16px;
-      padding-right: 32px;
     }
   }
+
+
+  #infos-blob-two {
+    height: 300px;
+
+    svg {
+      position: absolute;
+      width: 290px;
+      height: 295px;
+      right: 314px;
+    }
+
+    h2 {
+      top: 12px;
+      right: 384px;
+    }
+
+    h4.infos-title span {
+      bottom: 48px;
+      right: 384px;
+    }
+  }
+
+  #infos-blob-three {
+    height: 312px;
+
+    svg {
+      width: 306px;
+      height: 310px ;
+      left: 140px;
+    }
+
+    h2 {
+      top: 24px;
+      left: 236px;
+    }
+
+    h4.infos-title span {
+      top: 224px;
+      left: 64px;
+    }
+  }
+
+  #infos-blob-four {
+    height: 306px;
+
+    svg {
+      width: 310px;
+      height: 306px;
+      right: 124px;
+    }
+
+    h2 {
+      bottom: 24px;
+      right: 214px;
+    }
+
+    h4.infos-title span {
+      top: 48px;
+      right: 234px;
+    }
+  }
+
+  #sleeping {
+
+    svg.link-decoration {
+      width: 32px;
+      height: 32px;
+    }
+
+    a {
+      font-size: 3.2rem;
+      padding-top: 24px;
+    }
+
+    a:hover svg.link-decoration {
+      transform: translate(32px, 0);
+    }
+  }
+
+
+
 
 } // end of md-screen - 992px
 

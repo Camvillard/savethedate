@@ -85,7 +85,13 @@ export default {
     message: 'toute information utile sera la bienvenue'
   },
   success: {
-    header: 'bien reçu !',
-    content: "payer"
+    header: 'fantastique.',
+    subtitle: "merci mucho mucho !",
+    content: "afin d'être tout à fait tranquilles jusqu'au jour J, vous pouvez payer tout de suite vos places (que la technologie est pratique)."
+  },
+  frenchPeople: {
+    header: 'cher ami, chère famille venant de France',
+    subtitle: "en plus de vous astreindre à quelques heures de vol",
+    content: "pratique)."
   },
 }

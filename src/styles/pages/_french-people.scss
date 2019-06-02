@@ -1,10 +1,15 @@
-/*----- INDEX FOR PAGES ----- */
+/*----- PAGES : FRENCH PEOPLE ----- */
 
-@import "homepage";
-@import "informations";
-@import "french-people";
-@import "success";
-@import "thanks";
+#french-people .container-fullheight{
+  h1, h3, p {
+    text-align: center;
+  }
+
+  h1, h3 {
+    margin: 1rem auto;
+  }
+
+}
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px

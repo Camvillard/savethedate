@@ -1,6 +1,6 @@
 // external libs
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 
 // internal stuff
 import SEO from '../components/seo';
@@ -37,12 +37,12 @@ class ReservationPage extends React.Component {
     }, function(err, record) {
         if (err) { console.error(err); return; }
         // redirect to a success page + possible paiement
-        window.location.href = "/success"
+        // window.location.href = "/success"
+        navigate("/success", {state: reservation})
     });
   }
 
   handleSubmit = (event) => {
-    console.log('prout');
     event.preventDefault();
     // create the object reservation
     // takes the value of eacj one of the inputs

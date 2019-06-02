@@ -36,7 +36,7 @@ class InformationsPage extends React.Component {
 
           <div className="infos-container" >
 
-            <div className="blob" id="blob-one">
+            <div className="blob" id="infos-blob-one">
               <BlobOne />
               <h2>1</h2>
               <h4 className="infos-title"><span>{data.organisation.title}</span></h4>
@@ -56,7 +56,7 @@ class InformationsPage extends React.Component {
 
           <div className="infos-container" >
 
-            <div className="blob" id="blob-two">
+            <div className="blob" id="infos-blob-two">
               <BlobTwo />
               <h2>2</h2>
               <h4 className="infos-title"><span>{data.sleeping.title}</span></h4>
@@ -85,7 +85,7 @@ class InformationsPage extends React.Component {
 
           <div className="infos-container" >
 
-            <div className="blob" id="blob-three">
+            <div className="blob" id="infos-blob-three">
               <BlobThree />
               <h2>3</h2>
               <h4 className="infos-title"><span>{data.dressCode.title}</span></h4>
@@ -105,7 +105,7 @@ class InformationsPage extends React.Component {
 
           <div className="infos-container" >
 
-            <div className="blob" id="blob-four">
+            <div className="blob" id="infos-blob-four">
               <BlobFour />
               <h2>4</h2>
               <h4 className="infos-title"><span>{data.gifts.title}</span></h4>

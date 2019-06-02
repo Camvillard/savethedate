@@ -22,6 +22,37 @@
   }
 }
 
+#landing-page {
+  #resa-blob {
+    position: fixed;
+    right: -38px;
+    top: 48px;
+    z-index: -1;
+  }
+}
+
+#french-people {
+  .blob-lg-one,
+  .blob-lg-two {
+    display: none;
+  }
+
+  .blob-sm-one {
+    width: 118px;
+    position: fixed;
+    bottom: 6px;
+    left: -16px;
+  }
+
+  .blob-sm-two {
+    width: 100px;
+    height: 85px;
+    position: fixed;
+    top: 24px;
+    right: 32px;
+  }
+}
+
 
 @media (min-width: $sm-screen) {
 
@@ -99,7 +130,7 @@
       display: none;
     }
 
-    #blob-sm-rsvp {
+    #blob-sm-two {
       display: none;
     }
 

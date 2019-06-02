@@ -10,10 +10,7 @@ import Footer from '../components/footer';
 import { defineContentLanguage } from '../helpers/helpers'
 
 // style & assets
-import BlobSmOne from '../images/blob-sm-1.svg';
-import BlobSmTwo from '../images/blob-sm-2.svg';
-import BlobLgOne from '../images/blob-lg-1.svg';
-import BlobLgTwo from '../images/blob-lg-2.svg';
+import Blob from '../images/resa-blob-1.svg';
 
 import '../styles/main.scss';
 
@@ -28,20 +25,20 @@ class SuccessPage extends React.Component {
 
 
   render() {
+    const numOfPeople = this.props.location.state.people
     const data = defineContentLanguage(this.state.language).success;
     return(
-      <div id="landing-page">
+      <div id="landing-page" className="main-container">
         <SEO id="success" title="bien reçu !" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
 
         <Header language={this.state.language} color="dark" position="fixed"/>
 
-        <BlobSmOne id="blob-sm-one"/>
-        <BlobSmTwo id="blob-sm-rsvp"/>
-        <BlobLgOne id="blob-lg-one"/>
-        <BlobLgTwo id="blob-lg-two"/>
+        <Blob id="resa-blob"/>
 
         <h1>{data.header}</h1>
-        <h5>{data.content}</h5>
+        <h5>{data.subtitle}<br/>on prend note et on vous réserve {numOfPeople} places.</h5>
+        <p>{data.content}</p>
+        <a href="https://www.paypal.me/CamilleVillard" className="button-green">mais oui, payer maintenant</a>
 
         {/* links */}
         <Footer />
