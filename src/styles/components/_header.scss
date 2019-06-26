@@ -2,72 +2,83 @@
 
 
 header {
-  display: none;
+  margin-top: 24px;
+
+  #cam-alex {
+    z-index: 5;
+    padding: 8px 0px 0px 16px;
+
+    h6 {
+      text-transform: uppercase;
+      margin: .2rem auto .4rem;
+    }
+  }
+
+  .small-divider {
+    width: 40px;
+    margin-left: -22px;
+  }
+
+  p {
+    text-align: left;
+    margin: .8rem 0 0 1.6rem;
+    font-size: 1.2rem;
+  }
+
+}
+
+header.fixed-header {
+  position: fixed;
+  top: 24px;
+  left: 0px;
+}
+
+header.regular-header {
+
+}
+
+header.dark-header {
+
+  #cam-alex h6 {
+    color: $forest-green;
+  }
+
+  .small-divider {
+    border-top: 1px solid $forest-green;
+  }
+
+  p#header-tagline {
+    color: $forest-green;
+  }
+
+}
+
+header.light-header {
+
+  #cam-alex h6 {
+    color: white;
+  }
+
+  .small-divider {
+    border-top: 1px solid white;
+  }
+
+  #header-tagline {
+    color: white;
+  }
+
 }
 
 @media (min-width: $sm-screen) {
+
   header {
-    display: block;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-
-    #cam-alex {
-      z-index: 5;
-      padding: 12px 20px 0px 20px;
-
-      h6 {
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-      }
+    #cam-alex h6 {
+      margin-bottom: .8rem;
     }
-
-    .small-divider {
-      width: 40px;
-      margin-left: -22px;
-    }
-
     p {
-      margin-top: 1rem;
-      padding-left: 20px;
-      max-width: 120px;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
-
   }
-
-  header.dark-header {
-
-    #cam-alex h6 {
-      color: $primary-color;
-    }
-
-    .small-divider {
-      border-top: 1px solid $primary-color;
-    }
-
-    p#header-tagline {
-      color: $primary-color;
-    }
-
-  }
-
-  header.light-header {
-
-    #cam-alex h6 {
-      color: white;
-    }
-
-    .small-divider {
-      border-top: 1px solid white;
-    }
-
-    #header-tagline {
-      color: white;
-    }
-
-  }
-
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
@@ -75,18 +86,15 @@ header {
 
 
 @media (min-width: $lg-screen) {
+
   header {
+    position: fixed;
+    left: 0px;
     top: 10px;
 
-    #cam-alex {
-      padding: 20px 20px 0px 20px;
-    }
-
     p {
-      max-width: 160px;
       font-size: 1.6rem;
     }
-
   }
 
 } // end of lg-screen - 1200px

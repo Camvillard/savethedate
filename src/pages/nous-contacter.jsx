@@ -6,7 +6,6 @@ import { Link } from 'gatsby';
 import SEO from "../components/seo";
 import Header from '../components/header';
 
-import content from '../data/content';
 import { defineContentLanguage } from '../helpers/helpers';
 
 // styles
@@ -19,22 +18,8 @@ class ContactPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      language: '',
-      flags: []
+      language: navigator.language
     }
-  }
-
-  componentDidMount() {
-    // set the language accordingly with the browsers language
-    this.setLanguageVersion(window.navigator.language);
-  }
-
-  //changes languages depending on the browser preferences
-  setLanguageVersion = (language) => {
-      this.setState({
-        language: language,
-        // flags: navigator.languages
-      })
   }
 
   createAirtableContactRecord = (message) => {
@@ -65,29 +50,29 @@ class ContactPage extends React.Component {
   }
 
   render() {
-    const data = defineContentLanguage(this.state.language, content);
+    const data = defineContentLanguage(this.state.language).contact;
     return(
-      <div id="contact-container">
+      <div id="contact-container" className="container-fullheight">
         <SEO title="Nous contacter" id="contact" />
 
         <Header
           language={this.state.language}
-          // flags={this.state.flags}
           color="light"
-          tagline="date"
+          position="regular"
         />
 
         <div className="contact-content">
-          <p className="text-normal">{data.contactTagline}</p>
+          <p className="text-normal">{data.tagline}</p>
         </div>
+
         <form id="contact-form" onSubmit={this.handleSubmit}>
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
-          <input name="name" type="text" placeholder={`${data.contactName}`} ref="name"/>
-          <input name="name" type="email" placeholder={`${data.contactMail}`} ref="mail"/>
-          <input name="objet" type="text" placeholder={`${data.contactSubject}`} ref="objet"/>
-          <textarea name="msg" placeholder={`${data.contactBody}`} ref="body"></textarea>
-          <button className="button-send">{data.contactSend}</button>
+          <input name="name" type="text" placeholder={`${data.name}`} ref="name"/>
+          <input name="name" type="email" placeholder={`${data.mail}`} ref="mail"/>
+          <input name="objet" type="text" placeholder={`${data.subject}`} ref="objet"/>
+          <textarea name="msg" placeholder={`${data.body}`} ref="body"></textarea>
+          <button className="button-send">{data.send}</button>
         </form>
 
         <div id="footer-title">

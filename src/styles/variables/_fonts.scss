@@ -10,11 +10,14 @@ $accent-font: 'Frank Ruhl Libre', serif;
 
 body {
   font-family: $body-font;
+  text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $headers-font;
-  color: $primary-color;
+  color: $forest-green;
+  font-weight: 700;
+  margin: 1em auto 0.4rem;
 }
 
 .accent-text, em {
@@ -22,40 +25,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 4.8rem;
-
+  font-size: 3.6rem;
 }
 
 h2 {
-  font-size: 4rem;
-
+  font-size: 3.2rem;
 }
 
 h3 {
-  font-size: 3.2rem;
-
+  font-size: 2.8rem;
 }
 
 h4 {
   font-size: 2.4rem;
-
 }
 
 h5 {
   font-size: 2rem;
-
 }
 
 h6 {
   font-size: 1.8rem;
-
 }
 
 
 p, a, li {
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.2;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.4;
+  margin: 0.8em auto 0.4rem;
+}
+
+p {
+  color: $dark-gray;
 }
 
 // font weights
@@ -73,26 +75,20 @@ p, a, li {
 }
 
 
+
 @media (min-width: $sm-screen) {
-} // end of sm-screen - 768px
-
-@media (min-width: $md-screen) {
-} // end of md-screen - 992px
-
-@media (min-width: $lg-screen) {
-
   h1 {
-    font-size: 5.6rem;
-
-  }
-
-  h2 {
     font-size: 4.8rem;
 
   }
 
-  h3 {
+  h2 {
     font-size: 4rem;
+
+  }
+
+  h3 {
+    font-size: 3.2rem;
 
   }
 
@@ -102,18 +98,53 @@ p, a, li {
   }
 
   h5 {
-    font-size: 2.4rem;
+    font-size: 2rem;
+
+  }
+
+  p, a, li {
+    font-size: 1.6rem;
+  }
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+  h1 {
+    font-size: 6.4rem;
+
+  }
+
+  h2 {
+    font-size: 5.6rem;
+
+  }
+
+  h3 {
+    font-size: 4.8rem;
+
+  }
+
+  h4 {
+    font-size: 4rem;
+
+  }
+
+  h5 {
+    font-size: 3.2rem;
 
   }
 
   h6 {
-    font-size: 2rem;
+    font-size: 2.4rem;
 
   }
 
   p, a, li {
     font-size: 1.8rem;
   }
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+
 
 } // end of lg-screen - 1200px
 

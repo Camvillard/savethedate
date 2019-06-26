@@ -1,7 +1,7 @@
 /* ------ PAGES : SUCCESS ------ */
 
 #landing-page {
-  width: 100vw;
+  // width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
   text-align: center;
 
   h1, h5 {
-    color: $primary-color;
+    color: $forest-green;
     font-family: $accent-font;
   }
 
@@ -23,9 +23,9 @@
   }
 
 
-  a{
-    color: $secondary-color;
-  }
+  // a{
+  //   color: $jaune-moutarde;
+  // }
 
   // a {
   //   position: fixed;

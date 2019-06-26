@@ -1,0 +1,43 @@
+/*----- INDEX FOR COMPONENTS ----- */
+
+
+.main-container {
+  width: 90vw;
+  margin: auto;
+}
+
+.container-fullheight {
+  min-height: 100vh;
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+  .main-container {
+    width: 82vw;
+  }
+
+  .container-fullheight {
+    width: 82vw;
+  }
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+  .main-container {
+    width: 56vw;
+  }
+
+  .container-fullheight {
+    width: 64vw;
+  }
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px

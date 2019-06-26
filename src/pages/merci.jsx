@@ -8,7 +8,7 @@ import { defineContentLanguage } from '../helpers/helpers';
 
 import content from '../data/content';
 import BlobSmOne from '../images/blob-sm-1.svg';
-import BlobSmRsvp from '../images/blob-sm-rsvp.svg';
+import BlobSmTwo from '../images/blob-sm-2.svg';
 import BlobLgOne from '../images/blob-lg-1.svg';
 import BlobLgTwo from '../images/blob-lg-2.svg';
 
@@ -45,7 +45,7 @@ class Merci extends React.Component {
 
 
         <BlobSmOne id="blob-sm-one"/>
-        <BlobSmRsvp id="blob-sm-rsvp"/>
+        <BlobSmTwo id="blob-sm-rsvp"/>
         <BlobLgOne id="blob-lg-one"/>
         <BlobLgTwo id="blob-lg-two"/>
 

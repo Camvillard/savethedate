@@ -1,16 +1,71 @@
 /*----- LAYOUTS : MAIN ----- */
 
+* {
+  margin: 0;
+  box-sizing: inherit;
+}
 
-:root {
+*:before {
+  box-sizing: inherit;
+}
+
+*:after {
+  box-sizing: inherit;
+}
+
+body {
   font-size: 62.5%;
-  body {
-  font-size: 62.5%;
-    margin: 0;
-    font-size: 1.6rem;
-  }
+  margin: 0;
+  font-size: 1.6rem;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
 }
 
 a {
   text-decoration: none;
-  color: $primary-color;
+  color: $forest-green;
+
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &.link-block {
+    display: block;
+  }
+  &.text-strong {
+    font-size: 2rem;
+  }
 }
+
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+  a {
+    &.text-strong {
+      font-size: 2.2rem;
+    }
+  }
+
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px
+
+

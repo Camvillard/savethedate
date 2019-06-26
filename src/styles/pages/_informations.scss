@@ -1,0 +1,293 @@
+/*----- PAGES : INFORMATIONS ----- */
+
+
+#infos-page .fullwidth-container {
+  margin: 64px auto ;
+}
+
+#infos-page {
+
+  .links-decorated {
+    padding: 0px 24px;
+    margin-top: 8px;
+    position: relative;
+  }
+
+  svg.link-decoration {
+    position: absolute;
+    top: 0;
+    left: 14px;
+    transition: 0.3s;
+  }
+
+  a {
+    padding-top: 12px;
+  }
+
+  a:hover svg.link-decoration {
+    transform: translate(20px, 0);
+  }
+}
+
+.infos-container {
+  margin-bottom: 40px;
+
+  .blob {
+    position: relative;
+    // width: 100vw;
+  }
+
+  h2 {
+    position: absolute;
+    color: white;
+    font-size: 10.5rem;
+    margin: 0 auto;
+  }
+
+  h4.infos-title span {
+    position: absolute;
+    color: white;
+    line-height: 1.25;
+    padding-top: 0px;
+    padding-bottom: 4px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.infos-content {
+  margin-top: 16px;
+}
+
+#infos-blob-one {
+  height: 190px;
+
+  svg {
+    position: absolute;
+    width: 189px;
+    height: 190px;
+    top: 0;
+    left: -32px;
+  }
+
+  h2 {
+    top: 20px;
+    left: 30px;
+  }
+
+  h4.infos-title span {
+    top: 20px;
+    left: 92px;
+    background: $jaune-moutarde;
+  }
+}
+
+#infos-blob-two {
+  height: 208px;
+
+  svg {
+    position: absolute;
+    width: 207px;
+    height: 204px;
+    top: 0;
+    right: 24px;
+  }
+
+  h2 {
+    top: 0px;
+    right: 74px;
+  }
+
+  h4.infos-title span {
+    text-align: right;
+    bottom: 48px;
+    right: 64px;
+    background: $forest-green;
+  }
+}
+
+#infos-blob-three {
+  height: 204px;
+
+  svg {
+    position: absolute;
+    width: 206px;
+    height: 206px ;
+    top: 0;
+    left: 40px;
+  }
+
+  h2 {
+    top: 8px;
+    left: 96px;
+  }
+
+  h4.infos-title span {
+    top: 130px;
+    left: 64px;
+    background: $forest-green;
+  }
+}
+
+#infos-blob-four {
+  height: 189px;
+
+  svg {
+    position: absolute;
+    width: 191px;
+    height: 189px;
+    top: 16px;
+    right: 8px;
+  }
+
+  h2 {
+    bottom: 24px;
+    right: 94px;
+  }
+
+  h4.infos-title span {
+    top: 24px;
+    right: 34px;
+    background: $taupe;
+  }
+}
+
+
+
+
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+  #infos-page .fullwidth-container {
+    margin-top: 164px;
+  }
+
+  .infos-container {
+    h2 {
+      font-size: 16rem;
+    }
+
+    h4.infos-title span {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  #infos-page {
+    .main-container {
+      max-width: 560px;
+    }
+  }
+
+  #infos-blob-one {
+    height: 126px;
+
+    svg {
+      width:298px;
+      height:300px;
+      top: 0;
+      left: -32px;
+    }
+
+    h2 {
+      top: 20px;
+      left: 30px;
+    }
+
+    h4.infos-title span {
+      top: 20px;
+      left: 92px;
+    }
+  }
+
+
+  #infos-blob-two {
+    height: 300px;
+
+    svg {
+      position: absolute;
+      width: 290px;
+      height: 295px;
+      right: 314px;
+    }
+
+    h2 {
+      top: 12px;
+      right: 384px;
+    }
+
+    h4.infos-title span {
+      bottom: 48px;
+      right: 384px;
+    }
+  }
+
+  #infos-blob-three {
+    height: 312px;
+
+    svg {
+      width: 306px;
+      height: 310px ;
+      left: 140px;
+    }
+
+    h2 {
+      top: 24px;
+      left: 236px;
+    }
+
+    h4.infos-title span {
+      top: 224px;
+      left: 64px;
+    }
+  }
+
+  #infos-blob-four {
+    height: 306px;
+
+    svg {
+      width: 310px;
+      height: 306px;
+      right: 124px;
+    }
+
+    h2 {
+      bottom: 24px;
+      right: 214px;
+    }
+
+    h4.infos-title span {
+      top: 48px;
+      right: 234px;
+    }
+  }
+
+  #infos-page {
+
+    svg.link-decoration {
+      width: 32px;
+      height: 32px;
+    }
+
+    a {
+      font-size: 3.2rem;
+      padding-top: 24px;
+    }
+
+    a:hover svg.link-decoration {
+      transform: translate(32px, 0);
+    }
+  }
+
+
+
+
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px

@@ -1,7 +1,7 @@
 /* ------ PAGES : RSVP ------ */
 
 body#rsvp {
-  background: $secondary-color;
+  background: $jaune-moutarde;
 }
 
 #rsvp-container {
@@ -16,7 +16,7 @@ body#rsvp {
 form#form-rsvp {
   input,
   textarea {
-    background: $secondary-color;
+    background: $jaune-moutarde;
   }
 
   select {
@@ -24,7 +24,7 @@ form#form-rsvp {
     border: 2px solid white;
     border-radius: 0px !important;
     color: white;
-    background: $secondary-color;
+    background: $jaune-moutarde;
   }
 
   select:focus {
@@ -41,8 +41,8 @@ form#form-rsvp {
   textarea:active,
   textarea:hover,
   textarea:visited {
-    background: $primary-color;
-    border: 2px solid $primary-color;
+    background: $forest-green;
+    border: 2px solid $forest-green;
     outline: none;
     outline-offset: 0px;
     font-family: $body-font;
@@ -53,7 +53,7 @@ form#form-rsvp {
   }
 
   button{
-    color: $secondary-color;
+    color: $jaune-moutarde;
     align-self: flex-end;
     width: 100% !important;
   }

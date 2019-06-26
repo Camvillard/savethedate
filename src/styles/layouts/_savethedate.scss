@@ -27,7 +27,7 @@
   align-self: center;
 
   h1 {
-    color: $primary-color;
+    color: $forest-green;
     margin-bottom: 0px;
     font-family: $accent-font;
   }
@@ -37,7 +37,7 @@
     text-align: left;
     margin-bottom: 1.6rem;
     font-size: 1.4rem;
-    color: $secondary-color;
+    color: $jaune-moutarde;
     padding-left: 20px;
 
     span {
@@ -52,8 +52,8 @@
   margin-bottom: 100px;
   margin-right: 20px;
   margin-left: 60%;
-  border: 3px solid $primary-color;
-  background: $primary-color;
+  border: 3px solid $forest-green;
+  background: $forest-green;
 
     a {
       display: block;
@@ -68,7 +68,7 @@
     cursor: pointer;
     background: white;
     a {
-      color: $primary-color;
+      color: $forest-green;
     }
   }
 }
@@ -78,9 +78,9 @@
   position: fixed;
   bottom: 20px;
   padding: 20px;
-  color: $secondary-color;
+  color: $jaune-moutarde;
   a {
-    color: $secondary-color;
+    color: $jaune-moutarde;
     cursor: pointer;
   }
 }
@@ -127,7 +127,7 @@
     margin-top: 20px;
     margin-bottom: 0px;
     margin-right: 20px;
-    background: $primary-color;
+    background: $forest-green;
 
       a {
         display: block;
@@ -152,9 +152,9 @@
     left: 0;
     right: 0;
     padding: 0px;
-    color: $secondary-color;
+    color: $jaune-moutarde;
     a {
-      color: $secondary-color;
+      color: $jaune-moutarde;
       cursor: pointer;
     }
   }
@@ -194,7 +194,7 @@
 
       span {
         padding-bottom: 12px;
-        // border-bottom: 3px solid $secondary-color;
+        // border-bottom: 3px solid $jaune-moutarde;
       }
     }
   }

@@ -1,12 +1,15 @@
-/*----- INDEX FOR COMPONENTS ----- */
+/*----- PAGES : FRENCH PEOPLE ----- */
 
-@import "navbar";
-@import "buttons";
-@import "forms";
-@import "header";
-@import "blobs";
-@import "containers";
-@import "footer";
+#french-people .container-fullheight{
+  h1, h3, p {
+    text-align: center;
+  }
+
+  h1, h3 {
+    margin: 1rem auto;
+  }
+
+}
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px

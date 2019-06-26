@@ -4,11 +4,11 @@
 @import "../variables/index";
 @import "../mixins/buttons";
 
-.button-blue {
-  @include button($primary-color, $primary-color, white);
+.button-green {
+  @include button($forest-green, $forest-green, white);
 }
 
 .button-white {
-  @include button(white, $primary-color, $primary-color);
+  @include button(white, $forest-green, $forest-green);
 }
 

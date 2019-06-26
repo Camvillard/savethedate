@@ -1,15 +1,16 @@
+// external libs
 import React from 'react';
 import { Link } from 'gatsby'
 
-import content from '../data/content';
-import { defineContentLanguage } from '../helpers/helpers'
+// internal stuff
 import SEO from "../components/seo";
-import Header from "../components/header"
+import Header from "../components/header";
+import Footer from '../components/footer';
 
-import BlobSmOne from '../images/blob-sm-1.svg';
-import BlobSmRsvp from '../images/blob-sm-rsvp.svg';
-import BlobLgOne from '../images/blob-lg-1.svg';
-import BlobLgTwo from '../images/blob-lg-2.svg';
+import { defineContentLanguage } from '../helpers/helpers'
+
+// style & assets
+import Blob from '../images/resa-blob-1.svg';
 
 import '../styles/main.scss';
 
@@ -18,46 +19,29 @@ class SuccessPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      language: ''
+      language: navigator.language
     }
   }
 
-  componentDidMount() {
-    // first things first, we define the global language accordingly to the browser
-    this.setState({
-      language: navigator.language
-    })
-  }
 
   render() {
-    const data = defineContentLanguage(this.state.language, content);
-    const request = `https://calendar.google.com/calendar/r/eventedit?text=${data.eventName}&dates=20191019T170000Z/20191021T170000Z&location=${data.eventLocation}&sprop=name:Name&sprop=website:EventWebite&details=${data.eventDetails}&sf=true&output=xml`
+    const numOfPeople = this.props.location.state.people
+    const data = defineContentLanguage(this.state.language).success;
     return(
-      <div id="landing-page">
+      <div id="landing-page" className="main-container">
         <SEO id="success" title="bien reçu !" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
 
-        <Header language={this.state.language} color="dark" tagline="text"/>
+        <Header language={this.state.language} color="dark" position="fixed"/>
 
-        <BlobSmOne id="blob-sm-one"/>
-        <BlobSmRsvp id="blob-sm-rsvp"/>
-        <BlobLgOne id="blob-lg-one"/>
-        <BlobLgTwo id="blob-lg-two"/>
+        <Blob id="resa-blob"/>
 
-        <h1>{data.successHeader}</h1>
-        <h5>{data.successTagline}</h5>
+        <h1>{data.header}</h1>
+        <h5>{data.subtitle}<br/>on prend note et on vous réserve {numOfPeople} places.</h5>
+        <p>{data.content}</p>
+        <a href="https://www.paypal.me/CamilleVillard" className="button-green">mais oui, payer maintenant</a>
 
         {/* links */}
-        <div id="links">
-          <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href={request}
-          >
-            {data.calendar}
-          </a>
-          <span>{' // '}</span>
-          <Link to="/">{data.backToSite}</Link>
-        </div>
+        <Footer />
         {/* links */}
 
       </div>
