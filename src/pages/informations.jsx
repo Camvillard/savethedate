@@ -39,15 +39,20 @@ class InformationsPage extends React.Component {
             <div className="blob" id="infos-blob-one">
               <BlobOne />
               <h2>1</h2>
-              <h4 className="infos-title"><span>{data.organisation.title}</span></h4>
+              <h4 className="infos-title"><span>le week end</span></h4>
             </div>
 
             <div className="main-container" >
               <div className="infos-content" id="organisation">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum nam beatae ipsa dignissimos suscipit impedit molestiae repellat,
-                ratione enim, molestias odit magni aspernatur minima iure earum ullam ab itaque? Officiis!
-                </p>
+                <p>le week end du mariage aura lieu du dix-huit (18) octobre en soirée au vingt (20) octobre en fin de journée, à Saint Adolphe d’Howard, une charmante petite bourgade des Laurentides, à 1h30 environ de Montréal.</p>
+                <p>vous pouvez arriver à l’heure qui vous sied le plus sur les lieux, la cérémonie en tant que telle sera célébrée à 16h, le samedi, dans le chalet principal, le Grand Lodge.</p>
+                <p>le vendredi soir et le samedi matin seront un peu « chacun fait comme il veut », il y a des barbecues sur place, ainsi que tous les trucs normaux utiles en temps normal pour cuisiner. le dimanche matin, afin de se remettre des émotions - et des gin tonics - il y aura un fantastique brunch aux alentours de midi, toujours au Grand Lodge.</p>
+                <div className="links-decorated">
+                  <Link className="link-block text-strong" to="/location">
+                    <Arrow className="link-decoration"/>
+                    découvrir les lieux
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -59,23 +64,21 @@ class InformationsPage extends React.Component {
             <div className="blob" id="infos-blob-two">
               <BlobTwo />
               <h2>2</h2>
-              <h4 className="infos-title"><span>{data.sleeping.title}</span></h4>
+              <h4 className="infos-title"><span>l'hébergement</span></h4>
             </div>
 
             <div className="main-container" >
               <div className="infos-content" id="sleeping">
-                <p>{data.sleeping.content}</p>
+                <p>5 chalets sont réservés pour le weekend entier (il y a des pédalos et des plages privées sur le lac et des baby-foot et des barbecues dans chacun des chalets) (oui, c'est merveilleux).</p>
+                <p>on demande à chacun une petite participation de 75$ CAD par personne (environ 50 euros) pour le weekend, pour l'hébergement.
+                </p>
+                <p>un petit peu comme en colonie de vacances, nous essaierons de mettre des amis ensemble, mais bon, peut-être que vous allez vous retrouver avec des gens que vous ne connaissez pas, mais écoutez, quelle meilleure occasion qu’un mariage pour rencontrer d’autres personnes, après tout ?
+                </p>
                 <div className="links-decorated">
                   <Link to="/reserver" className="text-strong link-block">
                     <Arrow className="link-decoration"/>
                     nous faire signe pour un hébergement
                   </Link>
-                </div>
-                <div className="links-decorated">
-                  <a className="link-block text-strong" href="https://fr.airbnb.ca/wishlists/481630144" target="_blank" rel="noopener noreferrer">
-                    <Arrow className="link-decoration"/>
-                    découvrir les chalets (canons)
-                  </a>
                 </div>
               </div>
             </div>
@@ -88,15 +91,14 @@ class InformationsPage extends React.Component {
             <div className="blob" id="infos-blob-three">
               <BlobThree />
               <h2>3</h2>
-              <h4 className="infos-title"><span>{data.dressCode.title}</span></h4>
+              <h4 className="infos-title"><span>le dress-code</span></h4>
             </div>
 
             <div className="main-container" >
               <div className="infos-content" id="dresscode">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum nam beatae ipsa dignissimos suscipit impedit molestiae repellat,
-                ratitwo enim, molestias odit magni aspernatur minima iure earum ullam ab itaque? Officiis!
-                </p>
+                <p>un peu comme chez mac do*, venez comme vous êtes. si vous voulez porter un chapeau, vous pouvez porter un chapeau, si vous voulez porter des baskets, vous pouvez porter des baskets, si vous voulez porer un costume trois  pièces, vous pouvez porter un costumes trois pièces, écoutez, même si vous voulez venir en tongsm venez en tongs.</p>
+                <p>gardez tout de même en tête que le mois d'octobre au Québec peut être fantastique, mais peut également être une catastrophe météorologique, alors bon, on vous conseille de prévoir une petite laine, comme on dit.</p>
+                <p>(* mais ce sera meilleur que chez mac do)</p>
               </div>
             </div>
 
@@ -108,15 +110,20 @@ class InformationsPage extends React.Component {
             <div className="blob" id="infos-blob-four">
               <BlobFour />
               <h2>4</h2>
-              <h4 className="infos-title"><span>{data.gifts.title}</span></h4>
+              <h4 className="infos-title"><span>les cadeaux (lol)</span></h4>
             </div>
 
             <div className="main-container" >
               <div className="infos-content" id="gifts">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum nam beatae ipsa dignissimos suscipit impedit molestiae repellat,
-                ratitwo enim, molestias odit magni aspernatur minima iure earum ullam ab itaque? Officiis!
-                </p>
+                <p>c'est vraiment parce que 98% des gens ont posé la question, alors d'accord, si vous voulez nous offrir des cadeaux, nous n'y voyons aucun inconvénient.</p>
+                <p>comme nous sommes un couple moderne, nous avons fait une petite cagnotte en ligne qui nous aidera à financer notre voyage de noces au Chili (ou des croquettes pour Underscore)</p>
+                <div className="links-decorated">
+                  <a className="link-block text-strong" href="https://paypal.me/pools/c/8fXMV0Bbt7" target="_blank" rel="noopener noreferrer">
+                    <Arrow className="link-decoration"/>
+                    participer à la cagnotte
+                  </a>
+                </div>
+
               </div>
             </div>
 

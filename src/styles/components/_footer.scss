@@ -1,6 +1,6 @@
 /*----- COMPONENTS : FOOTER ----- */
 
-.footer-links {
+#footer-links {
   position: fixed;
   bottom: 0px;
   left: 0;
@@ -9,21 +9,21 @@
   background: white;
   text-align: center;
   color: $jaune-moutarde;
-  font-size: 1.2rem;
+  font-size: 1.2rem !important;
   a {
     color: $jaune-moutarde;
   }
 }
 
 @media (min-width: $sm-screen) {
-  .footer-links {
-    font-size: 1.4rem;
+  #footer-links a{
+    font-size: 1.4rem !important;
   }
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
-  .footer-links {
-    font-size: 1.6rem;
+  #footer-links a{
+    font-size: 1.6rem !important;
   }
 } // end of md-screen - 992px
 

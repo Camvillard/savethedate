@@ -10,7 +10,7 @@ const Footer = (props) => {
   const data = defineContentLanguage(props.language).footer;
   return(
   <footer>
-    <div className="footer-links">
+    <div id="footer-links">
       <AddToCalendar />
       <span> // </span>
       <Link to="/nous-contacter">contact</Link>

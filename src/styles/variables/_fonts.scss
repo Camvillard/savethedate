@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $headers-font;
   color: $forest-green;
   font-weight: 700;
+  margin: 1em auto 0.4rem;
 }
 
 .accent-text, em {
@@ -25,33 +26,26 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3.6rem;
-  margin: 4rem auto 2rem;
 }
 
 h2 {
   font-size: 3.2rem;
-  margin: 3.8rem auto 2rem;
 }
 
 h3 {
   font-size: 2.8rem;
-  margin: 3.2rem auto 1.8rem;
 }
 
 h4 {
   font-size: 2.4rem;
-  margin: 2.8rem auto 1.8rem;
-
 }
 
 h5 {
   font-size: 2rem;
-  margin: 2.4rem auto 1.4rem;
 }
 
 h6 {
   font-size: 1.8rem;
-  margin: 2.4rem auto 1.4rem;
 }
 
 
@@ -59,6 +53,7 @@ p, a, li {
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.4;
+  margin: 0.8em auto 0.4rem;
 }
 
 p {
