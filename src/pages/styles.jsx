@@ -11,13 +11,6 @@ import '../styles/main.scss';
 
 class StylesPage extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      language: navigator.language
-    }
-  }
-
   render() {
     return (
       <div className="main-container" id="styles">
