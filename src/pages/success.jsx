@@ -16,28 +16,20 @@ import '../styles/main.scss';
 
 class SuccessPage extends React.Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      language: navigator.language
-    }
-  }
-
-
   render() {
-    const numOfPeople = this.props.location.state.people
-    const data = defineContentLanguage(this.state.language).success;
+    // const numOfPeople = this.props.location.state.people
+    const numOfPeople = 2
     return(
-      <div id="landing-page" className="main-container">
+      <div id="success-page" className="main-container">
         <SEO id="success" title="bien reçu !" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
 
-        <Header language={this.state.language} color="dark" position="fixed"/>
+        <Header color="dark" position="fixed"/>
 
-        <Blob id="resa-blob"/>
+        {/* JSX Comment <Blob id="resa-blob"/>*/}
 
-        <h1>{data.header}</h1>
-        <h5>{data.subtitle}<br/>on prend note et on vous réserve {numOfPeople} places.</h5>
-        <p>{data.content}</p>
+        <h1>todo bueno</h1>
+        <h5>et merci mucho mucho !<br/>on prend note et on vous réserve {numOfPeople} places.</h5>
+        <p>afin d'être tout à fait tranquilles jusqu'au jour J, vous pouvez payer tout de suite vos places (que la technologie est pratique).</p>
         <a href="https://www.paypal.me/CamilleVillard" className="button-green">mais oui, payer maintenant</a>
 
         {/* links */}

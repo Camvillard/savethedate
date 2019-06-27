@@ -44,19 +44,17 @@ class ContactPage extends React.Component {
   }
 
   render() {
-    const data = defineContentLanguage(this.state.language).contact;
     return(
       <div id="contact-container" className="container-fullheight">
         <SEO title="Nous contacter" id="contact" />
 
         <Header
-          language={this.state.language}
           color="light"
           position="regular"
         />
 
         <div className="contact-content">
-          <p className="text-normal">{data.tagline}</p>
+          <p className="text-normal">si vous avez des trucs à nous demander, ne soyez pas insolents, n'utilisez pas le téléphone (ou alors appelez Alex). Étant donné qu'on est supposément débordés par la préparation de ce mariage, ne vous inquiétez pas si nous mettons plus de 48 heures à vous répondre. Si toutefois vous n'avez pas de réponse au bout d'une semaine, vous êtes en droit de gentiment nous harceler.</p>
         </div>
 
         <form id="contact-form" onSubmit={this.handleSubmit}>

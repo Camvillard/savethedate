@@ -5,7 +5,7 @@ import SEO from '../components/seo';
 import Header from '../components/header'
 
 import content from '../data/content';
-import { defineContentLanguage } from '../helpers/helpers';
+// import { defineContentLanguage } from '../helpers/helpers';
 
 import "../styles/main.scss"
 
@@ -13,13 +13,6 @@ const Airtable = require('airtable');
 // const ApiKey = process.env.AIRTABLE_API;
 
 class RSVP extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      language: ''
-    }
-  }
 
   createAirtableRecord = (rsvp) => {
     // for each new rsvp received, create a new record
@@ -59,18 +52,6 @@ class RSVP extends React.Component {
     this.createAirtableRecord(rsvp);
   }
 
-  componentDidMount() {
-    // set the language accordingly with the browsers language
-    this.setLanguageVersion(window.navigator.language);
-  }
-
-  //changes languages depending on the browser preferences
-  setLanguageVersion = (language) => {
-      this.setState({
-        language: language,
-        inputState: ''
-      })
-  };
 
   handleBlur = () => {
     this.setState({
@@ -79,7 +60,6 @@ class RSVP extends React.Component {
   }
 
   render() {
-    const data = defineContentLanguage(this.state.language, content);
     return(
       <div id="rsvp-container">
 
@@ -90,32 +70,30 @@ class RSVP extends React.Component {
         />
 
         <Header
-          language={this.state.language}
-          flags={this.state.flags}
           color="light"
           tagline="date"
         />
 
         <div className="contact-content">
-          <p>{data.rsvpTagLine}</p>
+          <p>rsvp</p>
         </div>
 
         <form onSubmit={this.handleSubmit} id="form-rsvp" action="/success">
-          <input type="text" placeholder={`${data.contactName}`} ref="name"/>
+          <input type="text" placeholder="nom, prénom, etc" ref="name"/>
           <select name="presence" id="presence" ref="presence">
-            <option value="oui">{data.rsvpYes}</option>
-            <option value="non">{data.rsvpNo}</option>
+            <option value="oui">oui</option>
+            <option value="non">non</option>
           </select>
-          <input type="email" placeholder={`${data.contactMail}`} ref="mail"/>
-          <input type="text" placeholder={`${data.contactAddress}`} ref="address"/>
-          <input type="number" placeholder={`${data.rsvpNumber}`} ref="nbre"/>
-          <textarea name="msg" ref="comment" placeholder={`${data.rsvpComment}`}></textarea>
+          <input type="email" placeholder="adresse mail" ref="mail"/>
+          <input type="text" placeholder="adresse" ref="address"/>
+          <input type="number" placeholder="nombre de personnes" ref="nbre"/>
+          <textarea name="msg" ref="comment" placeholder="commentaire"></textarea>
           <button className="button-send">RSVP</button>
         </form>
 
         <div id="footer-title">
           <h3>rsvp</h3>
-          <Link to="/">{data.backToSite}</Link>
+          <Link to="/">retour au site</Link>
         </div>
 
       </div>
