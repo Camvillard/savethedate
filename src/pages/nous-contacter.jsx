@@ -15,12 +15,6 @@ const Airtable = require('airtable');
 
 class ContactPage extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      language: navigator.language
-    }
-  }
 
   createAirtableContactRecord = (message) => {
     // creates a new record in airtable 'contact' base
@@ -68,16 +62,16 @@ class ContactPage extends React.Component {
         <form id="contact-form" onSubmit={this.handleSubmit}>
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
-          <input name="name" type="text" placeholder={`${data.name}`} ref="name"/>
-          <input name="name" type="email" placeholder={`${data.mail}`} ref="mail"/>
-          <input name="objet" type="text" placeholder={`${data.subject}`} ref="objet"/>
-          <textarea name="msg" placeholder={`${data.body}`} ref="body"></textarea>
-          <button className="button-send">{data.send}</button>
+          <input name="name" type="text" placeholder="nom, prénom, etc" ref="name"/>
+          <input name="name" type="email" placeholder="adresse mail" ref="mail"/>
+          <input name="objet" type="text" placeholder="objet de ce message" ref="objet"/>
+          <textarea name="msg" placeholder="message" ref="body"></textarea>
+          <button className="button-send">envoyer le message</button>
         </form>
 
         <div id="footer-title">
           <h3>contact</h3>
-          <Link to="/">{data.backToSite}</Link>
+          <Link to="/">retour à l'accueil</Link>
         </div>
 
       </div>
