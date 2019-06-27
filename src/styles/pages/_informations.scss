@@ -152,6 +152,29 @@
   }
 }
 
+#infos-blob-five {
+  height: 190px;
+
+  svg {
+    position: absolute;
+    width: 189px;
+    height: 190px;
+    top: 0;
+    left: 24px;
+  }
+
+  h2 {
+    top: 8px;
+    left: 48px;
+  }
+
+  h4.infos-title span {
+    top: 148px;
+    left: 32px;
+    background: $jaune-moutarde;
+  }
+}
+
 
 
 

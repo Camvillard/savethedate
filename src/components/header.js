@@ -3,12 +3,10 @@ import React from "react"
 import { Link } from "gatsby"
 
 // internal stuff
-import { defineContentLanguage } from '../helpers/helpers';
 
 class Header extends React.Component {
 
   render() {
-    const data = defineContentLanguage(this.props.language).header;
     return(
     <header className={`${this.props.color}-header ${this.props.position}-header`} >
       <Link to="/">
@@ -19,7 +17,7 @@ class Header extends React.Component {
         </div>
         {/* cam + alex */}
       </Link>
-      <p id="header-tagline">{data.content} <br/>St Adolphe d'Howard </p>
+      <p id="header-tagline">10/10/2019 <br/>St Adolphe d'Howard </p>
     </header>
 
     )

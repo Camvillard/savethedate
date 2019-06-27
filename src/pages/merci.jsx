@@ -36,12 +36,11 @@ class Merci extends React.Component {
   }
 
   render() {
-    const data = defineContentLanguage(this.state.language, content);
     return(
       <div id="landing-page">
         <SEO id="merci" title="Merci beaucoup" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
 
-        <Header language={this.state.language} color="dark" tagline="text"/>
+        <Header color="dark" tagline="text"/>
 
 
         <BlobSmOne id="blob-sm-one"/>
@@ -49,12 +48,12 @@ class Merci extends React.Component {
         <BlobLgOne id="blob-lg-one"/>
         <BlobLgTwo id="blob-lg-two"/>
 
-        <h1>{data.contactSuccess}</h1>
-        <h5>{data.contactContent}</h5>
+        <h1>merci !</h1>
+        <h5>on a bien reçu votre message, on s'en occupe dare-dare.</h5>
 
         {/* links */}
         <div id="links">
-          <Link to="/">{data.backToSite}</Link>
+          <Link to="/">retour au site</Link>
         </div>
         {/* links */}
 

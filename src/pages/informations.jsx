@@ -3,7 +3,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 // internal stuff
-import { defineContentLanguage } from '../helpers/helpers';
 import Header from "../components/header";
 import Footer from '../components/footer';
 
@@ -19,18 +18,11 @@ import "../styles/main.scss"
 
 class InformationsPage extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      language: navigator.language
-    }
-  };
 
   render(){
-    const data = defineContentLanguage(this.state.language).informations;
     return(
       <div id="infos-page">
-        <Header language={this.state.language} color="dark"/>
+        <Header color="dark"/>
 
         <div className="fullwidth-container">
 
@@ -130,11 +122,43 @@ class InformationsPage extends React.Component {
           </div>
           {/* end of #blob-four */}
 
+          <div className="infos-container" >
+
+            <div className="blob" id="infos-blob-five">
+              <BlobOne />
+              <h2>5</h2>
+              <h4 className="infos-title"><span>bon à savoir</span></h4>
+            </div>
+
+            <div className="main-container" >
+              <div className="columns-content" id="bon à savoir">
+
+                <div className="two-columns">
+                  <p>avant toute chose, ce mariage est un prétexte pour un gros weekend entre amis. si vous voulez partager avec nous (et tout le monde) votre (vos) bouteille(s) d’alcool - ou d’eau qui pique - favorite, vous êtes les bienvenus.</p>
+                  <p>de la même manière, si vous avez envie d’apporter un bout de mimolette et/ou de brie et/ou de saint nectaire et/ou vous avez compris l’idée, vous gagnerez un bisou (avant de manger du fromage qui pue).</p>
+                  <p>et puis aussi, apportez votre jeu de pétanque, de molki (Alex va perdre), de Uno (Camille va gagner), votre nécéessaire à point de croix, enfin bref, tout ce qui vous passe par la tête et vous fera passer un pur weekend de folie.</p>
+                </div>
+
+                <div className="two-columns">
+                  <p>si vous êtes allergique alimentairement à quelque chose - ou bien si vos convictions alimentaires sont particulières (par exemple véganisme), merci de nous le faire savoir illico presto (ou en tous cas assez rapidement).</p>
+                  <p>si vous êtes de nature maladroite (c’est à dire si vous cassez plus d’un verre par weekend), merci également de le faire savoir au comité organisateur - c’est à dire nous - afin de pouvoir vous donner des verres en carton (compostables) (évidemment).</p>
+                  <p>restez à l’affût, d’autres informations vous seront probablement communiquées dare-dare.</p>
+                </div>
+
+              </div>
+              {/* end of .columns-content */}
+
+            </div>
+            {/* end of main-container */}
+
+          </div>
+          {/* end of #blob-five */}
+
         </div>
         {/* end of .blobs */}
 
 
-        <Footer language={this.state.language} />
+        <Footer />
 
 
       </div>

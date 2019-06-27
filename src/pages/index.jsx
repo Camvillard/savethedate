@@ -8,7 +8,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 // import SaveTheDate from '../components/savethedate';
 
-import { defineContentLanguage } from '../helpers/helpers';
+// import { defineContentLanguage } from '../helpers/helpers';
 
 // style & assets
 import '../styles/main.scss';
@@ -22,45 +22,29 @@ import BlobLgTwo from '../images/blob-lg-2.svg';
 
 class IndexPage extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      language: navigator.language
-    }
-  }
-
   render() {
-    const data = defineContentLanguage(this.state.language);
-    const content = data.homepage
-    const event = data.event
     return (
       <div id="homepage">
         <SEO title="save the date" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
-        <Header language={this.state.language} color="dark" position="fixed"/>
+        <Header color="dark" position="fixed"/>
 
         <div className="container-fullheight" >
 
           <div id="date">
-            <h1 className="accent-text ">{content.date}</h1>
-            <h1 className="text-light accent-text">{content.year}</h1>
+            <h1 className="accent-text ">dix neuf octobre</h1>
+            <h1 className="text-light accent-text">deux mille dix neuf</h1>
           </div>
 
           <ul id="actions">
             <li>
-              <Link to="/#" className="text-strong">{content.where}</Link>
+              <Link to="/location" className="text-strong">c'est où ?</Link>
             </li>
             <li>
-              <Link to="/informations" className="text-strong">{content.how}</Link>
-            </li>
-            <li>
-              <Link to="/french-people" className="text-strong">{content.frenchPeople}</Link>
-            </li>
-            <li>
-              <Link to="/#" className="text-strong">{content.goodToKnow}</Link>
+              <Link to="/informations" className="text-strong">c'est comment ?</Link>
             </li>
           </ul>
 
-          <Footer language={this.state.language} />
+          <Footer />
 
           <BlobSmOne className="blob-sm-one"/>
           <BlobSmTwo className="blob-sm-two"/>

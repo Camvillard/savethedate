@@ -7,7 +7,6 @@ import SEO from '../components/seo';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
-import { defineContentLanguage } from '../helpers/helpers';
 
 // style & assets
 import "../styles/main.scss"
@@ -16,13 +15,6 @@ const Airtable = require('airtable');
 // const ApiKey = process.env.AIRTABLE_API;
 
 class ReservationPage extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      language: navigator.language
-    }
-  }
 
   createAirtableRecord = (reservation) => {
     // Airtable settings
@@ -58,7 +50,6 @@ class ReservationPage extends React.Component {
   }
 
   render() {
-    const data = defineContentLanguage(this.state.language).reserver;
     return(
       <div id="reserver-container">
 
@@ -69,25 +60,24 @@ class ReservationPage extends React.Component {
         />
 
         <Header
-          language={this.state.language}
           color="light"
         />
 
         <div className="contact-content">
-          <p>{data.rsvpTagLine}</p>
+          <p>étant donné que les deux futurs mariés sont plutôt désorganisés, ce serait assez génial de nous faciliter la tâche un tout petit peu et de nous donner une réponse avant le 15 mai. tous les détails, lieu, etc, de la cérémonie seront bien entendu communiqués très très vite.</p>
         </div>
 
         <form onSubmit={this.handleSubmit} id="form-rsvp">
-          <input type="text" placeholder={`${data.name}`} ref="name"/>
-          <input type="email" placeholder={`${data.mail}`} ref="mail"/>
-          <input type="text" placeholder={`${data.places}`} ref="people"/>
-          <textarea name="msg" ref="message" placeholder={`${data.message}`}></textarea>
+          <input type="text" placeholder="nom, prénom, etc" ref="name"/>
+          <input type="email" placeholder="adresse mail" ref="mail"/>
+          <input type="text" placeholder="nombre de personnes" ref="people"/>
+          <textarea name="msg" ref="message" placeholder="commentaire pertinent éventuel"></textarea>
           <button className="button-send">réserver</button>
         </form>
 
         <div id="footer-title">
           <h3>rsvp</h3>
-          <Link to="/">{data.backToSite}</Link>
+          <Link to="/">retour au site</Link>
         </div>
 
       </div>
