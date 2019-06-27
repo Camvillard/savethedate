@@ -1,11 +1,6 @@
-/*----- INDEX FOR PAGES ----- */
+/*----- PAGES : LOCATION ----- */
 
-@import "homepage";
-@import "informations";
-@import "french-people";
-@import "success";
-@import "thanks";
-@import "location";
+
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px
@@ -14,6 +9,13 @@
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
+  #location-page {
+    .location-details {
+      width: 28vw;
+      margin-left: 12vw;
+      margin-top: -120px;
+    }
+  }
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {
