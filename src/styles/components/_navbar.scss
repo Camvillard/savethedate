@@ -3,7 +3,7 @@
 #toggle {
   position: fixed;
   top: 24px;
-  right: 24px;
+  left: 6vw;
   z-index: 9000000;
 
   h4{
@@ -36,7 +36,30 @@
   justify-content: center;
   position: fixed;
   z-index: 6000;
-  background: $forest-green;
+
+  &.green {
+    background: $forest-green;
+    a {
+      color: white;
+      border-bottom: 2px solid white;
+    }
+  }
+
+  &.yellow {
+    background: $jaune-moutarde;
+    a {
+      color: white;
+      border-bottom: 2px solid white;
+    }
+  }
+
+  &.white {
+    background: white;
+    a {
+      color: $forest-green;
+      border-bottom: 2px solid $forest-green;
+    }
+  }
 }
 
 .menu.hide-menu {

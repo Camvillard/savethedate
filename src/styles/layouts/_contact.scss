@@ -1,21 +1,35 @@
 /* ------ PAGES : RSVP ------ */
 
 
-body#contact {
+#contact-container {
   background: $forest-green;
 }
 
 // page
 
-#contact-container {
-  width: 100vw;
-  margin: auto;
-}
+
 
 // content
-.contact-content p{
-  color: white;
-  font-weight: 300;
+
+.contact-container {
+
+
+  .page-title {
+    color: white;
+    margin-bottom: 32px;
+  }
+
+
+  .page-title span {
+    padding-bottom: 8px;
+    border-bottom: 4px solid white;
+  }
+
+  p.contact-content{
+    color: white;
+    font-weight: 300;
+  }
+
 }
 
 .back-home-link {
@@ -36,10 +50,10 @@ body#contact {
 form#contact-form {
   margin: auto;
 
-  input,
-  textarea {
-    background: $forest-green;
-  }
+  // input,
+  // textarea {
+  //   background: $forest-green;
+  // }
 
   ::placeholder {
     color: white;
@@ -47,9 +61,9 @@ form#contact-form {
 
   // states for inputs
 
+  input:hover,
   input:focus,
   input:active,
-  input:hover,
   input:visited,
   textarea:focus,
   textarea:active,
@@ -71,7 +85,7 @@ form#contact-form {
 @media (min-width: $sm-screen) {
   // content
   .contact-content {
-    width: 65%;
+    // width: 65%;
   }
 
 } // end of sm-screen - 768px
@@ -80,7 +94,7 @@ form#contact-form {
 
 @media (min-width: $md-screen) {
   .contact-content {
-    width: 50%;
+    // width: 50%;
   }
 
 } // end of md-screen - 992px

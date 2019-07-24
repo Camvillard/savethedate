@@ -7,7 +7,14 @@
 .main-container {
   width: 88vw;
   margin: auto;
-  max-width: 1280px;
+  max-width: 1080px;
+}
+
+
+.small-container {
+  width: 88vw;
+  margin: auto;
+  max-width: 624px;
 }
 
 .large-container {
@@ -16,7 +23,7 @@
 }
 
 .container-fullpage {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   margin: auto;
   display: flex;
@@ -44,7 +51,7 @@
 
 @media (min-width: $lg-screen) {
   .main-container {
-    width: 56vw;
+    width: 62vw;
   }
 
   .container-fullheight {

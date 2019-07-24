@@ -5,6 +5,7 @@ import { Link } from 'gatsby';
 // internal data
 import SEO from "../components/seo";
 import Header from '../components/header';
+import Navbar from "../components/navbar";
 
 import { defineContentLanguage } from '../helpers/helpers';
 
@@ -45,34 +46,44 @@ class ContactPage extends React.Component {
 
   render() {
     return(
-      <div id="contact-container" className="container-fullheight">
-        <SEO title="Nous contacter" id="contact" />
+      <React.Fragment>
+        <SEO title="Nous contacter" />
 
-        <Header
-          color="light"
-          position="regular"
-        />
+        <div id="contact-container" className="container-fullpage" >
 
-        <div className="contact-content">
-          <p className="text-normal">si vous avez des trucs à nous demander, ne soyez pas insolents, n'utilisez pas le téléphone (ou alors appelez Alex). Étant donné qu'on est supposément débordés par la préparation de ce mariage, ne vous inquiétez pas si nous mettons plus de 48 heures à vous répondre. Si toutefois vous n'avez pas de réponse au bout d'une semaine, vous êtes en droit de gentiment nous harceler.</p>
+          <Header
+            color="light"
+            position="regular"
+          />
+
+          { window.innerWidth < 992 && (<Navbar bgColor="green" /> )}
+
+          <div className="contact-container small-container">
+
+            <h2 className="page-title"><span>contact</span></h2>
+            <p className="contact-content">si vous avez des trucs à nous demander, ne soyez pas insolents, n'utilisez pas le téléphone (ou alors appelez Alex). Étant donné qu'on est supposément débordés par la préparation de ce mariage, ne vous inquiétez pas si nous mettons plus de 48 heures à vous répondre. Si toutefois vous n'avez pas de réponse au bout d'une semaine, vous êtes en droit de gentiment nous harceler.</p>
+
+            <form id="contact-form" className="form-stroked form-white" onSubmit={this.handleSubmit}>
+              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="form-name" value="contact" />
+              <input name="name" type="text" placeholder="nom, prénom, etc" ref="name"/>
+              <input name="name" type="email" placeholder="adresse mail" ref="mail"/>
+              <input name="objet" type="text" placeholder="objet de ce message" ref="objet"/>
+              <textarea name="msg" placeholder="message" ref="body"></textarea>
+              <button className="button-send">envoyer le message</button>
+            </form>
+
+            <div id="footer-title">
+              <Link to="/">retour à l'accueil</Link>
+            </div>
+
+          </div>
+
+
+
+
         </div>
-
-        <form id="contact-form" onSubmit={this.handleSubmit}>
-          <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="contact" />
-          <input name="name" type="text" placeholder="nom, prénom, etc" ref="name"/>
-          <input name="name" type="email" placeholder="adresse mail" ref="mail"/>
-          <input name="objet" type="text" placeholder="objet de ce message" ref="objet"/>
-          <textarea name="msg" placeholder="message" ref="body"></textarea>
-          <button className="button-send">envoyer le message</button>
-        </form>
-
-        <div id="footer-title">
-          <h3>contact</h3>
-          <Link to="/">retour à l'accueil</Link>
-        </div>
-
-      </div>
+      </React.Fragment>
     )
   }
 

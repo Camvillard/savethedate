@@ -15,6 +15,7 @@
     outline: none;
     padding-left: 10px;
     font-weight: 400;
+    font-family: $body-font;
   }
 
   textarea {
@@ -45,10 +46,11 @@
     border-bottom: 1px solid white;
     color: white;
   }
+
   ::placeholder{
     font-family: $accent-font;
-    font-weight: 400;
-    font-size: 1.4rem;
+    font-weight: 300;
+    font-size: 1.2rem;
     color: white;
   }
 
@@ -67,17 +69,15 @@ form {
     font-size: 1.4rem;
   }
 
-
-
   button.button-send {
     align-self: flex-end;
     border-radius: 0px;
     width: 100%;
     height: 3.8rem;
-    text-align: right;
-    font-family: $accent-font;
+    text-align: center;
+    font-family:  $body-font;
     color: $forest-green;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 2rem;
     outline: none;
     border: none;
@@ -93,17 +93,11 @@ form {
 
 @media (min-width: $sm-screen) {
   // content
-  form {
-    width: 65vw;
-  }
 
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
 
-  form {
-    width: 50vw;
-  }
 } // end of md-screen - 992px
 
 

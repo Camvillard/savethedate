@@ -13,16 +13,11 @@ class Header extends React.Component {
 
       <div className="header-left">
         <Link to="/">
-          {/* cam + alex */}
-          <div id="cam-alex">
-            <h6>cam & alex</h6>
-            <div className="small-divider"></div>
-          </div>
-          {/* cam + alex */}
+          <h6>cam & alex</h6>
         </Link>
-        <p id="header-tagline">19/10/2019</p>
+        <p>19/10/2019</p>
       </div>
-      <Navbar />
+
     </header>
 
     )

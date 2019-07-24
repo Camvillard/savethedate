@@ -24,13 +24,16 @@ class Navbar extends React.Component {
 
         <div id="toggle" onClick={this.handleClick}>
 
-          {this.state.navbarIsOpen ? <CloseToggle /> : <Toggle />  }
+          {/*this.state.navbarIsOpen ? <CloseToggle /> : <Toggle />  */}
+          {this.state.navbarIsOpen ? <span>x</span> : <span>+</span>  }
 
         </div>
 
-        <ul className={`menu ${this.state.navbarIsOpen ? 'show-menu' : 'hide-menu' }`}>
+        <ul className={`menu ${this.state.navbarIsOpen ? 'show-menu' : 'hide-menu' } ${this.props.bgColor} `}>
           <li><Link to="/informations">les infos</Link></li>
           <li><Link to="/location">l'endroit</Link></li>
+          <li><Link to="/reserver">réserver</Link></li>
+          <li><Link to="/nous-contacter">contact</Link></li>
         </ul>
 
       </div>

@@ -28,29 +28,27 @@ class IndexPage extends React.Component {
 
         <div id="page-homepage">
 
-
           <div className="container-fullpage content-homepage">
-          <div id="homepage-header">
-            <h6>cam & alex</h6>
-          </div>
-
-          <div className="homepage-center">
-
-            <div id="location" className="text-link">
-              <Link to="/location" id="location-link-cursor">le lieu</Link>
+            <div id="homepage-header">
+              <h6>cam & alex</h6>
             </div>
 
-            <div id="date">
-              <h1>dix neuf octobre <br/>
-              deux mille dix neuf</h1>
+            <div className="homepage-center">
+
+              <div id="location" className="text-link">
+                <Link to="/location" id="location-link-cursor">le lieu</Link>
+              </div>
+
+              <div id="date">
+                <h1>dix neuf octobre <br/>
+                deux mille dix neuf</h1>
+              </div>
+
+              <div id="informations" className="text-link">
+                  <Link to="/informations" id="info-link-cursor">les infos</Link>
+              </div>
+
             </div>
-
-            <div id="informations" className="text-link">
-                <Link to="/informations" id="info-link-cursor">les infos</Link>
-            </div>
-
-          </div>
-
 
             <Footer />
 
