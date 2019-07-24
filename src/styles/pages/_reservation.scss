@@ -1,7 +1,7 @@
 /*----- PAGES : RESERVATION ----- */
 
 
-body#reserver {
+#page-reservation {
   background: $taupe;
 }
 
@@ -11,6 +11,36 @@ body#reserver {
   h2, p {
     color: white;
   }
+}
+
+#form-reserver {
+  margin: auto;
+
+  ::placeholder {
+    color: white;
+  }
+
+  // states for inputs
+
+  input:hover,
+  input:focus,
+  input:active,
+  input:visited,
+  textarea:focus,
+  textarea:active,
+  textarea:hover,
+  textarea:visited {
+    background: $forest-green;
+    border: 2px solid $forest-green;
+    outline: none;
+    outline-offset: 0px;
+    font-family: $body-font;
+  }
+
+  button {
+    color: $forest-green;
+  }
+
 }
 
 @media (min-width: $sm-screen) {

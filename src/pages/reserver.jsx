@@ -52,42 +52,37 @@ class ReservationPage extends React.Component {
 
   render() {
     return(
-      <div id="page-reservation">
-
+      <React.Fragment>
         <SEO
-          id="reserver"
           title="réservation"
           keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
         />
 
-        <Header
-          color="light"
-          position= "floating"
-        />
+        <div id="page-reservation" className="container-fullpage">
 
-        <Navbar />
+          <Header
+            color="light"
+            position= "regular"
+          />
 
-        <div className="large-container">
+          { window && window.innerWidth < 992 && (<Navbar bgColor="yellow" /> )}
 
-          <h2>réserver l'hébergement</h2>
-          <p>étant donné que les deux futurs mariés sont plutôt désorganisés, ce serait assez génial de nous faciliter la tâche un tout petit peu et de nous donner une réponse avant le 15 mai. tous les détails, lieu, etc, de la cérémonie seront bien entendu communiqués très très vite.</p>
+          <div className="large-container">
 
-          <form onSubmit={this.handleSubmit} id="form-reserver" className="form-stroked form-white">
-            <input type="text" placeholder="nom, prénom, etc" ref="name"/>
-            <input type="email" placeholder="adresse mail" ref="mail"/>
-            <input type="text" placeholder="nombre de personnes" ref="people"/>
-            <textarea name="msg" ref="message" placeholder="commentaire pertinent éventuel"></textarea>
-            <button className="button-send">réserver</button>
-          </form>
+            <h2>réserver l'hébergement</h2>
+            <p>étant donné que les deux futurs mariés sont plutôt désorganisés, ce serait assez génial de nous faciliter la tâche un tout petit peu et de nous donner une réponse avant le 15 mai. tous les détails, lieu, etc, de la cérémonie seront bien entendu communiqués très très vite.</p>
+
+            <form onSubmit={this.handleSubmit} id="form-reserver" className="form-stroked form-white">
+              <input type="text" placeholder="nom, prénom, etc" ref="name"/>
+              <input type="email" placeholder="adresse mail" ref="mail"/>
+              <input type="text" placeholder="nombre de personnes" ref="people"/>
+              <textarea name="msg" ref="message" placeholder="commentaire pertinent éventuel"></textarea>
+              <button className="button-send">réserver</button>
+            </form>
+          </div>
+
         </div>
-
-
-        <div id="footer-title">
-          <h3>réserver</h3>
-          <Link to="/">retour au site</Link>
-        </div>
-
-      </div>
+      </React.Fragment>
     )
   }
 }

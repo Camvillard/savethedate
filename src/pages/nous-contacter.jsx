@@ -56,7 +56,7 @@ class ContactPage extends React.Component {
             position="regular"
           />
 
-          { window.innerWidth < 992 && (<Navbar bgColor="green" /> )}
+          { window && window.innerWidth < 992 && (<Navbar bgColor="green" /> )}
 
           <div className="contact-container small-container">
 
@@ -73,14 +73,7 @@ class ContactPage extends React.Component {
               <button className="button-send">envoyer le message</button>
             </form>
 
-            <div id="footer-title">
-              <Link to="/">retour à l'accueil</Link>
-            </div>
-
           </div>
-
-
-
 
         </div>
       </React.Fragment>
