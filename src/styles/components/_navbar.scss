@@ -2,12 +2,24 @@
 
 #toggle {
   position: fixed;
+  font-size: 4.2rem;
   top: 24px;
   left: 6vw;
   z-index: 9000000;
 
   h4{
     color: white
+  }
+
+  svg.close {
+    display: block;
+    transform: rotate(45deg);
+    transform-origin: center;
+  }
+
+  svg.open {
+    display:  block;
+    // transform: rotate(-45deg);
   }
 }
 
@@ -66,3 +78,8 @@
   display: none;
   opacity: 0;
 }
+
+
+@media (min-width: $md-screen) {
+
+} // end of md-screen - 992px

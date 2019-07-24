@@ -65,9 +65,9 @@ class ReservationPage extends React.Component {
             position= "regular"
           />
 
-          { window && window.innerWidth < 992 && (<Navbar bgColor="yellow" /> )}
+          <Navbar bgColor="yellow" />
 
-          <div className="large-container">
+          <div className="reservation-container small-container">
 
             <h2>réserver l'hébergement</h2>
             <p>étant donné que les deux futurs mariés sont plutôt désorganisés, ce serait assez génial de nous faciliter la tâche un tout petit peu et de nous donner une réponse avant le 15 mai. tous les détails, lieu, etc, de la cérémonie seront bien entendu communiqués très très vite.</p>

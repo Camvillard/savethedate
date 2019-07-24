@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import Toggle from "../images/toggle.svg";
+import Toggle from "../images/toggle_2.svg";
 import CloseToggle from "../images/toggle-close.svg";
 
 class Navbar extends React.Component {
@@ -24,8 +24,7 @@ class Navbar extends React.Component {
 
         <div id="toggle" onClick={this.handleClick}>
 
-          {/*this.state.navbarIsOpen ? <CloseToggle /> : <Toggle />  */}
-          {this.state.navbarIsOpen ? <span>x</span> : <span>+</span>  }
+          {this.state.navbarIsOpen ? <Toggle className="close" /> : <Toggle className="open" /> }
 
         </div>
 

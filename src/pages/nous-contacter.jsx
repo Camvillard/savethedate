@@ -56,7 +56,7 @@ class ContactPage extends React.Component {
             position="regular"
           />
 
-          { window && window.innerWidth < 992 && (<Navbar bgColor="green" /> )}
+          <Navbar bgColor="green" />
 
           <div className="contact-container small-container">
 
