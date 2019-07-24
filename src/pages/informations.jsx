@@ -6,6 +6,7 @@ import { Link } from 'gatsby';
 import Header from "../components/header";
 import Footer from '../components/footer';
 
+
 // style & assets
 import BlobOne from "../images/infos-blob-1.svg";
 import BlobTwo from "../images/infos-blob-2.svg";
@@ -22,9 +23,10 @@ class InformationsPage extends React.Component {
   render(){
     return(
       <div id="infos-page">
+
         <Header color="dark"/>
 
-        <div className="fullwidth-container">
+        <div className="fullwidth-container top-container">
 
           <div className="infos-container" >
 
@@ -62,7 +64,7 @@ class InformationsPage extends React.Component {
             <div className="main-container" >
               <div className="infos-content" id="sleeping">
                 <p>5 chalets sont réservés pour le weekend entier (il y a des pédalos et des plages privées sur le lac et des baby-foot et des barbecues dans chacun des chalets) (oui, c'est merveilleux).</p>
-                <p>on demande à chacun une petite participation de 75$ CAD par personne (environ 50 euros) pour le weekend, pour l'hébergement.
+                <p>on demande à chacun une petite participation de 80$ CAD par personne (environ 60 euros) pour le weekend, pour l'hébergement.
                 </p>
                 <p>un petit peu comme en colonie de vacances, nous essaierons de mettre des amis ensemble, mais bon, peut-être que vous allez vous retrouver avec des gens que vous ne connaissez pas, mais écoutez, quelle meilleure occasion qu’un mariage pour rencontrer d’autres personnes, après tout ?
                 </p>
@@ -108,7 +110,7 @@ class InformationsPage extends React.Component {
             <div className="main-container" >
               <div className="infos-content" id="gifts">
                 <p>c'est vraiment parce que 98% des gens ont posé la question, alors d'accord, si vous voulez nous offrir des cadeaux, nous n'y voyons aucun inconvénient.</p>
-                <p>comme nous sommes un couple moderne, nous avons fait une petite cagnotte en ligne qui nous aidera à financer notre voyage de noces au Chili (ou des croquettes pour Underscore)</p>
+                <p>comme nous sommes un couple moderne, nous avons fait une petite cagnotte en ligne qui nous aidera à financer notre voyage de noces au Chili (ou des croquettes pour Coco).</p>
                 <div className="links-decorated">
                   <a className="link-block text-strong" href="https://paypal.me/pools/c/8fXMV0Bbt7" target="_blank" rel="noopener noreferrer">
                     <Arrow className="link-decoration"/>

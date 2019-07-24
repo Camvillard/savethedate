@@ -7,10 +7,8 @@ import { defineContentLanguage } from '../helpers/helpers';
 
 
 import content from '../data/content';
-import BlobSmOne from '../images/blob-sm-1.svg';
-import BlobSmTwo from '../images/blob-sm-2.svg';
-import BlobLgOne from '../images/blob-lg-1.svg';
-import BlobLgTwo from '../images/blob-lg-2.svg';
+import Blob1 from '../images/blob_homepage-1.svg';
+import Blob2 from '../images/blob_homepage-2.svg';
 
 import '../styles/main.scss'
 
@@ -43,10 +41,8 @@ class Merci extends React.Component {
         <Header color="dark" tagline="text"/>
 
 
-        <BlobSmOne id="blob-sm-one"/>
-        <BlobSmTwo id="blob-sm-rsvp"/>
-        <BlobLgOne id="blob-lg-one"/>
-        <BlobLgTwo id="blob-lg-two"/>
+        <Blob1 id="blob-sm-one"/>
+        <Blob2 id="blob-sm-rsvp"/>
 
         <h1>merci !</h1>
         <h5>on a bien reçu votre message, on s'en occupe dare-dare.</h5>

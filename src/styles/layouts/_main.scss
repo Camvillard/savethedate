@@ -25,6 +25,20 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 
+img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 100vw;
+}
+
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
 a {
   text-decoration: none;
   color: $forest-green;
@@ -40,18 +54,6 @@ a {
   &.text-strong {
     font-size: 2rem;
   }
-}
-
-img, svg {
-  width: 100%;
-  max-width: 100vw;
-}
-
-
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-  overflow-y: scroll;
 }
 
 

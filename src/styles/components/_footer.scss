@@ -9,21 +9,22 @@
   background: white;
   text-align: center;
   color: $jaune-moutarde;
-  font-size: 1.2rem !important;
   a {
+    font-size: 1.2rem;
     color: $jaune-moutarde;
+    font-weight: 300;
   }
 }
 
 @media (min-width: $sm-screen) {
   #footer-links a{
-    font-size: 1.4rem !important;
+    font-size: 1.4rem;
   }
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
   #footer-links a{
-    font-size: 1.6rem !important;
+    font-size: 1.6rem;
   }
 } // end of md-screen - 992px
 

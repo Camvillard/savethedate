@@ -1,12 +1,11 @@
 /*----- VARIABLES : FONTS ----- */
 
 @import url("https://use.typekit.net/kzs6ilf.css");
-@import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:300,700');
 
 
 $body-font: 'arboria', sans-serif;
 $headers-font: 'arboria', sans-serif;
-$accent-font: 'Frank Ruhl Libre', serif;
+$accent-font: 'interstate-mono', monospace;
 
 body {
   font-family: $body-font;
@@ -22,14 +21,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .accent-text, em {
   font-family: $accent-font;
+  font-weight: 300;
 }
 
 h1 {
-  font-size: 3.6rem;
+  font-size: 3.2rem;
 }
 
 h2 {
-  font-size: 3.2rem;
+  font-size: 3rem;
 }
 
 h3 {

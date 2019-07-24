@@ -1,9 +1,13 @@
 /*----- INDEX FOR COMPONENTS ----- */
 
+.top-container {
+  margin-top: 24px;
+}
 
 .main-container {
   width: 88vw;
   margin: auto;
+  max-width: 1280px;
 }
 
 .large-container {
@@ -11,9 +15,9 @@
   margin: auto;
 }
 
-.container-fullheight {
-  min-height: 100vh;
-  width: 90vw;
+.container-fullpage {
+  height: 100vh;
+  width: 100vw;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -25,6 +29,10 @@
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
+  .top-container {
+    margin-top: 124px;
+  }
+
   .main-container {
     width: 82vw;
   }

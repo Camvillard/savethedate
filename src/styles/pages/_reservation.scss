@@ -1,12 +1,17 @@
-/*----- INDEX FOR PAGES ----- */
+/*----- PAGES : RESERVATION ----- */
 
-@import "homepage";
-@import "informations";
-@import "reservation";
-@import "french-people";
-@import "success";
-@import "thanks";
-@import "location";
+
+body#reserver {
+  background: $taupe;
+}
+
+#page-reservation {
+  color: white;
+
+  h2, p {
+    color: white;
+  }
+}
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px

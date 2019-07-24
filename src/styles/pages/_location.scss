@@ -1,5 +1,19 @@
 /*----- PAGES : LOCATION ----- */
 
+#location-page {
+  h2 {
+    margin: 1em auto;
+  }
+
+  .text-strong {
+    color: $forest-green;
+
+  }
+
+  .ceremony-details {
+    margin-bottom: 48px;
+  }
+}
 
 
 @media (min-width: $sm-screen) {
@@ -15,6 +29,20 @@
       margin-left: 12vw;
       margin-top: -120px;
     }
+
+    .ceremony-details {
+      img {
+        width: 75%;
+        margin: auto;
+      }
+    }
+
+    .details-content {
+      width: 45%;
+      margin-left: 25%;
+    }
+
+
   }
 } // end of lg-screen - 1200px
 

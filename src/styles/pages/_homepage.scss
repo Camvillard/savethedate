@@ -1,84 +1,257 @@
 /*----- PAGES : HOMEPAGE ----- */
 
+#homepage-header {
+  position: fixed;
+  top: 8px;
+  left: 0;
+  width: 100%;
 
-#homepage {
+  h6 {
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.4rem;
+  }
+}
+
+.content-homepage {
+  width: 90%;
+  margin: auto;
 
   h1 {
     margin: 0 auto;
     text-align: center;
+    font-weight: 700;
   }
-}
 
-ul#actions {
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-  width: 60vw;
+  .blob-homepage-one {
+    width: 100px;
+    height: 85px;
+    position: fixed;
+    top: 24px;
+    right: 32px;
+  }
 
-  li {
-    background: $forest-green;
-    text-align: center;
-    margin: 8px auto;
-    padding: 8px 0px;
+  .blob-homepage-two {
+    width: 118px;
+    position: fixed;
+    bottom: 6px;
+    left: -16px;
+  }
+
+  .text-link {
+    position: relative;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 
   a {
-    color: white;
-    font-size: 1.6rem;
-    text-transform: uppercase;
+    margin: 0 4px 0 0;
   }
 }
 
+
+#location.text-link {
+  justify-content: flex-start;
+  padding-left: 40px;
+
+  a:after {
+    position: absolute;
+    top: 17px;
+    left: 94px;
+    content: " ";
+    background: $forest-green;
+    width: 80px;
+    height: 1px;
+  }
+}
+
+#informations.text-link {
+  justify-content: flex-end;
+  padding-right: 40px;
+
+  a {
+    text-align: right;
+  }
+
+  a:after {
+    position: absolute;
+    top: 17px;
+    right: 114px;
+    content: " ";
+    background: $forest-green;
+    width: 80px;
+    height: 1px;
+  }
+}
+
+
 @media (min-width: $sm-screen) {
 
-  ul#actions {
-    width: 46vw;
-
-    li {
-      margin: 16px auto;
-      padding: 12px 0px;
-    }
-
-    a {
-      font-size: 1.8rem;
-    }
-  }
 
 } // end of sm-screen - 768px
 
-@media (min-width: $md-screen) {
+@media (min-width: $sm-screen) and (orientation: portrait) {
 
-  ul#actions {
-    width: 40vw;
+  #homepage-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
 
-    li {
-      margin: 16px auto;
-      padding: 12px 0px;
+    h6 {
+      text-align: center;
+      margin: 0;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 1.4rem;
     }
   }
+
+  .content-homepage {
+    width: 90%;
+
+    .homepage-center {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .text-link {
+      flex: 0 0 24%;
+    }
+
+    h1 {
+      font-size:  3.4rem;
+    }
+
+    .blob-homepage-one {
+      width: 188px;
+      height: 166px;
+      position: fixed;
+      top: 32px;
+      right: 32px;
+    }
+
+    .blob-homepage-two {
+      width: 334px;
+      height: 298px;
+      position: fixed;
+      bottom: 32px;
+      left: -20px;
+    }
+  }
+
+  #location.text-link {
+    padding-left: 0px;
+
+    a:after {
+      position: absolute;
+      top: 17px;
+      left: 54px;
+      content: " ";
+      background: $forest-green;
+      width: 80px;
+      height: 1px;
+    }
+  }
+
+  #informations.text-link {
+    padding-right: 0px;
+
+    a {
+      text-align: right;
+    }
+
+    a:after {
+      position: absolute;
+      top: 17px;
+      right: 74px;
+      content: " ";
+      background: $forest-green;
+      width: 80px;
+      height: 1px;
+    }
+  }
+
+} // end of tablets portrait
+
+@media (min-width: $md-screen) {
+
+  #homepage-header {
+    top: 24px;
+
+    h6 {
+      font-size: 1.6rem;
+    }
+  }
+
+  .content-homepage {
+    width: 60%;
+  }
+
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
 
-  ul#actions {
-    width: 36vw;
+  #homepage-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 24px;
+    width: 100%;
 
-    a {
-      font-size: 2rem;
+    h6 {
+      text-align: center;
+      margin: 0;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 1.4rem;
     }
+  }
+  .content-homepage {
+    width: 60%;
+
+    .homepage-center {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .text-link {
+      flex: 0 0 24%;
+    }
+
+    h1 {
+      font-size:  3.4rem;
+    }
+
+    .blob-homepage-one {
+      width: 188px;
+      height: 166px;
+      position: fixed;
+      top: 32px;
+      right: 32px;
+    }
+
+    .blob-homepage-two {
+      width: 211px;
+      height: 188px;
+      position: fixed;
+      bottom: 32px;
+      left: 24px;
+    }
+
   }
 
 } // end of lg-screen - 1200px
 
-@media (min-width: $md-screen) and (orientation: portrait) {
-  ul#actions {
-    margin-top: 40px;
 
-    li {
-      margin: 16px auto;
-      padding: 12px 0px;
-    }
-  }
+
+@media (min-width: $md-screen) {
 
 }
 

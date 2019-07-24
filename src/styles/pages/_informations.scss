@@ -5,29 +5,6 @@
   margin: 64px auto ;
 }
 
-#infos-page {
-
-  .links-decorated {
-    padding: 0px 24px;
-    margin-top: 8px;
-    position: relative;
-  }
-
-  svg.link-decoration {
-    position: absolute;
-    top: 0;
-    left: 14px;
-    transition: 0.3s;
-  }
-
-  a {
-    padding-top: 12px;
-  }
-
-  a:hover svg.link-decoration {
-    transform: translate(20px, 0);
-  }
-}
 
 .infos-container {
   margin-bottom: 40px;

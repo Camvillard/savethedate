@@ -12,3 +12,40 @@
   @include button(white, $forest-green, $forest-green);
 }
 
+.links-decorated {
+  position: relative;
+  padding: 0px 24px;
+  margin-top: 8px;
+
+  a {
+    padding-top: 12px;
+  }
+
+  a:hover svg.link-decoration {
+    transform: translate(20px, 0);
+  }
+
+  svg.link-decoration {
+    position: absolute;
+    top: 0;
+    left: 14px;
+    transition: 0.3s;
+  }
+}
+
+.text-link {
+  font-family: $body-font;
+  font-weight: 300;
+}
+
+// CURSORS
+
+#info-link-cursor:hover {
+  cursor: url(https://res.cloudinary.com/camvillard/image/upload/v1563976031/dixneufoctobre/pizza.png), pointer;
+}
+
+#location-link-cursor:hover {
+  cursor: url(https://res.cloudinary.com/camvillard/image/upload/v1558382877/dixneufoctobre/bed.png), pointer;
+}
+
+

@@ -1,6 +1,45 @@
 /*----- COMPONENTS : NAVBAR ----- */
 
+#toggle {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 9000000;
 
-header {
-  z-index: 300;
+  h4{
+    color: white
+  }
+}
+
+.menu {
+  transition: all 1s;
+  opacity: 1;
+  padding: 0;
+  list-style: none;
+
+  li a{
+    color: white;
+    font-size: 6.8rem;
+    font-weight: 600;
+    border-bottom: 2px solid white;
+  }
+}
+
+.menu.show-menu {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 6000;
+  background: $forest-green;
+}
+
+.menu.hide-menu {
+  display: none;
+  opacity: 0;
 }

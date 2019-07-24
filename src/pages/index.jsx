@@ -13,10 +13,8 @@ import Footer from '../components/footer';
 // style & assets
 import '../styles/main.scss';
 
-import BlobSmOne from '../images/blob-sm-1.svg';
-import BlobSmTwo from '../images/blob-sm-2.svg';
-import BlobLgOne from '../images/blob-lg-1.svg';
-import BlobLgTwo from '../images/blob-lg-2.svg';
+import Blob1 from '../images/blob_homepage-1.svg';
+import Blob2 from '../images/blob_homepage-2.svg';
 
 
 
@@ -24,35 +22,44 @@ class IndexPage extends React.Component {
 
   render() {
     return (
-      <div id="homepage">
+      <React.Fragment>
+
         <SEO title="save the date" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
-        <Header color="dark" position="fixed"/>
 
-        <div className="container-fullheight" >
+        <div id="page-homepage">
 
-          <div id="date">
-            <h1 className="accent-text ">dix neuf octobre</h1>
-            <h1 className="text-light accent-text">deux mille dix neuf</h1>
+
+          <div className="container-fullpage content-homepage">
+          <div id="homepage-header">
+            <h6>cam & alex</h6>
           </div>
 
-          <ul id="actions">
-            <li>
-              <Link to="/location" className="text-strong">c'est où ?</Link>
-            </li>
-            <li>
-              <Link to="/informations" className="text-strong">c'est comment ?</Link>
-            </li>
-          </ul>
+          <div className="homepage-center">
 
-          <Footer />
+            <div id="location" className="text-link">
+              <Link to="/location" id="location-link-cursor">le lieu</Link>
+            </div>
 
-          <BlobSmOne className="blob-sm-one"/>
-          <BlobSmTwo className="blob-sm-two"/>
-          <BlobLgOne className="blob-lg-one"/>
-          <BlobLgTwo className="blob-lg-two"/>
+            <div id="date">
+              <h1>dix neuf octobre <br/>
+              deux mille dix neuf</h1>
+            </div>
 
+            <div id="informations" className="text-link">
+                <Link to="/informations" id="info-link-cursor">les infos</Link>
+            </div>
+
+          </div>
+
+
+            <Footer />
+
+            <Blob1 className="blob-homepage-one"/>
+            <Blob2 className="blob-homepage-two"/>
+
+          </div>
         </div>
-      </div>
+      </React.Fragment>
 
     )
   }

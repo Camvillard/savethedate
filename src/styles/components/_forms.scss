@@ -1,36 +1,25 @@
 /*----- COMPONENTS : FORMS ----- */
 
-
-form {
-  width: 80vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.form-stroked {
 
   input,
   select,
   textarea {
+    background: none;
     padding: 0;
     width: 100%;
     min-height: 3.6rem;
     margin: 1.2rem auto;
     border: none;
     transition: all 0.2s ease;
-    border: 2px solid white;
     outline: none;
     padding-left: 10px;
-    color: white;
+    font-weight: 400;
   }
 
   textarea {
     min-height: 12rem;
     padding-top: 12px;
-  }
-
-  ::placeholder{
-    font-family: $accent-font;
-    font-weight: 300;
-    font-size: 1.4rem;
   }
 
   // states for inputs
@@ -47,6 +36,38 @@ form {
     outline-offset: 0px;
     font-family: $body-font;
   }
+}
+
+.form-white {
+  input,
+  select,
+  textarea {
+    border-bottom: 1px solid white;
+    color: white;
+  }
+  ::placeholder{
+    font-family: $accent-font;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: white;
+  }
+
+}
+
+form {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  ::placeholder{
+    font-family: $accent-font;
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+
+
 
   button.button-send {
     align-self: flex-end;
