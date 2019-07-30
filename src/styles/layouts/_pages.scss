@@ -1,0 +1,36 @@
+/*----- LAYOUTS  : PAGES ----- */
+
+
+.page-container {
+
+  .page-title {
+    color: white;
+    margin-bottom: 32px;
+  }
+
+
+  .page-title span {
+    padding-bottom: 8px;
+    border-bottom: 4px solid white;
+  }
+
+  p.contact-content{
+    color: white;
+    font-weight: 300;
+  }
+
+}
+
+
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px

@@ -20,6 +20,9 @@ class RSVP extends React.Component {
     const base = new Airtable({apiKey: ApiKey}).base('appvBah3imDtdNXOz');
 
     base('rsvp').create({
+      // create new record in airtable base
+      // using key/value pairs
+      // based on columns name in airtable sheet
       nom: rsvp.name,
       presence: rsvp.presence,
       mail: rsvp.mail,
@@ -30,7 +33,7 @@ class RSVP extends React.Component {
         if (err) { console.error(err); return; }
         // redirect to a yay or not yay page
         // depending on the given answer
-        window.location.href = rsvp.presence ? "/success" : "/sadness"
+
     });
   }
 
@@ -40,8 +43,9 @@ class RSVP extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    event.preventDefault();
     const rsvp = {
+      // grab value from the form
+      // using ref attribute
       name: this.refs.name.value,
       mail: this.refs.mail.value,
       address: this.refs.address.value,
@@ -53,25 +57,23 @@ class RSVP extends React.Component {
   }
 
 
-  handleBlur = () => {
-    this.setState({
-      inputState: 'blur'
-    })
-  }
+  // handleBlur = () => {
+  //   this.setState({
+  //     inputState: 'blur'
+  //   })
+  // }
 
   render() {
     return(
       <div id="rsvp-container">
 
         <SEO
-          id="rsvp"
           title="RSVP"
           keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
         />
 
         <Header
           color="light"
-          tagline="date"
         />
 
         <div className="contact-content">

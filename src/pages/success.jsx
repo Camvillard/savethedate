@@ -17,26 +17,25 @@ import '../styles/main.scss';
 class SuccessPage extends React.Component {
 
   render() {
-    // const numOfPeople = this.props.location.state.people
-    const numOfPeople = 2
+    const numOfPeople = this.props.location.state.people
     return(
-      <div id="success-page" className="main-container">
-        <SEO id="success" title="bien reçu !" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
-
+      <React.Fragment>
+        <SEO  title="bien reçu !" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
         <Header color="dark" position="fixed"/>
 
-        {/* JSX Comment <Blob id="resa-blob"/>*/}
+        <div id="success-page" className="page-container container-fullpage">
 
-        <h1>todo bueno</h1>
-        <h5>et merci mucho mucho !<br/>on prend note et on vous réserve {numOfPeople} places.</h5>
-        <p>afin d'être tout à fait tranquilles jusqu'au jour J, vous pouvez payer tout de suite vos places (que la technologie est pratique).</p>
-        <a href="https://www.paypal.me/CamilleVillard" className="button-green">mais oui, payer maintenant</a>
+          <h1>todo bueno</h1>
+          <h5>et merci mucho mucho !<br/>on prend note et on vous réserve {numOfPeople} places.</h5>
+          <p>afin d'être tout à fait tranquilles jusqu'au jour J, vous pouvez payer tout de suite vos places (que la technologie est pratique).</p>
+          <a href="https://www.paypal.me/CamilleVillard" className="button-green">mais oui, payer maintenant</a>
 
-        {/* links */}
-        <Footer />
-        {/* links */}
+          {/* links */}
+          <Footer />
+          {/* links */}
 
-      </div>
+        </div>
+      </React.Fragment>
     )
   }
 }

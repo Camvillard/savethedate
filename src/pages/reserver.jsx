@@ -38,7 +38,7 @@ class ReservationPage extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     // create the object reservation
-    // takes the value of eacj one of the inputs
+    // takes the value of each one of the inputs
     // to passe them to the corresponding key in the table
     const reservation = {
       name: this.refs.name.value,
@@ -67,10 +67,12 @@ class ReservationPage extends React.Component {
 
           <Navbar bgColor="yellow" />
 
-          <div className="reservation-container small-container">
+          <div className="page-container reservation-container small-container">
 
-            <h2>réserver l'hébergement</h2>
-            <p>étant donné que les deux futurs mariés sont plutôt désorganisés, ce serait assez génial de nous faciliter la tâche un tout petit peu et de nous donner une réponse avant le 15 mai. tous les détails, lieu, etc, de la cérémonie seront bien entendu communiqués très très vite.</p>
+            <h2 className="page-title"><span>réserver l'hébergement</span></h2>
+            <p className="page-content">
+              il y a environ une soixantaine de places disponibles dans les chalets et nous vous demandons une (toute petite) participation financière de 80$ par personne pour le weekend, s’il vous plait. <br/> vous seriez fantastiques si vous répondiez avant le 15 août, mais bon, comme il y a sûrement des  gens en vacances (ou des cancres refusant l'autorité des deadlines), disons que si on pouvait avoir une réponse (et le paiement) avant le 7 septembre (l'anniversaire de cam), ce serait bien.
+            </p>
 
             <form onSubmit={this.handleSubmit} id="form-reserver" className="form-stroked form-white">
               <input type="text" placeholder="nom, prénom, etc" ref="name"/>
