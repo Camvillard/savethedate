@@ -5,36 +5,20 @@ header {
   width: 100%;
   margin-top: 0px;
   text-align: right;
-  padding-right: 12px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   h6 {
     margin: 0;
-    padding-top: 8px;
     font-weight: 300;
     font-size: 1.6rem;
-  }
-
-  .small-divider {
-    width: 40px;
-    margin-left: -22px;
   }
 
   p {
     margin: 0;
     font-size: 1.2rem;
-  }
-
-  hr {
-    display: block;
-    width: 24px;
-    unicode-bidi: isolate;
-    margin-block-start: 8px;
-    margin-block-end: 0em;
-    margin-inline-start: auto;
-    margin-inline-end: 0;
-    overflow: hidden;
-    border-style: inset;
-    border-width: 0.5px;
   }
 }
 
@@ -88,9 +72,7 @@ header.light-header {
 @media (min-width: $lg-screen) {
 
   header {
-    // position: fixed;
-    // left: 0px;
-    // top: 0px;
+    padding-right: 24px;
 
     p {
       font-size: 1.6rem;

@@ -26,7 +26,7 @@ class InformationsPage extends React.Component {
 
         <Header color="dark"/>
 
-        <div className="fullwidth-container top-container">
+        <div className="top-container">
 
           <div className="infos-container" >
 
@@ -71,7 +71,7 @@ class InformationsPage extends React.Component {
                 <div className="links-decorated">
                   <Link to="/reserver" className="text-strong link-block">
                     <Arrow className="link-decoration"/>
-                    nous faire signe pour un hébergement
+                    réserver & payer l'hébergement
                   </Link>
                 </div>
               </div>
@@ -92,7 +92,7 @@ class InformationsPage extends React.Component {
               <div className="infos-content" id="dresscode">
                 <p>un peu comme chez mac do*, venez comme vous êtes. si vous voulez porter un chapeau, vous pouvez porter un chapeau, si vous voulez porter des baskets, vous pouvez porter des baskets, si vous voulez porer un costume trois  pièces, vous pouvez porter un costumes trois pièces, écoutez, même si vous voulez venir en tongsm venez en tongs.</p>
                 <p>gardez tout de même en tête que le mois d'octobre au Québec peut être fantastique, mais peut également être une catastrophe météorologique, alors bon, on vous conseille de prévoir une petite laine, comme on dit.</p>
-                <p>(* mais ce sera meilleur que chez mac do)</p>
+                <p>(* mais ce sera meilleur qu'un anniversaire chez mac do)</p>
               </div>
             </div>
 
@@ -136,13 +136,13 @@ class InformationsPage extends React.Component {
               <div className="columns-content" id="bon à savoir">
 
                 <div className="two-columns">
-                  <p>avant toute chose, ce mariage est un prétexte pour un gros weekend entre amis. si vous voulez partager avec nous (et tout le monde) votre (vos) bouteille(s) d’alcool - ou d’eau qui pique - favorite, vous êtes les bienvenus.</p>
+                  <p>avant toute chose, ce mariage est un prétexte pour un gros weekend entre amis. si vous voulez partager avec nous (et tout le monde) votre (vos) bouteille(s) d’alcool - ou d’eau qui pique - favorite, ou toute spécialité culinaire de votre choix vous êtes les bienvenu(e)s, tant qu'il n'y a pas de betterave dans tout ça.</p>
                   <p>de la même manière, si vous avez envie d’apporter un bout de mimolette et/ou de brie et/ou de saint nectaire et/ou vous avez compris l’idée, vous gagnerez un bisou (avant de manger du fromage qui pue).</p>
                   <p>et puis aussi, apportez votre jeu de pétanque, de molki (Alex va perdre), de Uno (Camille va gagner), votre nécéessaire à point de croix, enfin bref, tout ce qui vous passe par la tête et vous fera passer un pur weekend de folie.</p>
                 </div>
 
                 <div className="two-columns">
-                  <p>si vous êtes allergique alimentairement à quelque chose - ou bien si vos convictions alimentaires sont particulières (par exemple véganisme), merci de nous le faire savoir illico presto (ou en tous cas assez rapidement).</p>
+                  <p>si vous êtes allergique alimentairement à quelque chose - ou bien si vos convictions alimentaires sont particulières (par exemple véganisme), merci de nous le faire savoir assez rapidement.</p>
                   <p>si vous êtes de nature maladroite (c’est à dire si vous cassez plus d’un verre par weekend), merci également de le faire savoir au comité organisateur - c’est à dire nous - afin de pouvoir vous donner des verres en carton (compostables) (évidemment).</p>
                   <p>restez à l’affût, d’autres informations vous seront probablement communiquées dare-dare.</p>
                 </div>

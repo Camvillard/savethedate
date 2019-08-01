@@ -11,6 +11,8 @@ class Header extends React.Component {
     return(
     <header className={`${this.props.color}-header`} >
 
+      <Navbar color={this.props.navbarColor}/>
+
       <div className="header-left">
         <Link to="/">
           <h6>cam & alex</h6>

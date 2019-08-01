@@ -3,6 +3,10 @@
 
 #contact-container {
   background: $forest-green;
+
+  .page-content {
+    color: white;
+  }
 }
 
 // page
@@ -53,19 +57,11 @@ form#contact-form {
 }
 
 @media (min-width: $sm-screen) {
-  // content
-  .contact-content {
-    // width: 65%;
-  }
-
 } // end of sm-screen - 768px
 
 
 
 @media (min-width: $md-screen) {
-  .contact-content {
-    // width: 50%;
-  }
 
 } // end of md-screen - 992px
 
