@@ -41,9 +41,10 @@ class Navbar extends React.Component {
 
           <ul className="list-inline">
 
-            <li><Link to="/location" className="menu-link white">l'endroit</Link></li>
-            <li><Link to="/informations" className="menu-link white">infos</Link></li>
-            <li><Link to="/reserver" className="menu-link white">réserver</Link></li>
+            <li><Link to="/location" className={`${this.props.sidebarColor}`}>l'endroit</Link></li>
+            <li><Link to="/informations" className={`${this.props.sidebarColor}`}>infos</Link></li>
+            <li><Link to="/reserver" className={`${this.props.sidebarColor}`}>réserver</Link></li>
+            <li><Link to="/nous-contacter" className={`${this.props.sidebarColor}`}>contact</Link></li>
 
           </ul>
 

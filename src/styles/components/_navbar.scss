@@ -114,38 +114,20 @@
       line-height: 1;
     }
 
-    li a{
+    li a.white{
       color: white;
+      font-size: 1.2rem;
+      font-family: $accent-font;
+    }
+
+    li a.yellow{
+      color: $jaune-moutarde;
       font-size: 1.2rem;
       font-family: $accent-font;
     }
 
 
   }
-
-
-  // .desktop-menu {
-  //   width: 40px;
-  //   height: 100vh;
-  //   display: block;
-  //   position: fixed;
-  //   // border: 3px solid red;
-  //   left: 0;
-  //   top: 0;
-  // }
-
-  // .desktop-menu-container {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   display: flex;
-  //   transform: rotate(-90deg);
-  //   transform-origin: center;
-  // }
-
-  // .menu-link.white {
-  //   color: white;
-  // }
 
 
 

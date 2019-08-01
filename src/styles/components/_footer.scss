@@ -24,8 +24,8 @@
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
-  #footer-links a{
-    font-size: 1.6rem;
+  #footer-links {
+    display: none
   }
 } // end of md-screen - 992px
 

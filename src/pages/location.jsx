@@ -19,12 +19,13 @@ class Location extends React.Component {
   render(){
     return(
       <div id="location-page">
-        <Header color="dark" navbarColor="green"/>
+        <Header color="dark" navbarColor="green" sidebarColor="yellow"/>
 
         <div className="top-container">
 
           <div className="large-container">
             <h2 className="page-title green"><span>se rendre sur place</span></h2>
+            <p>TL;DR : 1438, chemin Jamboree sur votre GPS.</p>
           </div>
 
           <img src="https://res.cloudinary.com/camvillard/image/upload/v1561596647/dixneufoctobre/map_generale.png" alt=""/>
