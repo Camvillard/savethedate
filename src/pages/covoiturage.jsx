@@ -7,6 +7,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import SEO from '../components/seo';
 import content from '../data/content';
+import Navbar from "../components/navbar";
 
 // style & assets
 import "../styles/main.scss"
@@ -33,7 +34,8 @@ class Covoiturage extends React.Component {
       date: covoiturage.date,
       return: covoiturage.return,
       returnQty: covoiturage.returnQty,
-      returnWhen: covoiturage.returnWhen
+      returnWhen: covoiturage.returnWhen,
+      covoiturage: covoiturage.covoiturage
     }, function(err, record) {
         if (err) { console.error(err); return; }
         // redirect to a yay or not yay page
@@ -51,9 +53,10 @@ class Covoiturage extends React.Component {
       driver: this.refs.driver.value === "oui" ? true : false,
       qty: this.refs.qty.value,
       date: this.refs.date.value,
-      return: this.refs.return.value === "oui" ? true :false,
+      return: this.refs.return.value === "oui" ? true : false,
       returnQty: this.refs.returnQty.value,
-      returnWhen: this.refs.returnWhen.value
+      returnWhen: this.refs.returnWhen.value,
+      covoiturage: this.refs.covoiturage.value === "oui" ? true : false
     }
     this.createAirtableRecord(covoiturage);
   }
@@ -61,7 +64,7 @@ class Covoiturage extends React.Component {
 
   render() {
     return(
-      <div id="rsvp-container">
+      <div className="container-fullpage" id="covoit-container">
 
         <SEO
           title="RSVP"
@@ -72,37 +75,69 @@ class Covoiturage extends React.Component {
           color="light"
         />
 
-        <div className="contact-content">
-          <p>transports</p>
+
+        <Navbar bgColor="green" />
+
+        <div className="page-container contact-container small-container">
+
+          <h2 className="page-title"><span>transports</span></h2>
+          <p className="page-content"> texte á venir</p>
+
+
+          <form onSubmit={this.handleSubmit} action="/success" className="form-stroked form-white">
+
+            <div>
+            <input type="text" placeholder="nom, prénom, etc" ref="name"/>
+            </div>
+
+            <div>
+            <p> As-tu une voiture à disposition? </p>
+            <input type="radio" ref="driver"name="driver" value="oui"/> Oui
+            <input type="radio" ref="driver" name="driver" value="non"/> Non
+            </div>
+
+            <div>
+            <p>Es-tu intéressé par le covoiturage?</p>
+            <input type="radio" ref="covoiturage"name="covoiturage" value="oui"/> Oui
+            <input type="radio" ref="covoiturage" name="covoiturage" value="non"/> Non
+            </div>
+
+            <div>
+            <p> Vous êtes combien? </p>
+            <input type="text" placeholder="combien de personnes" ref="qty"/>
+            </div>
+
+            <div>
+            <p> Vous voulez arriver quand? </p>
+            <select name="date" id="presence" ref="date">
+              <option disabled selected value> -- choisi une option -- </option>
+              <option value="vendredi matin">vendredi matin</option>
+              <option value="vendredi aprem">vendredi aprem</option>
+              <option value="samedi matin">samedi matin</option>
+            </select>
+            </div>
+
+            <div>
+            <p> As-tu besoin la coivoit pour la route de retour?  </p>
+            <input type="radio" ref="return"name="return" value="oui"/> Oui
+            <input type="radio" ref="return" name="return" value="non"/> Non
+            </div>
+
+            <div>
+            <p> Dans ce cas-là, on recommence:  </p>
+            <p> Vous êtes combien? </p>
+            <input type="text" placeholder="combien de personnes" ref="returnQty"/>
+            <p> Vous voulez partir quand? </p>
+            <select name="returnWhen" id="presence" ref="returnWhen">
+              <option disabled selected value> -- choisi une option -- </option>
+              <option value="dimanche matin">dimanche matin</option>
+              <option value="dimanche aprem">dimanche aprem</option>
+            </select>
+            </div>
+
+            <button className="button-send">envoyer ta demande de coivoit</button>
+          </form>
         </div>
-
-        <form onSubmit={this.handleSubmit} id="form-rsvp" action="/success">
-          <input type="text" placeholder="nom, prénom, etc" ref="name"/>
-          <select name="driver" id="presence" ref="driver">
-            <option value="oui">oui</option>
-            <option value="non">non</option>
-          </select>
-          <input type="text" placeholder="combien de personnes" ref="qty"/>
-          <select name="date" id="presence" ref="date">
-            <option disabled selected value> -- choisi une option -- </option>
-            <option value="vendredi">vendredi</option>
-            <option value="samedi">samedi</option>
-          </select>
-          <select name="return" id="presence" ref="return" placeholder="retour">
-            <option disabled selected value> -- choisi une option -- </option>
-            <option value="oui">oui</option>
-            <option value="non">non</option>
-          </select>
-          <input type="text" placeholder="combien de personnes" ref="returnQty"/>
-          <select name="returnWhen" id="presence" ref="returnWhen">
-            <option disabled selected value> -- choisi une option -- </option>
-            <option value="dimanche matin">dimanche matin</option>
-            <option value="dimanche aprem">dimanche aprem</option>
-          </select>
-
-          <button className="button-send">envoyer ta demande de coivoit</button>
-        </form>
-
         <div id="footer-title">
           <h3>transports</h3>
           <Link to="/">retour au site</Link>
