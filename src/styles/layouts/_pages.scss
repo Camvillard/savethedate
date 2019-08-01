@@ -1,25 +1,42 @@
 /*----- LAYOUTS  : PAGES ----- */
 
 
-.page-container {
-
-  .page-title {
-    color: white;
-    margin-bottom: 32px;
-  }
-
-
-  .page-title span {
-    padding-bottom: 8px;
-    border-bottom: 4px solid white;
-  }
-
-  p.contact-content{
-    color: white;
-    font-weight: 300;
-  }
-
+.page-title {
+  margin-bottom: 32px;
 }
+
+.page-title span {
+  padding-bottom: 8px;
+}
+
+
+// contact, reservatiopn & covoit pages
+.page-title.white {
+  color: white;
+}
+
+.page-title.white span {
+  border-bottom: 4px solid white;
+}
+
+.page-content.white{
+  color: white;
+  font-weight: 300;
+}
+
+
+
+// location & info
+.page-title.green {
+  color: $forest-green;
+}
+
+.page-title.green span {
+  border-bottom: 4px solid $forest-green;
+}
+
+
+
 
 
 

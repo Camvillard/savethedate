@@ -19,16 +19,13 @@ class Location extends React.Component {
   render(){
     return(
       <div id="location-page">
-        <Header color="dark"/>
-
+        <Header color="dark" navbarColor="green"/>
 
         <div className="top-container">
 
-
           <div className="large-container">
-            <h2>se rendre sur place</h2>
+            <h2 className="page-title green"><span>se rendre sur place</span></h2>
           </div>
-
 
           <img src="https://res.cloudinary.com/camvillard/image/upload/v1561596647/dixneufoctobre/map_generale.png" alt=""/>
 
@@ -67,10 +64,11 @@ class Location extends React.Component {
               des gens).</p>
 
               <div className="links-decorated">
-                <Link className="link-block text-strong" to="/location">
-                  <Arrow className="link-decoration"/>
-                  voir les horaires de bus
-                </Link>
+
+              <a href="https://www.rome2rio.com/fr/map/Saint-Sauveur-QC-Canada/Montr%C3%A9al" className="link-block text-strong">
+                <Arrow className="link-decoration"/>
+                voir les horaires de bus
+              </a>
               </div>
 
           </div>
@@ -78,7 +76,7 @@ class Location extends React.Component {
 
             <div className="ceremony-details">
               <div className="large-container">
-              <h2>sur place</h2>
+              <h2 className="page-title green"><span>le lieu du mariage</span></h2>
               </div>
               <img src="https://res.cloudinary.com/camvillard/image/upload/v1563569282/dixneufoctobre/map_ceremonie_details.png" alt="map cérémonie"/>
 
@@ -89,10 +87,15 @@ class Location extends React.Component {
                 </p>
                 <p>
                   Chaque chalet dispose d’une petite plage privée (OH LA LA) sur le lac (OH LA LA) avec des pédalos, des kayaks et des SUP (OH LA LA).
-                </p>
-                <p>
                   Chaque chalet aussi possède des petits endroits pour faire du feu (YOUPI) et il y a des billards et un baby foot (YOUPI AUSSI).
                 </p>
+                <p>Vous n'aurez besoin de rien apporter, si ce n'est votre démaquillant et vos chaussettes de rechange. Toute la literie + serviettes et autre linge blanc est prévue sur place, les chalets étant fully-equiped.</p>
+                <div className="links-decorated">
+                  <Link className="link-block text-strong" to="/reserver">
+                    <Arrow className="link-decoration"/>
+                    réserver & payer l'hébergement
+                  </Link>
+                </div>
 
               </div>
             </div>
