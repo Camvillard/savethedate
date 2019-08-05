@@ -1,6 +1,72 @@
 /*----- PAGES : INFORMATIONS ----- */
 
+.horizontal-lign {
+  position: relative;
+  margin-left: 8px;
+}
 
+.horizontal-lign:after {
+  content: " ";
+  position: absolute;
+  top: 56%;
+  background: $forest-green;
+  width: 52px;
+  height: 1px;
+}
+
+.border-green {
+  border-style: solid;
+  border-color: $forest-green;
+  border-width: 0.5px;
+}
+
+
+.border-yellow {
+  border-style: solid;
+  border-color: $jaune-moutarde;
+  border-width: 0.5px;
+}
+
+.infos-summary {
+
+  ul {
+    margin-left: 22vw;
+  }
+  .summary-text {
+    margin-left: 64px;
+  }
+}
+
+.infos-container {
+  width: 88vw;
+  max-width: 620px;
+  margin: auto;
+}
+
+.infos-header {
+  width: 40%;
+
+  h4 {
+    font-size: 2.4rem;
+    margin: 0;
+    text-align: right;
+    width: 60%;
+    font-weight: 300;
+    color: $jaune-moutarde;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .border-green {
+    width: 60%;
+  }
+
+}
 
 .infos-container {
   margin-bottom: 40px;
@@ -10,22 +76,22 @@
     // width: 100vw;
   }
 
-  h2 {
-    position: absolute;
-    color: white;
-    font-size: 10.5rem;
-    margin: 0 auto;
-  }
+  // h2 {
+  //   position: absolute;
+  //   color: white;
+  //   font-size: 10.5rem;
+  //   margin: 0 auto;
+  // }
 
-  h4.infos-title span {
-    position: absolute;
-    color: white;
-    line-height: 1.25;
-    padding-top: 0px;
-    padding-bottom: 4px;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
+  // h4.infos-title span {
+  //   position: absolute;
+  //   color: white;
+  //   line-height: 1.25;
+  //   padding-top: 0px;
+  //   padding-bottom: 4px;
+  //   padding-left: 24px;
+  //   padding-right: 24px;
+  // }
 }
 
 .infos-content {

@@ -80,7 +80,7 @@ class RSVP extends React.Component {
           <p>rsvp</p>
         </div>
 
-        <form onSubmit={this.handleSubmit} id="form-rsvp" action="/success">
+        <form onSubmit={this.handleSubmit} className="form-stroked" id="form-rsvp" action="/success">
           <input type="text" placeholder="nom, prénom, etc" ref="name"/>
           <select name="presence" id="presence" ref="presence">
             <option value="oui">oui</option>

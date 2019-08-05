@@ -28,12 +28,39 @@ class InformationsPage extends React.Component {
 
         <div className="top-container">
 
+        <div className="main-container">
+          <h2 className="page-title green"><span>le week end</span></h2>
+
+          <div className="infos-summary">
+            <ul className="no-bullet-list">
+              <li>
+                <Link to="/informations/#organisation">1<span className="horizontal-lign"></span> <span className="summary-text">le week-end</span></Link>
+              </li>
+              <li>
+                <Link to="/informations/#sleeping">2<span className="horizontal-lign"></span> <span className="summary-text">le week-end</span></Link>
+              </li>
+              <li>
+                <Link to="/informations/#dresscode">3<span className="horizontal-lign"></span> <span className="summary-text">le week-end</span></Link>
+              </li>
+              <li>
+                <Link to="/informations/#gifts">4<span className="horizontal-lign"></span> <span className="summary-text">le week-end</span></Link>
+              </li>
+              <li>
+                <Link to="/informations/#good-to-know">5<span className="horizontal-lign"></span> <span className="summary-text">le week-end</span></Link>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+
+
           <div className="infos-container" >
 
-            <div className="blob" id="infos-blob-one">
-              <BlobOne />
-              <h2>1</h2>
-              <h4 className="infos-title"><span>le week end</span></h4>
+            <div className="infos-header">
+              <h4>1</h4>
+              <hr className="border-yellow"/>
+              <h2 className="infos-title"><span>le week end</span></h2>
             </div>
 
             <div className="main-container" >
@@ -52,6 +79,7 @@ class InformationsPage extends React.Component {
 
           </div>
           {/* end of #blob-one */}
+
 
           <div className="infos-container" >
 
@@ -133,7 +161,7 @@ class InformationsPage extends React.Component {
             </div>
 
             <div className="main-container" >
-              <div className="columns-content" id="bon à savoir">
+              <div className="columns-content" id="good-to-know">
 
                 <div className="two-columns">
                   <p>avant toute chose, ce mariage est un prétexte pour un gros weekend entre amis. si vous voulez partager avec nous (et tout le monde) votre (vos) bouteille(s) d’alcool - ou d’eau qui pique - favorite, ou toute spécialité culinaire de votre choix vous êtes les bienvenu(e)s, tant qu'il n'y a pas de betterave dans tout ça.</p>

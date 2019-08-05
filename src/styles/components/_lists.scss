@@ -1,13 +1,17 @@
-/*----- INDEX FOR COMPONENTS ----- */
+/*----- COMPONENTS : LISTS ----- */
 
-@import "navbar";
-@import "buttons";
-@import "forms";
-@import "header";
-@import "blobs";
-@import "containers";
-@import "footer";
-@import "lists";
+.no-bullet-list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-inline{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px
