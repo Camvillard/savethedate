@@ -1,9 +1,69 @@
 #covoit-container{
-  // min-height: 100vh;
-  // width: 100vw;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
   background: #E39D24;
 }
+
+
+.covoit-form p {
+    font-family: $accent-font !important;
+    font-weight: 300 !important;
+    font-size: 1.2rem !important;
+    color: white !important;
+    margin-bottom:16px;
+}
+
+.covoit-form {
+  margin-bottom:24px;
+}
+
+.covoit-form-container {
+  width: 88vw;
+  margin: auto;
+  max-width: 624px;
+}
+
+.covoit-radio-btn {
+  display: inline-block;
+  align-items: center;
+  margin: 20px;
+}
+
+.radio-btn-style {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-family: $accent-font;
+  color: white;
+  font-weight: 300;
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+.radio-btn-style input{
+  display: none;
+}
+
+.radio-btn-style .radio-btn-span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #E39D24;
+  border: 1px solid white;
+  position: absolute;
+  top: -30px;
+  left: 0px;
+}
+
+
+.radio-btn-style:hover .radio-btn-span {
+  background-color:$forest-green;
+}
+
+.radio-btn-style input:checked + .radio-btn-span {
+  background-image: url(https://res.cloudinary.com/kristynadierstein/image/upload/v1564761387/radio_btn_check_vwsa44.svg);
+}
+
+.radio-btn-style input:checked + .radio-btn-span:after {
+// background-image: `url(https://res.cloudinary.com/kristynadierstein/image/upload/v1564761387/radio_btn_check_vwsa44.svg)`;
+background-color: red;
+}
+

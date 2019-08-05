@@ -4,10 +4,9 @@ import { Link } from "gatsby";
 
 // internal stuff
 import Header from "../components/header";
-import Footer from "../components/footer";
 import SEO from '../components/seo';
 import content from '../data/content';
-import Navbar from "../components/navbar";
+
 
 // style & assets
 import "../styles/main.scss"
@@ -64,6 +63,7 @@ class Covoiturage extends React.Component {
 
   render() {
     return(
+      <React.Fragment>
       <div className="container-fullpage" id="covoit-container">
 
         <SEO
@@ -73,77 +73,112 @@ class Covoiturage extends React.Component {
 
         <Header
           color="light"
+          position="regular"
+          navbarColor="yellow"
         />
 
+        <div className="small-container">
 
-        <Navbar bgColor="green" />
-
-        <div className="page-container contact-container small-container">
-
-          <h2 className="page-title"><span>transports</span></h2>
-          <p className="page-content"> texte á venir</p>
-
+          <h2 className="page-title white"><span>transports</span></h2>
+          <p className="page-content white"> texte á venir</p>
 
           <form onSubmit={this.handleSubmit} action="/success" className="form-stroked form-white">
-
-            <div>
             <input type="text" placeholder="nom, prénom, etc" ref="name"/>
-            </div>
 
-            <div>
-            <p> As-tu une voiture à disposition? </p>
-            <input type="radio" ref="driver"name="driver" value="oui"/> Oui
-            <input type="radio" ref="driver" name="driver" value="non"/> Non
-            </div>
 
-            <div>
-            <p>Es-tu intéressé par le covoiturage?</p>
-            <input type="radio" ref="covoiturage"name="covoiturage" value="oui"/> Oui
-            <input type="radio" ref="covoiturage" name="covoiturage" value="non"/> Non
-            </div>
+            <div className="covoit-form-container">
+              <div className="covoit-form">
+                <p> As-tu une voiture à disposition? </p>
 
-            <div>
-            <p> Vous êtes combien? </p>
-            <input type="text" placeholder="combien de personnes" ref="qty"/>
-            </div>
+                <div className="covoit-radio-btn">
+                  <label className="radio-btn-style"> oui
+                    <input type="radio" ref="driver"name="driver" value="oui"/>
+                    <span className="radio-btn-span"></span>
+                  </label>
+                </div>
 
-            <div>
-            <p> Vous voulez arriver quand? </p>
-            <select name="date" id="presence" ref="date">
-              <option disabled selected value> -- choisi une option -- </option>
-              <option value="vendredi matin">vendredi matin</option>
-              <option value="vendredi aprem">vendredi aprem</option>
-              <option value="samedi matin">samedi matin</option>
-            </select>
-            </div>
+                <div className="covoit-radio-btn">
+                  <label className="radio-btn-style"> non
+                    <input type="radio" ref="driver" name="driver" value="non"/>
+                    <span className="radio-btn-span"></span>
+                  </label>
+                </div>
+              </div>
 
-            <div>
-            <p> As-tu besoin la coivoit pour la route de retour?  </p>
-            <input type="radio" ref="return"name="return" value="oui"/> Oui
-            <input type="radio" ref="return" name="return" value="non"/> Non
-            </div>
+              <div className="covoit-form">
+                <p>Es-tu intéressé par le covoiturage?</p>
 
-            <div>
-            <p> Dans ce cas-là, on recommence:  </p>
-            <p> Vous êtes combien? </p>
-            <input type="text" placeholder="combien de personnes" ref="returnQty"/>
-            <p> Vous voulez partir quand? </p>
-            <select name="returnWhen" id="presence" ref="returnWhen">
-              <option disabled selected value> -- choisi une option -- </option>
-              <option value="dimanche matin">dimanche matin</option>
-              <option value="dimanche aprem">dimanche aprem</option>
-            </select>
-            </div>
+                <div className="covoit-radio-btn">
+                  <label className="radio-btn-style"> oui
+                    <input type="radio" ref="covoiturage"name="covoiturage" value="oui"/>
+                    <span className="radio-btn-span"></span>
+                  </label>
+                </div>
 
-            <button className="button-send">envoyer ta demande de coivoit</button>
+                <div className="covoit-radio-btn">
+                  <label className="radio-btn-style"> non
+                    <input type="radio" ref="covoiturage" name="covoiturage" value="non"/>
+                    <span className="radio-btn-span"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div className="covoit-form">
+                <p> Vous êtes combien? </p>
+                <input type="text" placeholder="combien de personnes" ref="qty"/>
+              </div>
+
+              <div className="covoit-form">
+                <p> Vous voulez arriver quand? </p>
+                <select name="date" id="presence" ref="date">
+                  <option disabled selected value> -- choisi une option -- </option>
+                  <option value="vendredi matin">vendredi matin</option>
+                  <option value="vendredi aprem">vendredi aprem</option>
+                  <option value="samedi matin">samedi matin</option>
+                </select>
+              </div>
+
+              <div className="covoit-form">
+                <p> As-tu besoin la coivoit pour la route de retour?  </p>
+
+                <div className="covoit-radio-btn">
+                  <label className="radio-btn-style"> oui
+                    <input type="radio" ref="return"name="return" value="oui"/>
+                    <span className="radio-btn-span"></span>
+                  </label>
+                </div>
+
+                <div className="covoit-radio-btn">
+                  <label className="radio-btn-style"> non
+                    <input type="radio" ref="return" name="return" value="non" />
+                    <span className="radio-btn-span"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div className="covoit-form">
+                <p> Dans ce cas-là, on recommence:  </p>
+                <p> Vous êtes combien? </p>
+                <input type="text" placeholder="combien de personnes" ref="returnQty"/>
+              </div>
+
+              <div className="covoit-form">
+                <p> Vous voulez partir quand? </p>
+                <select name="returnWhen" id="presence" ref="returnWhen">
+                  <option disabled selected value> -- choisi une option -- </option>
+                  <option value="dimanche matin">dimanche matin</option>
+                  <option value="dimanche aprem">dimanche aprem</option>
+                </select>
+              </div>
+
+              <button className="button-send">envoyer ta demande de covoit</button>
+            </div>
           </form>
-        </div>
-        <div id="footer-title">
-          <h3>transports</h3>
-          <Link to="/">retour au site</Link>
+
         </div>
 
       </div>
+      </React.Fragment>
     )
   }
 }
