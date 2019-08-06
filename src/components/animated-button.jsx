@@ -69,7 +69,7 @@ class AnimatedButton extends React.Component {
 
       <div className="btn-animated" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.clearAnimations}>
         <BtnDeco id="svg-btn-animated" />
-        <Link to={this.props.link}>{this.props.value}</Link>
+        <a href={this.props.link} target={this.props.target}>{this.props.value}</a>
       </div>
 
     </React.Fragment>
