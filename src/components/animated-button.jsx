@@ -41,6 +41,7 @@ class AnimatedButton extends React.Component {
     paths.forEach( path => {
       const random = Math.floor(Math.random() * 100)
       allRandom.push(random)
+      // console.log(random)
       path.style.transition = 'all .8s'
       path.style.transform = `rotate(${random}deg)`
       path.style.transformOrigin = "center"
@@ -70,7 +71,7 @@ class AnimatedButton extends React.Component {
 
       <div className="btn-animated" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.clearAnimations}>
         <BtnDeco className="svg-btn-animated" />
-        <a href={this.props.link} target={this.props.target}>{this.props.value}</a>
+        <a href={this.props.link} target={this.props.target || "self"}>{this.props.value}</a>
       </div>
 
     </React.Fragment>
