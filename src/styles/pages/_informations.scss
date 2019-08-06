@@ -219,6 +219,14 @@
     margin-left: 56vw;
     max-width: 36vw;
   }
+
+  #gifts {
+    width: 32vw;
+
+    .btn-animated {
+      margin-left: 4vw;
+    }
+  }
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {
