@@ -6,6 +6,7 @@ import Header from '../components/header';
 import InputCar from "../components/input-car";
 import InputPlaces from "../components/input-places";
 import InputCarpoolingOne from "../components/input-carpooling-one";
+import InputCarpooling from "../components/input-carpooling";
 
 import content from '../data/content';
 // import { defineContentLanguage } from '../helpers/helpers';
@@ -38,7 +39,12 @@ class RSVP extends React.Component {
     // }
     console.log(this.state)
     // this.createAirtableRecord(rsvp);
-  }
+  };
+
+  handleChange = (e) => {
+    console.log('value', e.target.value)
+    console.log('name', e.target.name)
+  };
 
 
   handleCar = (e) => {
@@ -48,7 +54,7 @@ class RSVP extends React.Component {
     } else {
       this.setState({ hasACar: false})
     }
-  }
+  };
 
   render() {
     return(
@@ -71,11 +77,18 @@ class RSVP extends React.Component {
           <input type="text" placeholder="nom, prénom, etc" ref="name"/>
           <InputCar onChange={this.handleCar} />
 
-          {this.state.hasACar === null && ('')}
 
-          {this.state.hasACar && (<InputPlaces />)}
+          <InputCarpooling
+            onChange={this.handleChange}
+            name="carpooling-1"
+            id="carpooling-1"
+            formElement="input"
+            inputType="text"
+            optionsForSelect="friday,saturday,sunday"
+            label="how many people"
+            />
 
-          {this.state.hasACar === false && (<InputCarpoolingOne />)}
+
 
           <button className="button-send">RSVP</button>
         </form>
