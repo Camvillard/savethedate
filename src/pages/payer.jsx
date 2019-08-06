@@ -18,6 +18,8 @@ class SuccessPage extends React.Component {
 
   render() {
     let numOfPeople
+    // access to the state of the reservation thanks to the Link API
+    // in source page
     if (this.props.location.state.reservation.people) {
       numOfPeople = this.props.location.state.reservation.people
     } else {
