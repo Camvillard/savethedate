@@ -2,6 +2,9 @@
 
 
 header {
+  position: fixed;
+  top:0;
+  left: 0;
   width: 100%;
   margin-top: 0px;
   text-align: right;
@@ -20,12 +23,6 @@ header {
     margin: 0;
     font-size: 1.2rem;
   }
-}
-
-header.fixed-header {
-  position: fixed;
-  top: 12px;
-  left: 0px;
 }
 
 

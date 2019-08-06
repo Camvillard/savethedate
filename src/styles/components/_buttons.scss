@@ -44,8 +44,7 @@
   position: relative;
   height: 120px;
   display: flex;
-  align-items: flex-end;
-  border:  1px solid red;
+  align-items: center;
   svg {
     position: absolute;
     top: 0;
@@ -56,10 +55,10 @@
   a {
     margin-left: 64px;
     text-transform: uppercase;
-    margin-bottom: 24px;
+    margin-top: 12px;
     position: relative;
     z-index: 100;
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 }
 

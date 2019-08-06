@@ -17,7 +17,7 @@ class AnimatedButton extends React.Component {
 
   componentDidMount() {
     // select svg element
-    const svgForBtn = document.querySelector('#svg-btn-animated')
+    const svgForBtn = document.querySelector('.svg-btn-animated')
     // select all the path in this svg
     const paths = Array.from(svgForBtn.querySelectorAll('path'))
     // store that into a state
@@ -41,6 +41,7 @@ class AnimatedButton extends React.Component {
     paths.forEach( path => {
       const random = Math.floor(Math.random() * 100)
       allRandom.push(random)
+      // console.log(random)
       path.style.transition = 'all .8s'
       path.style.transform = `rotate(${random}deg)`
       path.style.transformOrigin = "center"
@@ -49,6 +50,7 @@ class AnimatedButton extends React.Component {
   };
 
   handleMouseEnter = (e) => {
+    console.log('hello');
     this.animateButton()
   };
 
@@ -68,8 +70,8 @@ class AnimatedButton extends React.Component {
     <React.Fragment >
 
       <div className="btn-animated" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.clearAnimations}>
-        <BtnDeco id="svg-btn-animated" />
-        <Link to={this.props.link}>{this.props.value}</Link>
+        <BtnDeco className="svg-btn-animated" />
+        <a href={this.props.link} target={this.props.target || "self"}>{this.props.value}</a>
       </div>
 
     </React.Fragment>
