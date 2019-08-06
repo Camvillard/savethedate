@@ -31,7 +31,7 @@ class ReservationPage extends React.Component {
         if (err) { console.error(err); return; }
         // redirect to a success page + possible paiement
         // window.location.href = "/success"
-        navigate("/success", {state: reservation})
+        navigate("/payer", {state: reservation})
     });
   }
 
@@ -60,13 +60,14 @@ class ReservationPage extends React.Component {
 
         <div id="page-reservation" className="container-fullpage">
 
-          <Header
-            color="light"
-            position= "regular"
-            navbarColor="white"
+          <Navbar
+            linksColor="white"
+            bgColor="green"
+            sidebarColor="white"
+            toggleColor="white"
           />
 
-          <div className="small-container">
+          <div className="main-container small">
 
             <h2 className="page-title white"><span>réserver l'hébergement</span></h2>
             <p className="page-content white">

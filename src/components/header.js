@@ -13,13 +13,6 @@ class Header extends React.Component {
 
       <Navbar color={this.props.navbarColor} sidebarColor={this.props.sidebarColor}/>
 
-      <div className="header-left">
-        <Link to="/">
-          <h6>cam & alex</h6>
-        </Link>
-        <p>19/10/2019</p>
-      </div>
-
     </header>
 
     )

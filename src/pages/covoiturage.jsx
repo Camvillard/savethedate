@@ -77,7 +77,7 @@ class Covoiturage extends React.Component {
           navbarColor="yellow"
         />
 
-        <div className="small-container">
+        <div className="main-container small">
 
           <h2 className="page-title white"><span>transports</span></h2>
           <p className="page-content white"> texte á venir</p>

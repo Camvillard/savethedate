@@ -33,6 +33,7 @@
   top: -20px;
   right: 24px;
   transform: rotate(180deg);
+  z-index: -1;
 }
 
 #infos-blob-two {
@@ -41,6 +42,7 @@
   bottom: 24px;
   left: 4px;
   transform: rotate(180deg);
+  z-index: -1;
 }
 
 .infos-banner {

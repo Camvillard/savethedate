@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 // internal stuff
-import Header from "../components/header";
+import Navbar from "../components/navbar";
 import Footer from '../components/footer';
 
 
@@ -24,7 +24,12 @@ class InformationsPage extends React.Component {
     return(
       <div id="infos-page">
 
-        <Header color="dark" position="fixed"/>
+        <Navbar
+          linksColor="white"
+          bgColor="yellow"
+          sidebarColor="yellow"
+          toggleColor="yellow"
+        />
 
           <div className="infos-banner">
             <h2 className="page-title green"><span>toutes les infos</span></h2>

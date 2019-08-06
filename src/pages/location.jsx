@@ -19,7 +19,13 @@ class Location extends React.Component {
   render(){
     return(
       <div id="location-page">
-        <Header color="dark" navbarColor="green" sidebarColor="yellow"/>
+
+        <Navbar
+          linksColor="white"
+          bgColor="yellow"
+          sidebarColor="yellow"
+          toggleColor="yellow"
+        />
 
         <div className="top-container">
 
@@ -49,7 +55,7 @@ class Location extends React.Component {
               roulettes.</p>
 
               <div className="links-decorated">
-                <Link className="link-block text-strong" to="/location">
+                <Link className="link-block text-strong" to="/covoiturage">
                   <Arrow className="link-decoration"/>
                   nous faire signe pour un covoit
                 </Link>

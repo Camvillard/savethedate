@@ -8,13 +8,21 @@ import { Link } from "gatsby"
 const Footer = (props) => {
   return(
   <footer>
-    <div id="footer-links">
-      <Link to="/nous-contacter" className="accent-text">contact </Link>
-      -
-      <Link to="/reserver" className="accent-text"> réserver</Link>
+
+
+    <div className="footer-infos">
+      <hr/>
+
+      <p className="footer-names">cam & alex</p>
+      <p className="footer-date">dix neuf octobre</p>
+      <p className="footer-year">deux mille dix neuf</p>
+      <p className="footer-address">1438, chemin du Jamboree <br/> Saint Adolphe d'Howard, Québec</p>
+
     </div>
+
   </footer>
   )
 }
 
 export default Footer;
+
