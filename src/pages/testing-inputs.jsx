@@ -16,7 +16,7 @@ import "../styles/main.scss"
 const Airtable = require('airtable');
 // const ApiKey = process.env.AIRTABLE_API;
 
-class RSVP extends React.Component {
+class TestingInputs extends React.Component {
 
   constructor(props){
     super(props)
@@ -26,8 +26,6 @@ class RSVP extends React.Component {
       numPlaces: false,
     }
   }
-
-
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -42,18 +40,11 @@ class RSVP extends React.Component {
   };
 
   handleChange = (e) => {
-    console.log('value', e.target.value)
-    console.log('name', e.target.name)
-  };
-
-
-  handleCar = (e) => {
-    console.log(e.target.value)
-    if (e.target.value === "yes") {
-      this.setState({ hasACar: true})
-    } else {
-      this.setState({ hasACar: false})
-    }
+    // console.log('value', e.target.value)
+    // console.log('name', e.target.name)
+    this.setState({
+      [`${e.target.name}`]: e.target.value
+    })
   };
 
   render() {
@@ -65,29 +56,42 @@ class RSVP extends React.Component {
           keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
         />
 
-        <Header
-          color="light"
-        />
-
-        <div className="contact-content">
-          <p>rsvp</p>
-        </div>
 
         <form onSubmit={this.handleSubmit} id="form-rsvp" action="/success">
           <input type="text" placeholder="nom, prénom, etc" ref="name"/>
-          <InputCar onChange={this.handleCar} />
-
+          <InputCar onChange={this.handleChange} />
 
           <InputCarpooling
             onChange={this.handleChange}
-            name="carpooling-1"
+            name="leavingDay"
+            id="carpooling-1"
+            formElement="radio"
+            inputType="radio"
+            optionsForSelect="oui, non"
+            label="when are you leaving montreal ?"
+            step="2"
+            />
+
+          <InputCarpooling
+            onChange={this.handleChange}
+            name="hasACar"
             id="carpooling-1"
             formElement="input"
             inputType="text"
-            optionsForSelect="friday,saturday,sunday"
             label="how many people"
+            step="1"
             />
 
+          <InputCarpooling
+            onChange={this.handleChange}
+            name="leavingDay"
+            id="carpooling-1"
+            formElement="select"
+            inputType="text"
+            optionsForSelect="friday,saturday,sunday"
+            label="when are you leaving montreal ?"
+            step="2"
+            />
 
 
           <button className="button-send">RSVP</button>
@@ -103,5 +107,5 @@ class RSVP extends React.Component {
   }
 }
 
-export default RSVP;
+export default TestingInputs;
 
