@@ -104,7 +104,7 @@ class InformationsPage extends React.Component {
             </div>
 
             <div className="infos-content">
-              <p>un peu comme chez mac do*, venez comme vous êtes. si vous voulez porter un chapeau, vous pouvez porter un chapeau, si vous voulez porter des baskets, vous pouvez porter des baskets, si vous voulez porer un costume trois  pièces, vous pouvez porter un costumes trois pièces, écoutez, même si vous voulez venir en tongsm venez en tongs.</p>
+              <p>un peu comme chez mac do*, venez comme vous êtes. si vous voulez porter un chapeau, vous pouvez porter un chapeau, si vous voulez porter des baskets, vous pouvez porter des baskets, si vous voulez porter un costume trois pièces, vous pouvez porter un costumes trois pièces, écoutez, même si vous voulez venir en tongs, venez en tongs.</p>
               <p>gardez tout de même en tête que le mois d'octobre au Québec peut être fantastique, mais peut également être une catastrophe météorologique, alors bon, on vous conseille de prévoir une petite laine, comme on dit.</p>
               <p>(* mais ce sera meilleur qu'un anniversaire chez mac do)</p>
             </div>
