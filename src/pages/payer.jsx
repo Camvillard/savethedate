@@ -16,16 +16,23 @@ import '../styles/main.scss';
 
 class SuccessPage extends React.Component {
 
-  render() {
-    let numOfPeople
-    // access to the state of the reservation thanks to the Link API
-    // in source page
-    if (this.props.location.state.reservation.people) {
-      numOfPeople = this.props.location.state.reservation.people
-    } else {
-      numOfPeople = "x"
+  constructor(props) {
+    super(props)
+    this.state = {
+      numOfPeople: 0
     }
-    console.log(numOfPeople)
+  }
+
+  componentDidMount() {
+  if (typeof window === 'undefined') {
+     return;
+   }
+   this.setState({
+    numOfPeople: this.props.location.state.reservation.people
+   });
+  }
+
+  render() {
     return(
       <React.Fragment>
         <SEO  title="bien reçu !" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
@@ -35,9 +42,9 @@ class SuccessPage extends React.Component {
         <div className="page-container">
 
           <h1>todo bueno</h1>
-          <h5>et merci mucho mucho !<br/>on prend note et on vous réserve {numOfPeople} places.</h5>
+          <h5>et merci mucho mucho !<br/>on prend note et on vous réserve {this.state.numOfPeople} places.</h5>
           <p>afin d'être tout à fait tranquilles jusqu'au jour J, vous pouvez payer tout de suite vos places (que la technologie est pratique).</p>
-          <a href={`https://www.paypal.me/CamilleVillard/${numOfPeople * 80}`} className="button-green">mais oui, payer maintenant</a>
+          <a href={`https://www.paypal.me/CamilleVillard/${this.state.numOfPeople * 80}`} className="button-green">mais oui, payer maintenant</a>
           <Link to="/">retour à l'accueil</Link>
         </div>
 
