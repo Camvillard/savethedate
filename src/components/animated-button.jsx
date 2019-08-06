@@ -16,19 +16,16 @@ class AnimatedButton extends React.Component {
   }
 
   componentDidMount() {
-    // select svg element
-    const svgForBtn = document.querySelector('.svg-btn-animated')
-    // select all the path in this svg
-    const paths = Array.from(svgForBtn.querySelectorAll('path'))
-    // store that into a state
-    this.setState({
-      svgElements: paths
-    })
   }
 
 
   animateButton = () => {
-    const paths = this.state.svgElements
+    // select svg element depending on the one whose hovered
+    // (will need to replace that)
+    const svgForBtn = document.querySelector(`#${this.props.id}`)
+    // select all the path in this svg
+    const paths = Array.from(svgForBtn.querySelectorAll('path'))
+    this.setState({svgElements: paths})
     // select only the first one (the big blob in the middle)
     const firstPath = paths.shift()
     // apply some style to this one, we want it
@@ -39,9 +36,9 @@ class AnimatedButton extends React.Component {
     // for all the paths, apply some style
     const allRandom = []
     paths.forEach( path => {
-      const random = Math.floor(Math.random() * 100)
+      const random = Math.floor(Math.random() * 80)
       allRandom.push(random)
-      // console.log(random)
+      console.log(path)
       path.style.transition = 'all .8s'
       path.style.transform = `rotate(${random}deg)`
       path.style.transformOrigin = "center"
@@ -69,7 +66,7 @@ class AnimatedButton extends React.Component {
     return(
     <React.Fragment >
 
-      <div className="btn-animated" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.clearAnimations}>
+      <div className="btn-animated" id={this.props.id} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.clearAnimations}>
         <BtnDeco className="svg-btn-animated" />
         <a href={this.props.link} target={this.props.target || "self"}>{this.props.value}</a>
       </div>

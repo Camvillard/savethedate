@@ -63,7 +63,7 @@ class InformationsPage extends React.Component {
               <p>le week end du mariage aura lieu du dix-huit (18) octobre en soirée au vingt (20) octobre en fin de journée, à Saint Adolphe d’Howard, une charmante petite bourgade des Laurentides, à 1h30 environ de Montréal.</p>
               <p>vous pouvez arriver à l’heure qui vous sied le plus sur les lieux, la cérémonie en tant que telle sera célébrée à 16h, le samedi, dans le chalet principal, le Grand Lodge.</p>
               <p>le vendredi soir et le samedi matin seront un peu « chacun fait comme il veut », il y a des barbecues sur place, ainsi que tous les trucs normaux utiles en temps normal pour cuisiner. le dimanche matin, afin de se remettre des émotions - et des gin tonics - il y aura un fantastique brunch aux alentours de midi, toujours au Grand Lodge.</p>
-              <AnimatedButton link="/location" value="découvrir le lieu" />
+              <AnimatedButton link="/location" value="découvrir le lieu" id="btn-infos" />
             </div>
 
           </div>
@@ -84,7 +84,7 @@ class InformationsPage extends React.Component {
               </p>
               <p>un petit peu comme en colonie de vacances, nous essaierons de mettre des amis ensemble, mais bon, peut-être que vous allez vous retrouver avec des gens que vous ne connaissez pas, mais écoutez, quelle meilleure occasion qu’un mariage pour rencontrer d’autres personnes, après tout ?
               </p>
-              <AnimatedButton link="/reserver" value="réserver & payer l'hébergement" />
+              <AnimatedButton link="/reserver" value="réserver & payer l'hébergement" id="btn-hebergement" />
             </div>
 
           </div>
@@ -118,7 +118,7 @@ class InformationsPage extends React.Component {
             <div className="infos-content">
               <p>c'est vraiment parce que 98% des gens ont posé la question, alors d'accord, si vous voulez nous offrir des cadeaux, nous n'y voyons aucun inconvénient.</p>
                             <p>comme nous sommes un couple moderne, nous avons fait une petite cagnotte en ligne qui nous aidera à financer notre voyage de noces au Chili (ou des croquettes pour Coco).</p>
-              <AnimatedButton link="https://www.paypal.com/pools/c/8fXMV0Bbt7" value="participer à la cagnotte" />
+              <AnimatedButton link="https://www.paypal.com/pools/c/8fXMV0Bbt7" value="participer à la cagnotte" id="btn-gift" />
             </div>
 
           </div>
