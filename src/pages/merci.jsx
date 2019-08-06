@@ -3,10 +3,7 @@ import { Link } from 'gatsby';
 
 import SEO from "../components/seo";
 import Header from "../components/header"
-import { defineContentLanguage } from '../helpers/helpers';
 
-
-import content from '../data/content';
 import Blob1 from '../images/blob_homepage-1.svg';
 import Blob2 from '../images/blob_homepage-2.svg';
 

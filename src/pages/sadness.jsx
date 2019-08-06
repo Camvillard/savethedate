@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby'
 
-import content from '../data/content';
 import SEO from "../components/seo";
 import Header from "../components/header"
 

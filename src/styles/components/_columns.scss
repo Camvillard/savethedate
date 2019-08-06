@@ -1,10 +1,4 @@
-/*----- INDEX FOR LAYOUTS ----- */
-
-@import "main";
-@import "contact";
-@import 'rsvp';
-@import "pages";
-@import "covoiturage";
+/*----- COMPONENTS : COLUMNS ----- */
 
 
 @media (min-width: $sm-screen) {
@@ -14,6 +8,19 @@
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
+  .columns-content {
+    display: flex;
+    justify-content: space-around;
+
+    .two-columns {
+      width: 48%;
+    }
+
+    .three-columns {
+      width: 32%;
+    }
+  }
+
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {

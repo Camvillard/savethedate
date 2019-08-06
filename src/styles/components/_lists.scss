@@ -1,11 +1,17 @@
-/*----- INDEX FOR LAYOUTS ----- */
+/*----- COMPONENTS : LISTS ----- */
 
-@import "main";
-@import "contact";
-@import 'rsvp';
-@import "pages";
-@import "covoiturage";
+.no-bullet-list {
+  list-style: none;
+  padding: 0;
+}
 
+.list-inline{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px

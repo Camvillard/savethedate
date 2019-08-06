@@ -1,11 +1,11 @@
 /*----- COMPONENTS : NAVBAR ----- */
 
 #toggle {
-  position: relative;
-  // font-size: 4.2rem;
-  // top: 24px;
-  // left: 6vw;
+  position: fixed;
+  top: 12px;
+  left: 12px;
   z-index: 9000000;
+
 
   svg.close {
     display: block;
@@ -15,7 +15,27 @@
 
   svg.open{
     display: block;
-    // transform: rotate(-45deg);
+  }
+
+  &.green svg.close path{
+    fill: $forest-green;
+  }
+
+  &.green svg.open path{
+    fill: white;
+  }
+
+  &.yellow svg.close path{
+    fill: white;
+  }
+
+  &.yellow svg.open path{
+    fill: $jaune-moutarde;
+  }
+
+  &.white svg.close path,
+  &.white svg.open path{
+    fill: white;
   }
 }
 
@@ -27,7 +47,7 @@
 
   li a{
     color: white;
-    font-size: 6.8rem;
+    font-size: 5.6rem;
     font-weight: 600;
     border-bottom: 2px solid white;
   }
@@ -86,7 +106,6 @@
     display: none;
   }
 
-
   .desktop-menu {
     display: block;
     position: fixed;
@@ -114,16 +133,18 @@
       line-height: 1;
     }
 
+    li a {
+      font-family: $accent-font;
+      font-size: 1.2rem;
+    }
+
     li a.white{
       color: white;
-      font-size: 1.2rem;
-      font-family: $accent-font;
     }
 
     li a.yellow{
       color: $jaune-moutarde;
       font-size: 1.2rem;
-      font-family: $accent-font;
     }
 
 
