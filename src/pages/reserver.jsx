@@ -31,7 +31,7 @@ class ReservationPage extends React.Component {
         if (err) { console.error(err); return; }
         // redirect to a success page + possible paiement
         // window.location.href = "/success"
-        navigate("/payer", {state: reservation})
+        navigate("/payer", {state: {reservation}})
     });
   }
 

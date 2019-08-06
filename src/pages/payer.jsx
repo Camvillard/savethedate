@@ -17,7 +17,13 @@ import '../styles/main.scss';
 class SuccessPage extends React.Component {
 
   render() {
-    const numOfPeople = this.props.location.state.people
+    let numOfPeople
+    if (this.props.location.state.reservation.people) {
+      numOfPeople = this.props.location.state.reservation.people
+    } else {
+      numOfPeople = "x"
+    }
+    console.log(numOfPeople)
     return(
       <React.Fragment>
         <SEO  title="bien reçu !" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
@@ -29,7 +35,7 @@ class SuccessPage extends React.Component {
           <h1>todo bueno</h1>
           <h5>et merci mucho mucho !<br/>on prend note et on vous réserve {numOfPeople} places.</h5>
           <p>afin d'être tout à fait tranquilles jusqu'au jour J, vous pouvez payer tout de suite vos places (que la technologie est pratique).</p>
-          <a href="https://www.paypal.me/CamilleVillard" className="button-green">mais oui, payer maintenant</a>
+          <a href={`https://www.paypal.me/CamilleVillard/${numOfPeople * 80}`} className="button-green">mais oui, payer maintenant</a>
           <Link to="/">retour à l'accueil</Link>
         </div>
 

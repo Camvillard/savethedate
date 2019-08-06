@@ -50,7 +50,6 @@ class IndexPage extends React.Component {
 
             </div>
 
-            <Footer />
 
             <Blob1 className="blob-homepage-one"/>
             <Blob2 className="blob-homepage-two"/>
