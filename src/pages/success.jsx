@@ -1,17 +1,12 @@
 // external libs
 import React from 'react';
-import { Link } from 'gatsby'
 
 // internal stuff
 import SEO from "../components/seo";
 import Header from "../components/header";
 import Footer from '../components/footer';
 
-import { defineContentLanguage } from '../helpers/helpers'
-
 // style & assets
-import Blob from '../images/resa-blob-1.svg';
-
 import '../styles/main.scss';
 
 class SuccessPage extends React.Component {

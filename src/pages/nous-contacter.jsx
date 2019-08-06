@@ -1,13 +1,10 @@
 // external ressources
 import React from "react";
-import { Link } from 'gatsby';
 
 // internal data
 import SEO from "../components/seo";
-import Header from '../components/header';
 import Navbar from "../components/navbar";
 
-import { defineContentLanguage } from '../helpers/helpers';
 
 // styles
 import "../styles/main.scss";

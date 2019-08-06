@@ -1,11 +1,9 @@
 // external libs
 import React from 'react';
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
 
 // internal stuff
 import SEO from '../components/seo';
-import Header from '../components/header';
-import Footer from '../components/footer';
 import Navbar from "../components/navbar";
 
 

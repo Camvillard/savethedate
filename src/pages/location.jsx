@@ -3,18 +3,14 @@ import React from 'react';
 import { Link } from "gatsby";
 
 // internal stuff
-import Header from "../components/header";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
 // style & assets
 import "../styles/main.scss"
 import Arrow from "../images/arrow.svg";
-import MapCeremonie from "../images/map-ceremonie_details.svg"
-import MapGenerale from "../images/map_generale.svg"
 
 class Location extends React.Component {
-
 
   render(){
     return(

@@ -10,7 +10,6 @@ import Footer from '../components/footer';
 // style & assets
 import BlobOne from "../images/blob_homepage-2.svg";
 import BlobTwo from "../images/blob_homepage-1.svg";
-import Arrow from "../images/arrow.svg";
 
 import AnimatedButton from "../components/animated-button"
 

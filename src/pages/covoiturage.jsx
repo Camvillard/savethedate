@@ -1,11 +1,9 @@
 // external libs
 import React from "react";
-import { Link } from "gatsby";
 
 // internal stuff
 import Header from "../components/header";
 import SEO from '../components/seo';
-import content from '../data/content';
 
 
 // style & assets

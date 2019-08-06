@@ -4,9 +4,6 @@ import { Link } from 'gatsby';
 import SEO from '../components/seo';
 import Header from '../components/header'
 
-import content from '../data/content';
-// import { defineContentLanguage } from '../helpers/helpers';
-
 import "../styles/main.scss"
 
 const Airtable = require('airtable');

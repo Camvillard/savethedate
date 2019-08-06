@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 
 import Toggle from "../images/toggle_2.svg";
-import CloseToggle from "../images/toggle-close.svg";
 
 class Navbar extends React.Component {
   constructor(props) {

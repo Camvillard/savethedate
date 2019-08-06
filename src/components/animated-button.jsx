@@ -1,6 +1,5 @@
 // external libs
 import React from "react"
-import { Link } from "gatsby"
 
 // internal stuff
 import BtnDeco from "../images/btn-decos.svg"
