@@ -116,13 +116,10 @@
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
-  #infos-page .fullwidth-container {
-    margin-top: 164px;
-  }
 
-  .infos-container {
+  .infos-header {
     h2 {
-      font-size: 6rem;
+      font-size: 2.6rem;
     }
 
     h4.infos-title span {
@@ -133,7 +130,7 @@
 
   #infos-page {
     .main-container {
-      max-width: 560px;
+      // max-width: 560px;
     }
   }
 
@@ -142,8 +139,86 @@
 
 @media (min-width: $lg-screen) {
 
+  #infos-blob-one {
+    position: absolute;
+    width: 38%;
+    top: 32px;
+    right: 24px;
+  }
+
+  #infos-blob-two {
+    width: 40%;
+    position: absolute;
+    bottom: 24px;
+    left: -72px;
+  }
+
   .infos-header {
-    width: 42%;
+
+    h4 {
+      font-size: 3.6rem;
+      width: 120px;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    .border-green {
+      width: 120px;
+    }
+
+  }
+
+  .infos-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+
+    h2 {
+      text-align: left;
+      margin: 0 0 24px 20vw;
+      width: 232px;
+      line-height: 1.625;
+    }
+  }
+
+  .infos-summary {
+
+    ul {
+      margin-left: 24vw;
+    }
+    .summary-text {
+      margin-left: 64px;
+    }
+  }
+
+  // #organisation,
+  // #sleeping,
+  // #dresscode,
+  // #gifts,
+  // #good-to-know {
+  //   padding-top: 72px;
+  // }
+
+  #organisation {
+    margin-left: 24vw;
+  }
+
+
+  #sleeping {
+    margin-left: 6vw;
+    max-width: 44vw;
+  }
+
+  #dresscode {
+    margin-top: -240px;
+    margin-left: 56vw;
+    max-width: 36vw;
+    border: 2px solid red;
   }
 } // end of lg-screen - 1200px
 

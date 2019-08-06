@@ -17,7 +17,7 @@ class AnimatedButton extends React.Component {
 
   componentDidMount() {
     // select svg element
-    const svgForBtn = document.querySelector('#svg-btn-animated')
+    const svgForBtn = document.querySelector('.svg-btn-animated')
     // select all the path in this svg
     const paths = Array.from(svgForBtn.querySelectorAll('path'))
     // store that into a state
@@ -49,6 +49,7 @@ class AnimatedButton extends React.Component {
   };
 
   handleMouseEnter = (e) => {
+    console.log('hello');
     this.animateButton()
   };
 
@@ -68,7 +69,7 @@ class AnimatedButton extends React.Component {
     <React.Fragment >
 
       <div className="btn-animated" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.clearAnimations}>
-        <BtnDeco id="svg-btn-animated" />
+        <BtnDeco className="svg-btn-animated" />
         <a href={this.props.link} target={this.props.target}>{this.props.value}</a>
       </div>
 
