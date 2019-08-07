@@ -1,24 +1,22 @@
 // external libs
 import React from "react";
-import { Link } from 'gatsby';
 
 
 const SimpleInput = ({data}) => {
   // console.log(data)
   return(
-    <div className="form-element">
+    <div className="form-element" id={data.id}>
       <label htmlFor="">{data.label}</label>
-      <input type="text" name={data.name} onChange={data.onChange}/>
+      <input type={data.inputType} name={data.name} onBlur={data.onBlur} stepbefore={data.stepbefore} step={data.step}/>
     </div>
   )
 }
 
 const SelectInput = ({data}) => {
-  // console.log(data)
   return(
-    <div className="form-element">
+    <div className="form-element" id={data.id}>
       <label htmlFor="">{data.label}</label>
-      <select name="test" id="select-test" onChange={data.onChange}>
+      <select name={data.name} id={data.id} onChange={data.onChange} stepbefore={data.stepbefore} step={data.step}>
         {data.optionsForSelect.split(',').map( d => <option value={d} key={d}>{d}</option>)}
       </select>
     </div>
@@ -28,15 +26,16 @@ const SelectInput = ({data}) => {
 const RadioInput = ({data}) => {
   // console.log(data)
   const values = data.optionsForSelect.split(',')
-  console.log(values)
+  let counter = 0
   return(
-    <div className="form-element">
+    <div className="form-element" id={data.id}>
       <label htmlFor="">{data.label}</label>
       {values.map( v => {
+        counter ++
         return (
-          <div>
+          <div key={counter}>
             <label htmlFor="">{v}</label>
-            <input type="radio" value={v}/>
+            <input type="radio" value={v} onChange={data.onChange} name={data.name} stepbefore={data.stepbefore} step={data.step}/>
           </div>
         )
       })}
