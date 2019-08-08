@@ -5,7 +5,25 @@ import { Link } from "gatsby";
 // internal stuff
 import Header from "../components/header";
 import SEO from '../components/seo';
-import content from '../data/content';
+
+//form-components
+import FormHasACar from "../components/form-covoit/form-has-a-car";
+import FormHowMany from "../components/form-covoit/form-how-many";
+import FormCarPool from "../components/form-covoit/form-car-pool";
+import FormComeWhen from "../components/form-covoit/form-come-when";
+import FormPickupPlace from "../components/form-covoit/form-pickup-place";
+import FormReturn from "../components/form-covoit/form-return";
+import FormReturnWhen from "../components/form-covoit/form-return-when";
+import FormReturnQty from "../components/form-covoit/form-return-qty";
+import FormCarpoolQty from "../components/form-covoit/form-carpool-qty";
+import FormCarpoolWhen from "../components/form-covoit/form-carpool-when";
+import FormReturnCovoit from "../components/form-covoit/form-return-covoit";
+import FormReturnCarpoolQty from "../components/form-covoit/form-return-carpool-qty";
+import FormReturnCarpoolWhen from "../components/form-covoit/form-return-carpool-when";
+
+import FormBtnSubmit from "../components/form-covoit/form-btn-submit";
+import FormBusLien from "../components/form-covoit/form-bus-lien";
+
 
 
 // style & assets
@@ -16,7 +34,24 @@ const Airtable = require('airtable');
 
 
 class Covoiturage extends React.Component {
-
+  constructor(props){
+    super(props);
+    this.state = {
+      hasACar: null,
+      howMany: 0,
+      comeWhen: "",
+      placePickUp: "",
+      returnWay: null,
+      carPool: null,
+      howManyPool: 0,
+      comeWhenPool: "",
+      returnWayPool: null,
+      returnWhen: "",
+      returnHowMany: 0,
+      returnPoolQty: 0,
+      returnPoolWhen: ""
+    }
+  }
 
   createAirtableRecord = (covoiturage) => {
     // for each new rsvp received, create a new record
@@ -60,9 +95,93 @@ class Covoiturage extends React.Component {
     this.createAirtableRecord(covoiturage);
   }
 
+  handleCar = (e) => {
+    console.log(e.target.value)
+    if (e.target.value === "oui") {
+      this.setState({ hasACar: true})
+    } else {
+      this.setState({ hasACar: false})
+    }
+  }
+
+  handleQty = (e) => {
+    console.log(e.target.value)
+    this.setState({howMany: e.target.value});
+  }
+
+  handleWhen = (e) => {
+    console.log(e.target.value)
+    this.setState({comeWhen: e.target.value});
+  }
+
+  handleWhere = (e) => {
+    console.log(e.target.value)
+    this.setState({placePickUp: e.target.value})
+  }
+
+  handleReturn = (e) => {
+    console.log(e.target.value)
+    if (e.target.value === "oui") {
+      this.setState({returnWay: true})
+    } else {
+      this.setState({returnWay: false})
+    }
+  }
+
+  handleReturnWhen = (e) => {
+    console.log(e.target.value)
+    this.setState({returnWhen: e.target.value});
+  }
+
+  handleReturnQty = (e) => {
+    console.log(e.target.value)
+    this.setState({returnHowMany: e.target.value})
+  }
+
+  handleCarPool = (e) => {
+    console.log(e.target.value)
+    if (e.target.value === "oui") {
+      this.setState({carPool: true})
+    } else {
+      this.setState({carPool: false})
+    }
+  }
+
+  handlePoolQty = (e) => {
+    console.log(e.target.value)
+    this.setState({howManyPool: e.target.value})
+  }
+
+  handlePoolWhen = (e) => {
+    console.log(e.target.value)
+    this.setState({comeWhenPool: e.target.value})
+  }
+
+  handlePoolReturn = (e) => {
+    console.log(e.target.value)
+    if (e.target.value === "oui") {
+      this.setState({returnWayPool: true})
+    } else {
+      this.setState({returnWayPool: false})
+    }
+  }
+
+  handlePoolReturnQty = (e) => {
+    console.log(e.target.value)
+    this.setState({returnPoolQty: e.target.value})
+  }
+
+  handlePoolReturnWhen = (e) => {
+    console.log(e.target.value)
+    this.setState({returnPoolWhen: e.target.value})
+  }
+
 
   render() {
-    return(
+
+    if(this.state.hasACar){
+console.log("HasACar");
+return(
       <React.Fragment>
       <div className="container-fullpage" id="covoit-container">
 
@@ -87,91 +206,35 @@ class Covoiturage extends React.Component {
 
 
             <div className="covoit-form-container">
-              <div className="covoit-form">
-                <p> As-tu une voiture à disposition? </p>
+              <FormHasACar onChange={this.handleCar} />
 
-                <div className="covoit-radio-btn">
-                  <label className="radio-btn-style"> oui
-                    <input type="radio" ref="driver"name="driver" value="oui"/>
-                    <span className="radio-btn-span"></span>
-                  </label>
-                </div>
 
-                <div className="covoit-radio-btn">
-                  <label className="radio-btn-style"> non
-                    <input type="radio" ref="driver" name="driver" value="non"/>
-                    <span className="radio-btn-span"></span>
-                  </label>
-                </div>
-              </div>
+                <FormHowMany onChange={this.handleQty} />
 
-              <div className="covoit-form">
-                <p>Es-tu intéressé par le covoiturage?</p>
+                {this.state.howMany === ('')}
 
-                <div className="covoit-radio-btn">
-                  <label className="radio-btn-style"> oui
-                    <input type="radio" ref="covoiturage"name="covoiturage" value="oui"/>
-                    <span className="radio-btn-span"></span>
-                  </label>
-                </div>
+                {this.state.howMany > 0  && (<FormComeWhen onChange={this.handleWhen} />)}
 
-                <div className="covoit-radio-btn">
-                  <label className="radio-btn-style"> non
-                    <input type="radio" ref="covoiturage" name="covoiturage" value="non"/>
-                    <span className="radio-btn-span"></span>
-                  </label>
-                </div>
-              </div>
+                {this.state.comeWhen === ('')}
 
-              <div className="covoit-form">
-                <p> Vous êtes combien? </p>
-                <input type="text" placeholder="combien de personnes" ref="qty"/>
-              </div>
+                {this.state.comeWhen !== ('') && (<FormPickupPlace onChange={this.handleWhere} />)}
 
-              <div className="covoit-form">
-                <p> Vous voulez arriver quand? </p>
-                <select name="date" id="presence" ref="date">
-                  <option disabled selected value> -- choisi une option -- </option>
-                  <option value="vendredi matin">vendredi matin</option>
-                  <option value="vendredi aprem">vendredi aprem</option>
-                  <option value="samedi matin">samedi matin</option>
-                </select>
-              </div>
+                {this.state.placePickUp === ('')}
 
-              <div className="covoit-form">
-                <p> As-tu besoin la coivoit pour la route de retour?  </p>
+                {this.state.placePickUp !== ('') && (<FormReturn onChange={this.handleReturn} />)}
 
-                <div className="covoit-radio-btn">
-                  <label className="radio-btn-style"> oui
-                    <input type="radio" ref="return"name="return" value="oui"/>
-                    <span className="radio-btn-span"></span>
-                  </label>
-                </div>
+                {this.state.returnWay === null && ('')}
 
-                <div className="covoit-radio-btn">
-                  <label className="radio-btn-style"> non
-                    <input type="radio" ref="return" name="return" value="non" />
-                    <span className="radio-btn-span"></span>
-                  </label>
-                </div>
-              </div>
+                {this.state.returnWay && (<FormReturnWhen onChange={this.handleReturnWhen} />)}
 
-              <div className="covoit-form">
-                <p> Dans ce cas-là, on recommence:  </p>
-                <p> Vous êtes combien? </p>
-                <input type="text" placeholder="combien de personnes" ref="returnQty"/>
-              </div>
+                {this.state.returnWay === false && (<FormBtnSubmit />)}
 
-              <div className="covoit-form">
-                <p> Vous voulez partir quand? </p>
-                <select name="returnWhen" id="presence" ref="returnWhen">
-                  <option disabled selected value> -- choisi une option -- </option>
-                  <option value="dimanche matin">dimanche matin</option>
-                  <option value="dimanche aprem">dimanche aprem</option>
-                </select>
-              </div>
+                {this.state.returnWhen !== ('') && (<FormReturnQty onChange={this.handleReturnQty} />)}
 
-              <button className="button-send">envoyer ta demande de covoit</button>
+                {this.state.returnHowMany === ('')}
+
+                {this.state.returnHowMany > 0 && (<FormBtnSubmit />)}
+
             </div>
           </form>
 
@@ -180,6 +243,84 @@ class Covoiturage extends React.Component {
       </div>
       </React.Fragment>
     )
+
+    } else {
+
+      console.log("Does not have a car")
+return(
+      <React.Fragment>
+      <div className="container-fullpage" id="covoit-container">
+
+        <SEO
+          title="RSVP"
+          keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
+        />
+
+        <Header
+          color="light"
+          position="regular"
+          navbarColor="yellow"
+        />
+
+        <div className="small-container">
+
+          <h2 className="page-title white"><span>transports</span></h2>
+          <p className="page-content white"> texte á venir</p>
+
+          <form onSubmit={this.handleSubmit} action="/success" className="form-stroked form-white">
+            <input type="text" placeholder="nom, prénom, etc" ref="name"/>
+
+
+            <div className="covoit-form-container">
+              <FormHasACar onChange={this.handleCar} />
+
+                {this.state.hasACar === false && (<FormCarPool onChange={this.handleCarPool} />)}
+
+
+                {this.state.carPool === null && ('')}
+
+                {this.state.carPool && (<FormCarpoolQty onChange={this.handlePoolQty} />)}
+
+                {this.state.carPool === false && (<FormBusLien />)}
+
+
+                {this.state.howManyPool === ('')}
+
+                {this.state.howManyPool > 0  && (<FormCarpoolWhen onChange={this.handlePoolWhen} />)}
+
+
+                {this.state.comeWhenPool === ('')}
+
+                {this.state.comeWhenPool !== ('') && (<FormReturnCovoit onChange={this.handlePoolReturn} />)}
+
+
+                {this.state.returnWayPool === null && ('')}
+
+                {this.state.returnWayPool && (<FormReturnCarpoolQty onChange={this.handlePoolReturnQty} />)}
+
+                {this.state.returnWayPool === false && (<FormBtnSubmit />)}
+
+
+                {this.state.returnPoolQty === ('')}
+
+                {this.state.returnPoolQty > 0 && (<FormReturnCarpoolWhen onChange={this.handlePoolReturnWhen} />)}
+
+                {this.state.returnPoolWhen === ('')}
+
+                {this.state.returnPoolWhen !== ('') && (<FormBtnSubmit />)}
+
+
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+      </React.Fragment>
+    )
+    }
+
+
   }
 }
 

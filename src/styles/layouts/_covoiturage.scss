@@ -1,3 +1,4 @@
+
 #covoit-container{
   background: #E39D24;
 }
@@ -39,7 +40,10 @@
 }
 
 .radio-btn-style input{
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .radio-btn-style .radio-btn-span {
@@ -54,16 +58,28 @@
 }
 
 
-.radio-btn-style:hover .radio-btn-span {
-  background-color:$forest-green;
-}
+// .radio-btn-style:hover .radio-btn-span {
+//   background-color:$forest-green;
+// }
 
-.radio-btn-style input:checked + .radio-btn-span {
-  background-image: url(https://res.cloudinary.com/kristynadierstein/image/upload/v1564761387/radio_btn_check_vwsa44.svg);
-}
+// .radio-btn-style input:checked + .radio-btn-span {
+//   fill: url(https://res.cloudinary.com/kristynadierstein/image/upload/v1564761387/radio_btn_check_vwsa44.svg);
+//   z-index: 1000;
+// }
 
-.radio-btn-style input:checked + .radio-btn-span:after {
-// background-image: `url(https://res.cloudinary.com/kristynadierstein/image/upload/v1564761387/radio_btn_check_vwsa44.svg)`;
-background-color: red;
-}
+// .radio-btn-style input:checked + .radio-btn-span:after {
+// // background-image: `url(https://res.cloudinary.com/kristynadierstein/image/upload/v1564761387/radio_btn_check_vwsa44.svg)`;
+// background-color: red;
+// }
 
+// #img {
+//   display: none;
+// }
+
+// [type=radio]:checked + img {
+//   display: flex !important;
+//   position: absolute;
+//   top: -32px;
+//   z-index: 1000;
+//   right: -4px;
+// }
