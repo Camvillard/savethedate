@@ -178,151 +178,129 @@ class Covoiturage extends React.Component {
 
 
   render() {
+    if(this.state.hasACar) {
+      console.log("HasACar");
+      return(
+          <React.Fragment>
+          <div className="container-fullpage" id="covoit-container">
+            <SEO
+              title="RSVP"
+              keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
+            />
+            <Header
+              color="light"
+              position="regular"
+              navbarColor="yellow"
+            />
+            <div className="small-container">
+              <h2 className="page-title white"><span>transports</span></h2>
+              <p className="page-content white"> texte á venir</p>
+              <form onSubmit={this.handleSubmit} action="/success" className="form-stroked form-white">
+                <input type="text" placeholder="nom, prénom, etc" ref="name"/>
+                <div className="covoit-form-container">
+                  <FormHasACar onChange={this.handleCar} />
 
-    if(this.state.hasACar){
-console.log("HasACar");
-return(
-      <React.Fragment>
-      <div className="container-fullpage" id="covoit-container">
+                    <FormHowMany onChange={this.handleQty} />
 
-        <SEO
-          title="RSVP"
-          keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
-        />
+                    {this.state.howMany === ('')}
 
-        <Header
-          color="light"
-          position="regular"
-          navbarColor="yellow"
-        />
+                    {this.state.howMany > 0  && (<FormComeWhen onChange={this.handleWhen} />)}
 
-        <div className="small-container">
+                    {this.state.comeWhen === ('')}
 
-          <h2 className="page-title white"><span>transports</span></h2>
-          <p className="page-content white"> texte á venir</p>
+                    {this.state.comeWhen !== ('') && (<FormPickupPlace onChange={this.handleWhere} />)}
 
-          <form onSubmit={this.handleSubmit} action="/success" className="form-stroked form-white">
-            <input type="text" placeholder="nom, prénom, etc" ref="name"/>
+                    {this.state.placePickUp === ('')}
 
+                    {this.state.placePickUp !== ('') && (<FormReturn onChange={this.handleReturn} />)}
 
-            <div className="covoit-form-container">
-              <FormHasACar onChange={this.handleCar} />
-
-
-                <FormHowMany onChange={this.handleQty} />
-
-                {this.state.howMany === ('')}
-
-                {this.state.howMany > 0  && (<FormComeWhen onChange={this.handleWhen} />)}
-
-                {this.state.comeWhen === ('')}
-
-                {this.state.comeWhen !== ('') && (<FormPickupPlace onChange={this.handleWhere} />)}
-
-                {this.state.placePickUp === ('')}
-
-                {this.state.placePickUp !== ('') && (<FormReturn onChange={this.handleReturn} />)}
-
-                {this.state.returnWay === null && ('')}
-
-                {this.state.returnWay && (<FormReturnWhen onChange={this.handleReturnWhen} />)}
-
-                {this.state.returnWay === false && (<FormBtnSubmit />)}
-
-                {this.state.returnWhen !== ('') && (<FormReturnQty onChange={this.handleReturnQty} />)}
-
-                {this.state.returnHowMany === ('')}
-
-                {this.state.returnHowMany > 0 && (<FormBtnSubmit />)}
-
+                    {this.state.returnWay === null && ('')}
+                </div>
+              </form>
             </div>
-          </form>
-
-        </div>
-
-      </div>
-      </React.Fragment>
-    )
-
+          </div>
+          </React.Fragment>
+          );
+    // } else if(this.state.returnWay) {
+    //   console.log("yes for the return");
+    //   return(
+    //       <React.Fragment>
+    //         <FormReturnWhen onChange={this.handleReturnWhen} />
+    //         {this.state.returnWhen !== ('') && (<FormReturnQty onChange={this.handleReturnQty} />)}
+    //         {this.state.returnHowMany === ('')}
+    //         {this.state.returnHowMany > 0 && (<FormBtnSubmit />)}
+    //       </React.Fragment>
+    //   );
+    // } else if(this.state.returnWay ===  false) {
+    //   console.log("no for the return");
+    //   return(
+    //   {this.state.returnWay === false && (<FormBtnSubmit />)}
+    //   );
     } else {
-
       console.log("Does not have a car")
-return(
-      <React.Fragment>
-      <div className="container-fullpage" id="covoit-container">
+      return(
+        <React.Fragment>
+        <div className="container-fullpage" id="covoit-container">
+          <SEO
+            title="RSVP"
+            keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
+          />
+          <Header
+            color="light"
+            position="regular"
+            navbarColor="yellow"
+          />
+          <div className="small-container">
+            <h2 className="page-title white"><span>transports</span></h2>
+            <p className="page-content white"> texte á venir</p>
+            <form onSubmit={this.handleSubmit} action="/success" className="form-stroked form-white">
+              <input type="text" placeholder="nom, prénom, etc" ref="name"/>
+              <div className="covoit-form-container">
+                <FormHasACar onChange={this.handleCar} />
 
-        <SEO
-          title="RSVP"
-          keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
-        />
-
-        <Header
-          color="light"
-          position="regular"
-          navbarColor="yellow"
-        />
-
-        <div className="small-container">
-
-          <h2 className="page-title white"><span>transports</span></h2>
-          <p className="page-content white"> texte á venir</p>
-
-          <form onSubmit={this.handleSubmit} action="/success" className="form-stroked form-white">
-            <input type="text" placeholder="nom, prénom, etc" ref="name"/>
-
-
-            <div className="covoit-form-container">
-              <FormHasACar onChange={this.handleCar} />
-
-                {this.state.hasACar === false && (<FormCarPool onChange={this.handleCarPool} />)}
+                  {this.state.hasACar === false && (<FormCarPool onChange={this.handleCarPool} />)}
 
 
-                {this.state.carPool === null && ('')}
+                  {this.state.carPool === null && ('')}
 
-                {this.state.carPool && (<FormCarpoolQty onChange={this.handlePoolQty} />)}
+                  {this.state.carPool && (<FormCarpoolQty onChange={this.handlePoolQty} />)}
 
-                {this.state.carPool === false && (<FormBusLien />)}
-
-
-                {this.state.howManyPool === ('')}
-
-                {this.state.howManyPool > 0  && (<FormCarpoolWhen onChange={this.handlePoolWhen} />)}
+                  {this.state.carPool === false && (<FormBusLien />)}
 
 
-                {this.state.comeWhenPool === ('')}
+                  {this.state.howManyPool === ('')}
 
-                {this.state.comeWhenPool !== ('') && (<FormReturnCovoit onChange={this.handlePoolReturn} />)}
-
-
-                {this.state.returnWayPool === null && ('')}
-
-                {this.state.returnWayPool && (<FormReturnCarpoolQty onChange={this.handlePoolReturnQty} />)}
-
-                {this.state.returnWayPool === false && (<FormBtnSubmit />)}
+                  {this.state.howManyPool > 0  && (<FormCarpoolWhen onChange={this.handlePoolWhen} />)}
 
 
-                {this.state.returnPoolQty === ('')}
+                  {this.state.comeWhenPool === ('')}
 
-                {this.state.returnPoolQty > 0 && (<FormReturnCarpoolWhen onChange={this.handlePoolReturnWhen} />)}
-
-                {this.state.returnPoolWhen === ('')}
-
-                {this.state.returnPoolWhen !== ('') && (<FormBtnSubmit />)}
+                  {this.state.comeWhenPool !== ('') && (<FormReturnCovoit onChange={this.handlePoolReturn} />)}
 
 
-            </div>
-          </form>
+                  {this.state.returnWayPool === null && ('')}
 
+                  {this.state.returnWayPool && (<FormReturnCarpoolQty onChange={this.handlePoolReturnQty} />)}
+
+                  {this.state.returnWayPool === false && (<FormBtnSubmit />)}
+
+
+                  {this.state.returnPoolQty === ('')}
+
+                  {this.state.returnPoolQty > 0 && (<FormReturnCarpoolWhen onChange={this.handlePoolReturnWhen} />)}
+
+                  {this.state.returnPoolWhen === ('')}
+
+                  {this.state.returnPoolWhen !== ('') && (<FormBtnSubmit />)}
+              </div>
+            </form>
+          </div>
         </div>
-
-      </div>
-      </React.Fragment>
-    )
+        </React.Fragment>
+      );
     }
-
-
   }
-}
+
 
 
 
