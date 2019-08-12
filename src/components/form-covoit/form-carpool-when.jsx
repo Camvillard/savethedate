@@ -9,7 +9,7 @@ class FormCarpoolWhen extends React.Component {
     return(
       <div className="covoit-form hidden-input">
         <p> Quand penses-tu être en forme pour partir dimanche? Au pire tu peux dormir dans la voiture :) </p>
-        <select name="date" id="presence" ref="date" onChange={this.props.onChange}>
+        <select name="comeWhenPool" id="presence" ref="comeWhenPool" onChange={this.props.onChange}>
           <option default value > -- choisi une option -- </option>
           <option value="vendredi matin">dimanche matin</option>
           <option value="vendredi aprem">dimanche aprem</option>

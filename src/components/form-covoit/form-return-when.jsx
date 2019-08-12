@@ -9,7 +9,7 @@ class FormReturnWhen extends React.Component {
     return(
       <div className="covoit-form hidden-input">
         <p> Quand penses-tu être en forme pour partir dimanche ? :) </p>
-        <select name="date" id="presence" ref="date" onChange={this.props.onChange}>
+        <select name="returnWhen" id="presence" ref="returnWhen" onChange={this.props.onChange}>
           <option default value> -- choisi une option -- </option>
           <option value="vendredi matin">dimanche matin</option>
           <option value="vendredi aprem">dimanche aprem</option>

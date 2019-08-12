@@ -9,7 +9,7 @@ class FormHowMany extends React.Component {
     return(
      <div className="covoit-form hidden-input">
         <p> Combien de personnes tu peux prendre dans ta voiture? </p>
-        <input type="text" placeholder="combien de personnes" ref="qty" onChange={this.props.onChange}/>
+        <input name="howMany" type="text" placeholder="combien de personnes" ref="howMany" onChange={this.props.onChange}/>
       </div>
     )
 

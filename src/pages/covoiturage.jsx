@@ -1,3 +1,4 @@
+
 // external libs
 import React from "react";
 import { Link } from "gatsby";
@@ -20,6 +21,7 @@ import FormCarpoolWhen from "../components/form-covoit/form-carpool-when";
 import FormReturnCovoit from "../components/form-covoit/form-return-covoit";
 import FormReturnCarpoolQty from "../components/form-covoit/form-return-carpool-qty";
 import FormReturnCarpoolWhen from "../components/form-covoit/form-return-carpool-when";
+import FormHasACarMain from "../components/form-hasacar-main";
 
 import FormBtnSubmit from "../components/form-covoit/form-btn-submit";
 import FormBusLien from "../components/form-covoit/form-bus-lien";
@@ -51,6 +53,9 @@ class Covoiturage extends React.Component {
       returnPoolQty: 0,
       returnPoolWhen: ""
     }
+
+    this.handleChanges = this.handleChanges.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   createAirtableRecord = (covoiturage) => {
@@ -95,6 +100,12 @@ class Covoiturage extends React.Component {
     this.createAirtableRecord(covoiturage);
   }
 
+  handleChanges = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
   handleCar = (e) => {
     console.log(e.target.value)
     if (e.target.value === "oui") {
@@ -104,20 +115,6 @@ class Covoiturage extends React.Component {
     }
   }
 
-  handleQty = (e) => {
-    console.log(e.target.value)
-    this.setState({howMany: e.target.value});
-  }
-
-  handleWhen = (e) => {
-    console.log(e.target.value)
-    this.setState({comeWhen: e.target.value});
-  }
-
-  handleWhere = (e) => {
-    console.log(e.target.value)
-    this.setState({placePickUp: e.target.value})
-  }
 
   handleReturn = (e) => {
     console.log(e.target.value)
@@ -126,16 +123,6 @@ class Covoiturage extends React.Component {
     } else {
       this.setState({returnWay: false})
     }
-  }
-
-  handleReturnWhen = (e) => {
-    console.log(e.target.value)
-    this.setState({returnWhen: e.target.value});
-  }
-
-  handleReturnQty = (e) => {
-    console.log(e.target.value)
-    this.setState({returnHowMany: e.target.value})
   }
 
   handleCarPool = (e) => {
@@ -147,16 +134,6 @@ class Covoiturage extends React.Component {
     }
   }
 
-  handlePoolQty = (e) => {
-    console.log(e.target.value)
-    this.setState({howManyPool: e.target.value})
-  }
-
-  handlePoolWhen = (e) => {
-    console.log(e.target.value)
-    this.setState({comeWhenPool: e.target.value})
-  }
-
   handlePoolReturn = (e) => {
     console.log(e.target.value)
     if (e.target.value === "oui") {
@@ -165,17 +142,6 @@ class Covoiturage extends React.Component {
       this.setState({returnWayPool: false})
     }
   }
-
-  handlePoolReturnQty = (e) => {
-    console.log(e.target.value)
-    this.setState({returnPoolQty: e.target.value})
-  }
-
-  handlePoolReturnWhen = (e) => {
-    console.log(e.target.value)
-    this.setState({returnPoolWhen: e.target.value})
-  }
-
 
   render() {
     if(this.state.hasACar) {
@@ -197,45 +163,40 @@ class Covoiturage extends React.Component {
               <p className="page-content white"> texte á venir</p>
               <form onSubmit={this.handleSubmit} action="/success" className="form-stroked form-white">
                 <input type="text" placeholder="nom, prénom, etc" ref="name"/>
-                <div className="covoit-form-container">
-                  <FormHasACar onChange={this.handleCar} />
+               <div className="covoit-form-container">
+                 <FormHasACar onChange={this.handleCar} />
 
-                    <FormHowMany onChange={this.handleQty} />
+                   {this.state.hasACar && (<FormHowMany onChange={this.handleChanges} />)}
 
-                    {this.state.howMany === ('')}
+                   {this.state.howMany === ('')}
 
-                    {this.state.howMany > 0  && (<FormComeWhen onChange={this.handleWhen} />)}
+                   {this.state.howMany > 0  && (<FormComeWhen onChange={this.handleChanges} />)}
 
-                    {this.state.comeWhen === ('')}
+                   {this.state.comeWhen === ('')}
 
-                    {this.state.comeWhen !== ('') && (<FormPickupPlace onChange={this.handleWhere} />)}
+                   {this.state.comeWhen !== ('') && (<FormPickupPlace onChange={this.handleChanges} />)}
 
-                    {this.state.placePickUp === ('')}
+                   {this.state.placePickUp === ('')}
 
-                    {this.state.placePickUp !== ('') && (<FormReturn onChange={this.handleReturn} />)}
+                   {this.state.placePickUp !== ('') && (<FormReturn onChange={this.handleReturn} />)}
 
-                    {this.state.returnWay === null && ('')}
-                </div>
+                   {this.state.returnWay === null && ('')}
+
+                   {this.state.returnWay && (<FormReturnWhen onChange={this.handleChanges} />)}
+
+                   {this.state.returnWay === false && (<FormBtnSubmit />)}
+
+                   {this.state.returnWhen !== ('') && (<FormReturnQty onChange={this.handleChanges} />)}
+
+                   {this.state.returnHowMany === ('')}
+
+                   {this.state.returnHowMany > 0 && (<FormBtnSubmit />)}
+               </div>
               </form>
             </div>
           </div>
           </React.Fragment>
           );
-    // } else if(this.state.returnWay) {
-    //   console.log("yes for the return");
-    //   return(
-    //       <React.Fragment>
-    //         <FormReturnWhen onChange={this.handleReturnWhen} />
-    //         {this.state.returnWhen !== ('') && (<FormReturnQty onChange={this.handleReturnQty} />)}
-    //         {this.state.returnHowMany === ('')}
-    //         {this.state.returnHowMany > 0 && (<FormBtnSubmit />)}
-    //       </React.Fragment>
-    //   );
-    // } else if(this.state.returnWay ===  false) {
-    //   console.log("no for the return");
-    //   return(
-    //   {this.state.returnWay === false && (<FormBtnSubmit />)}
-    //   );
     } else {
       console.log("Does not have a car")
       return(
@@ -263,14 +224,14 @@ class Covoiturage extends React.Component {
 
                   {this.state.carPool === null && ('')}
 
-                  {this.state.carPool && (<FormCarpoolQty onChange={this.handlePoolQty} />)}
+                  {this.state.carPool && (<FormCarpoolQty onChange={this.handleChanges} />)}
 
                   {this.state.carPool === false && (<FormBusLien />)}
 
 
                   {this.state.howManyPool === ('')}
 
-                  {this.state.howManyPool > 0  && (<FormCarpoolWhen onChange={this.handlePoolWhen} />)}
+                  {this.state.howManyPool > 0  && (<FormCarpoolWhen onChange={this.handleChanges} />)}
 
 
                   {this.state.comeWhenPool === ('')}
@@ -280,14 +241,14 @@ class Covoiturage extends React.Component {
 
                   {this.state.returnWayPool === null && ('')}
 
-                  {this.state.returnWayPool && (<FormReturnCarpoolQty onChange={this.handlePoolReturnQty} />)}
+                  {this.state.returnWayPool && (<FormReturnCarpoolQty onChange={this.handleChanges} />)}
 
                   {this.state.returnWayPool === false && (<FormBtnSubmit />)}
 
 
                   {this.state.returnPoolQty === ('')}
 
-                  {this.state.returnPoolQty > 0 && (<FormReturnCarpoolWhen onChange={this.handlePoolReturnWhen} />)}
+                  {this.state.returnPoolQty > 0 && (<FormReturnCarpoolWhen onChange={this.handleChanges} />)}
 
                   {this.state.returnPoolWhen === ('')}
 
@@ -300,6 +261,7 @@ class Covoiturage extends React.Component {
       );
     }
   }
+}
 
 
 

@@ -9,7 +9,7 @@ class FormComeWhen extends React.Component {
     return(
       <div className="covoit-form hidden-input">
         <p> Quand pouvez-vous prendre le passager? </p>
-        <select name="date" id="presence" ref="date" onChange={this.props.onChange}>
+        <select name="comeWhen" id="presence" ref="comeWhen" onChange={this.props.onChange}>
           <option default value > -- choisi une option -- </option>
           <option value="vendredi matin">vendredi matin</option>
           <option value="vendredi aprem">vendredi aprem</option>

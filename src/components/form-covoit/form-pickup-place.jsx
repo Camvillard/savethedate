@@ -9,7 +9,7 @@ class FormPickupPlace extends React.Component {
     return(
       <div className="covoit-form hidden-input">
         <p> L'endroit idéal pour chercher vos covoitureurs? </p>
-        <input type="text" placeholder="lieu de rdv" ref="rdz" onChange={this.props.onChange}/>
+        <input name="placePickUp" type="text" placeholder="lieu de rdv" ref="placePickUp" onChange={this.props.onChange}/>
       </div>
     )
 

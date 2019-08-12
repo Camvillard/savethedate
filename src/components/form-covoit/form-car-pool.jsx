@@ -12,14 +12,14 @@ class FormCarPool extends React.Component {
 
         <div className="covoit-radio-btn">
           <label className="radio-btn-style"> oui
-            <input type="radio" ref="covoiturage"name="covoiturage" value="oui" onChange={this.props.onChange}/>
+            <input type="radio" ref="carPool"name="carPool" value="oui" onChange={this.props.onChange}/>
             <span className="radio-btn-span"></span>
           </label>
         </div>
 
         <div className="covoit-radio-btn">
           <label className="radio-btn-style"> non
-            <input type="radio" ref="covoiturage" name="covoiturage" value="non" onChange={this.props.onChange}/>
+            <input type="radio" ref="carPool" name="carPool" value="non" onChange={this.props.onChange}/>
             <span className="radio-btn-span"></span>
           </label>
         </div>

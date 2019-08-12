@@ -9,7 +9,7 @@ class FormCarpoolQty extends React.Component {
     return(
      <div className="covoit-form hidden-input">
         <p> Combien de places tu désires?   </p>
-        <input type="text" placeholder="combien de personnes" ref="qty" onChange={this.props.onChange}/>
+        <input name="howManyPool" type="text" placeholder="combien de personnes" ref="howManyPool" onChange={this.props.onChange}/>
       </div>
     )
 

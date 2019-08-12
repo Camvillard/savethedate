@@ -19,7 +19,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-flow`,
     // sass styles
     `gatsby-plugin-sass`,
     {
