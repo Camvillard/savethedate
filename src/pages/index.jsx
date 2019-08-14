@@ -4,11 +4,6 @@ import { Link } from 'gatsby';
 
 // internal stuff
 import SEO from "../components/seo";
-import Header from '../components/header';
-import Footer from '../components/footer';
-// import SaveTheDate from '../components/savethedate';
-
-// import { defineContentLanguage } from '../helpers/helpers';
 
 // style & assets
 import '../styles/main.scss';
@@ -50,7 +45,6 @@ class IndexPage extends React.Component {
 
             </div>
 
-            <Footer />
 
             <Blob1 className="blob-homepage-one"/>
             <Blob2 className="blob-homepage-two"/>

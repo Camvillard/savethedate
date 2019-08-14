@@ -38,6 +38,31 @@
   font-weight: 300;
 }
 
+//  BUTTON ANIMATED
+
+.btn-animated {
+  position: relative;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  a {
+    margin-left: 64px;
+    text-transform: uppercase;
+    margin-top: 12px;
+    position: relative;
+    z-index: 100;
+    font-size: 2rem;
+  }
+}
+
+
 // CURSORS
 
 #info-link-cursor:hover {
@@ -48,5 +73,28 @@
   cursor: url(https://res.cloudinary.com/camvillard/image/upload/v1558382877/dixneufoctobre/bed.png), pointer;
 }
 
+
+
+@media (min-width: $sm-screen) {
+
+  .btn-animated {
+    max-width: 60vw;
+  }
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+  .btn-animated {
+    max-width: 55vw;
+  }
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+  .btn-animated {
+    max-width: 320px;
+  }
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px
 
 
