@@ -128,7 +128,7 @@ createAirtableRecord = (covoiturage) => {
               position="regular"
               navbarColor="yellow"
             />
-            <div className="small-container">
+            <div className="main-container small">
               <h2 className="page-title white"><span>transports</span></h2>
               <p className="page-content white"> texte á venir</p>
               <form onSubmit={this.handleSubmit} action="/success" id="form" className="form-stroked form-white">
@@ -136,7 +136,6 @@ createAirtableRecord = (covoiturage) => {
                 <div className="covoit-form-container">
                   <FormHasACar onChange={this.handleChanges} />
                 </div>
-                <button type="button" className="button-reset-form" onClick={this.handleReset}>j’ai fait une boulette : mettre à jour le formulaire</button>
               </form>
             </div>
           </div>
@@ -157,7 +156,7 @@ createAirtableRecord = (covoiturage) => {
               position="regular"
               navbarColor="yellow"
             />
-            <div className="small-container">
+            <div className="main-container small">
               <h2 className="page-title white"><span>transports</span></h2>
               <p className="page-content white"> texte á venir</p>
               <form onSubmit={this.handleSubmit} action="/success" className="form-stroked form-white" id="form">
@@ -181,7 +180,7 @@ createAirtableRecord = (covoiturage) => {
         <React.Fragment>
           <div className="container-fullpage" id="covoit-container">
             <SEO
-              title="RSVP"
+              title="transports"
               keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
             />
             <Header
@@ -189,7 +188,7 @@ createAirtableRecord = (covoiturage) => {
               position="regular"
               navbarColor="yellow"
             />
-            <div className="small-container">
+            <div className="main-container small">
               <h2 className="page-title white"><span>transports</span></h2>
               <p className="page-content white"> texte á venir</p>
               <form onSubmit={this.handleSubmit} action="/success" className="form-stroked form-white">
