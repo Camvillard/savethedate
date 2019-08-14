@@ -4,12 +4,11 @@ import { Link } from 'gatsby';
 
 
 class FormComeWhen extends React.Component {
-
   render() {
     return(
       <div className="covoit-form hidden-input">
         <p> Quand peux-tu prendre les passagers? </p>
-        <select name="comeWhen" id="presence" ref="comeWhen" onChange={this.props.onChange}>
+        <select name="comeWhen" id="presence" onChange={this.props.onChange}>
           <option default value > -- choisi une option -- </option>
           <option value="vendredi matin">vendredi matin</option>
           <option value="vendredi aprem">vendredi aprem</option>
@@ -17,10 +16,7 @@ class FormComeWhen extends React.Component {
         </select>
       </div>
     )
-
   }
 }
-
-
 
 export default FormComeWhen;

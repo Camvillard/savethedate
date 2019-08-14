@@ -2,9 +2,7 @@
 import React from "react";
 import { Link } from 'gatsby';
 
-
 class FormBtnSubmit extends React.Component {
-
   render() {
     return(
       <div>
@@ -13,7 +11,5 @@ class FormBtnSubmit extends React.Component {
     )
   }
 }
-
-
 
 export default FormBtnSubmit;
