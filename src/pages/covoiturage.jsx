@@ -31,7 +31,6 @@ import FormBusLien from "../components/form-covoit/form-bus-lien";
 
 
 
-
 // style & assets
 import "../styles/main.scss"
 
