@@ -1,6 +1,5 @@
 // external libs
 import React from "react"
-import { Link } from "gatsby"
 
 // internal stuff
 import Navbar from "./navbar"
@@ -12,13 +11,6 @@ class Header extends React.Component {
     <header className={`${this.props.color}-header`} >
 
       <Navbar color={this.props.navbarColor} sidebarColor={this.props.sidebarColor}/>
-
-      <div className="header-left">
-        <Link to="/">
-          <h6>cam & alex</h6>
-        </Link>
-        <p>19/10/2019</p>
-      </div>
 
     </header>
 

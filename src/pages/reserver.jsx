@@ -1,11 +1,9 @@
 // external libs
 import React from 'react';
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
 
 // internal stuff
 import SEO from '../components/seo';
-import Header from '../components/header';
-import Footer from '../components/footer';
 import Navbar from "../components/navbar";
 
 
@@ -30,8 +28,8 @@ class ReservationPage extends React.Component {
     }, function(err, record) {
         if (err) { console.error(err); return; }
         // redirect to a success page + possible paiement
-        // window.location.href = "/success"
-        navigate("/success", {state: reservation})
+        // passing the reservation as information
+        navigate("/payer", {state: {reservation}})
     });
   }
 
@@ -60,13 +58,14 @@ class ReservationPage extends React.Component {
 
         <div id="page-reservation" className="container-fullpage">
 
-          <Header
-            color="light"
-            position= "regular"
-            navbarColor="white"
+          <Navbar
+            linksColor="white"
+            bgColor="green"
+            sidebarColor="white"
+            toggleColor="white"
           />
 
-          <div className="small-container">
+          <div className="main-container small">
 
             <h2 className="page-title white"><span>réserver l'hébergement</span></h2>
             <p className="page-content white">

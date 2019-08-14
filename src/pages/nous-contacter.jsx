@@ -1,13 +1,10 @@
 // external ressources
 import React from "react";
-import { Link } from 'gatsby';
 
 // internal data
 import SEO from "../components/seo";
-import Header from '../components/header';
 import Navbar from "../components/navbar";
 
-import { defineContentLanguage } from '../helpers/helpers';
 
 // styles
 import "../styles/main.scss";
@@ -51,13 +48,13 @@ class ContactPage extends React.Component {
 
         <div id="contact-container" className="container-fullpage" >
 
-          <Header
-            color="light"
-            position="regular"
-            navbarColor="green"
+          <Navbar
+            linksColor="white"
+            bgColor="green"
+            sidebarColor="yellow"
           />
 
-          <div className="small-container">
+          <div className="main-container small">
 
             <h2 className="page-title white"><span>contact</span></h2>
             <p className="page-content white">si vous avez des trucs à nous demander, ne soyez pas insolents, n'utilisez pas le téléphone (ou alors appelez Alex). Étant donné qu'on est supposément débordés par la préparation de ce mariage, ne vous inquiétez pas si nous mettons plus de 48 heures à vous répondre. Si toutefois vous n'avez pas de réponse au bout d'une semaine, vous êtes en droit de gentiment nous harceler.</p>

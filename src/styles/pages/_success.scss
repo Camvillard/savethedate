@@ -1,38 +1,32 @@
 /* ------ PAGES : SUCCESS ------ */
 
-#landing-page {
-  // width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+#page-payer {
+  background: $jaune-moutarde;
 
-  h1, h5 {
-    color: $forest-green;
-    font-family: $accent-font;
+  h1, h5, p {
+    color: white;
   }
 
-  h1 {
+  a {
+    color: white;
+  }
+
+  a:last-child {
+    padding-left: 16px;
+  }
+
+  .page-container {
+    width: 92vw;
+    margin: auto;
+  }
+
+  .button-green {
     font-weight: 700;
+    display: block;
+    margin-top: 24px;
+    width: 248px;
   }
-
-  h5 {
-    font-weight: 300;
-  }
-
-
-  // a{
-  //   color: $jaune-moutarde;
-  // }
-
-  // a {
-  //   position: fixed;
-  //   bottom: 20px;
-  // }
 }
-
 
 
 @media (min-width: $md-screen) {

@@ -1,11 +1,11 @@
 
 // external libs
 import React from "react";
-import { Link } from "gatsby";
 
 // internal stuff
 import Header from "../components/header";
 import SEO from '../components/seo';
+
 
 //form-components
 import FormHasACar from "../components/form-covoit/form-has-a-car";
@@ -28,6 +28,7 @@ import FormCarpoolMain from "../components/form-carpool-main";
 
 import FormBtnSubmit from "../components/form-covoit/form-btn-submit";
 import FormBusLien from "../components/form-covoit/form-bus-lien";
+
 
 
 
@@ -113,7 +114,6 @@ class Covoiturage extends React.Component {
     })
     }
   }
-
 
   handleReset = () => {
     console.log(this.state)

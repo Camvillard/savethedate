@@ -1,5 +1,42 @@
 /*----- COMPONENTS : FOOTER ----- */
 
+
+.footer-infos {
+  width: 80vw;
+  margin-left: 12vw;
+
+  hr {
+    width: 20%;
+    border-color: $forest-green;
+    border-width: 0.5px;
+  }
+}
+
+.footer-names {
+  margin-top: .2em;
+  font-size: 1.6rem;
+  color: $forest-green;
+}
+
+.footer-date,
+.footer-year {
+  margin:  0;
+  color: $forest-green;
+  font-size: 2.8rem;
+  line-height: 1.2;
+}
+
+.footer-date {
+  font-weight: 700;
+}
+
+.footer-address {
+  color:  $jaune-moutarde;
+  margin-left: 4vw;
+}
+
+
+
 #footer-links {
   position: fixed;
   bottom: 0px;
