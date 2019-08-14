@@ -1,3 +1,4 @@
+
 #covoit-container{
   background: #E39D24;
 }
@@ -39,7 +40,10 @@
 }
 
 .radio-btn-style input{
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .radio-btn-style .radio-btn-span {
@@ -58,12 +62,26 @@
   background-color:$forest-green;
 }
 
-.radio-btn-style input:checked + .radio-btn-span {
-  background-image: url(https://res.cloudinary.com/kristynadierstein/image/upload/v1564761387/radio_btn_check_vwsa44.svg);
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-btn-span:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+/* Show the indicator (dot/circle) when checked */
+.radio-btn-style input:checked ~ .radio-btn-span:after {
+  display: block;
 }
 
-.radio-btn-style input:checked + .radio-btn-span:after {
-// background-image: `url(https://res.cloudinary.com/kristynadierstein/image/upload/v1564761387/radio_btn_check_vwsa44.svg)`;
-background-color: red;
+/* Style the indicator (dot/circle) */
+.radio-btn-style .radio-btn-span:after {
+  left: 11px;
+  top: -8px;
+  width: 9px;
+  height: 24px;
+  border: solid #005655;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 

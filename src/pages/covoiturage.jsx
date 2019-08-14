@@ -1,9 +1,32 @@
+
 // external libs
 import React from "react";
 
 // internal stuff
 import Header from "../components/header";
 import SEO from '../components/seo';
+
+//form-components
+import FormHasACar from "../components/form-covoit/form-has-a-car";
+import FormHowMany from "../components/form-covoit/form-how-many";
+import FormCarPool from "../components/form-covoit/form-car-pool";
+import FormComeWhen from "../components/form-covoit/form-come-when";
+import FormPickupPlace from "../components/form-covoit/form-pickup-place";
+import FormReturn from "../components/form-covoit/form-return";
+import FormReturnWhen from "../components/form-covoit/form-return-when";
+import FormReturnQty from "../components/form-covoit/form-return-qty";
+import FormCarpoolQty from "../components/form-covoit/form-carpool-qty";
+import FormCarpoolWhen from "../components/form-covoit/form-carpool-when";
+import FormReturnCovoit from "../components/form-covoit/form-return-covoit";
+import FormReturnCarpoolQty from "../components/form-covoit/form-return-carpool-qty";
+import FormReturnCarpoolWhen from "../components/form-covoit/form-return-carpool-when";
+import FormHasACarMain from "../components/form-hasacar-main";
+import FormNoCarMain from "../components/form-nocar-main";
+import FormCarpoolMain from "../components/form-carpool-main";
+
+
+import FormBtnSubmit from "../components/form-covoit/form-btn-submit";
+import FormBusLien from "../components/form-covoit/form-bus-lien";
 
 
 // style & assets
@@ -14,9 +37,32 @@ const Airtable = require('airtable');
 
 
 class Covoiturage extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      name: null,
+      hasACar: null,
+      howMany: null,
+      comeWhen: null,
+      placePickUp: null,
+      returnWay: null,
+      carPool: null,
+      howManyPool: null,
+      comeWhenPool: null,
+      returnWayPool: null,
+      returnWhen: null,
+      returnHowMany: null,
+      returnPoolQty: null,
+      returnPoolWhen: null
+    }
 
+    this.handleChanges = this.handleChanges.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleReset = this.handleReset.bind(this);
+  }
 
   createAirtableRecord = (covoiturage) => {
+    console.log(this.state)
     // for each new rsvp received, create a new record
     const ApiKey = process.env.GATSBY_AIRTABLE_API_KEY;
     const base = new Airtable({apiKey: ApiKey}).base('appvBah3imDtdNXOz');
@@ -25,14 +71,21 @@ class Covoiturage extends React.Component {
       // create new record in airtable base
       // using key/value pairs
       // based on columns name in airtable sheet
-      nom: covoiturage.name,
-      driver: covoiturage.driver,
-      qty: covoiturage.qty,
-      date: covoiturage.date,
-      return: covoiturage.return,
-      returnQty: covoiturage.returnQty,
-      returnWhen: covoiturage.returnWhen,
-      covoiturage: covoiturage.covoiturage
+      name: this.state.name,
+      driver: this.state.hasACar,
+      qty: this.state.howMany,
+      date: this.state.comeWhen,
+      pickup_place: this.state.placePickUp,
+      return: this.state.returnWay,
+      carpool: this.state.carPool,
+      car_pool_qty: this.state.howManyPool,
+      car_pool_when:this.state.comeWhenPool,
+      car_pool_return: this.state.returnWayPool,
+      car_pool_ret_qty: this.state.returnPoolQty,
+      car_pool_ret_when:this.state.returnPoolWhen,
+      returnQty: this.state.returnHowMany,
+      returnWhen: this.state.returnWhen,
+
     }, function(err, record) {
         if (err) { console.error(err); return; }
         // redirect to a yay or not yay page
@@ -43,143 +96,146 @@ class Covoiturage extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const covoiturage = {
-      // grab value from the form
-      // using ref attribute
-      name: this.refs.name.value,
-      driver: this.refs.driver.value === "oui" ? true : false,
-      qty: this.refs.qty.value,
-      date: this.refs.date.value,
-      return: this.refs.return.value === "oui" ? true : false,
-      returnQty: this.refs.returnQty.value,
-      returnWhen: this.refs.returnWhen.value,
-      covoiturage: this.refs.covoiturage.value === "oui" ? true : false
-    }
-    this.createAirtableRecord(covoiturage);
+    this.createAirtableRecord(this.state);
   }
 
+  handleChanges = (e) => {
+    console.log(e.target.value)
+    if (e.target.value === "oui") {
+      this.setState({[e.target.name] : true })
+    } else if (e.target.value === "non") {
+      this.setState({[e.target.name] : false})
+    } else {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+    }
+  }
+
+  handleReset = () => {
+    console.log(this.state)
+
+      this.setState({
+      name: "",
+      hasACar: null,
+      howMany: null,
+      comeWhen: null,
+      placePickUp: null,
+      returnWay: null,
+      carPool: null,
+      howManyPool: null,
+      comeWhenPool: null,
+      returnWayPool: null,
+      returnWhen: null,
+      returnHowMany: null,
+      returnPoolQty: null,
+      returnPoolWhen: null
+      })
+  }
 
   render() {
-    return(
-      <React.Fragment>
-      <div className="container-fullpage" id="covoit-container">
+    if(this.state.hasACar === null) {
+      console.log("hasACar is null")
+      return(
+        <React.Fragment>
+                  <div className="container-fullpage" id="covoit-container">
+                    <SEO
+                      title="RSVP"
+                      keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
+                    />
+                    <Header
+                      color="light"
+                      position="regular"
+                      navbarColor="yellow"
+                    />
+                    <div className="small-container">
+                      <h2 className="page-title white"><span>transports</span></h2>
+                      <p className="page-content white"> texte á venir</p>
+                      <form onSubmit={this.handleSubmit} action="/success" id="form" className="form-stroked form-white">
+                        <input type="text" placeholder="nom, prénom, etc" name="name" ref="name" onChange={this.handleChanges} value={this.state.name}/>
+                       <div className="covoit-form-container">
+                          <FormHasACar onChange={this.handleChanges}  />
+                       </div>
+                      <button type="button" className="button-reset-form" onClick={this.handleReset}>j’ai fait une boulette : mettre à jour le formulaire</button>
+                      </form>
+                    </div>
+                  </div>
+        </React.Fragment>
+      );
+    } else if(this.state.hasACar){
+      console.log("HasACar");
+      return(
+        <React.Fragment>
+                  <div className="container-fullpage" id="covoit-container">
+                    <SEO
+                      title="RSVP"
+                      keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
+                    />
+                    <Header
+                      color="light"
+                      position="regular"
+                      navbarColor="yellow"
+                    />
+                    <div className="small-container">
+                      <h2 className="page-title white"><span>transports</span></h2>
+                      <p className="page-content white"> texte á venir</p>
+                      <form onSubmit={this.handleSubmit} action="/success" className="form-stroked form-white" id="form">
+                        <input type="text" placeholder="nom, prénom, etc" ref="name" name="name" onChange={this.handleChanges} value={this.state.name}   />
+                       <div className="covoit-form-container">
+                          <FormHasACar onChange={this.handleChanges}  />
 
-        <SEO
-          title="RSVP"
-          keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
-        />
+                          <FormHowMany onChange={this.handleChanges} />
 
-        <Header
-          color="light"
-          position="regular"
-          navbarColor="yellow"
-        />
+                          {this.state.howMany > 0  && (<FormComeWhen onChange={this.handleChanges} />)}
 
-        <div className="main-container small">
+                          {this.state.comeWhen !== null && (<FormPickupPlace onChange={this.handleChanges} />)}
 
-          <h2 className="page-title white"><span>transports</span></h2>
-          <p className="page-content white"> texte á venir</p>
+                          {this.state.placePickUp !== null && (<FormReturn onChange={this.handleChanges} />)}
 
-          <form onSubmit={this.handleSubmit} action="/success" className="form-stroked form-white">
-            <input type="text" placeholder="nom, prénom, etc" ref="name"/>
+                          <FormHasACarMain onChange={this.handleChanges} value={this.state}/>
+                       </div>
+                      <button type="button" className="button-reset-form" onClick={this.handleReset}>j’ai fait une boulette : mettre à jour le formulaire</button>
+                      </form>
+                    </div>
+                  </div>
+                  </React.Fragment>
+                  )
+    } else {
+      console.log("Does not have a car")
+      return(
+        <React.Fragment>
+        <div className="container-fullpage" id="covoit-container">
+          <SEO
+            title="RSVP"
+            keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
+          />
+          <Header
+            color="light"
+            position="regular"
+            navbarColor="yellow"
+          />
+          <div className="small-container">
+            <h2 className="page-title white"><span>transports</span></h2>
+            <p className="page-content white"> texte á venir</p>
+            <form onSubmit={this.handleSubmit} action="/success" className="form-stroked form-white">
+              <input type="text" placeholder="nom, prénom, etc" ref="name" onChange={this.handleChanges} value={this.state.name}/>
+              <div className="covoit-form-container">
+                <FormHasACar onChange={this.handleChanges} />
 
+                <FormCarPool onChange={this.handleChanges} />
 
-            <div className="covoit-form-container">
-              <div className="covoit-form">
-                <p> As-tu une voiture à disposition? </p>
-
-                <div className="covoit-radio-btn">
-                  <label className="radio-btn-style"> oui
-                    <input type="radio" ref="driver"name="driver" value="oui"/>
-                    <span className="radio-btn-span"></span>
-                  </label>
-                </div>
-
-                <div className="covoit-radio-btn">
-                  <label className="radio-btn-style"> non
-                    <input type="radio" ref="driver" name="driver" value="non"/>
-                    <span className="radio-btn-span"></span>
-                  </label>
-                </div>
+                <FormNoCarMain onChange={this.handleChanges} value={this.state}/>
               </div>
-
-              <div className="covoit-form">
-                <p>Es-tu intéressé par le covoiturage?</p>
-
-                <div className="covoit-radio-btn">
-                  <label className="radio-btn-style"> oui
-                    <input type="radio" ref="covoiturage"name="covoiturage" value="oui"/>
-                    <span className="radio-btn-span"></span>
-                  </label>
-                </div>
-
-                <div className="covoit-radio-btn">
-                  <label className="radio-btn-style"> non
-                    <input type="radio" ref="covoiturage" name="covoiturage" value="non"/>
-                    <span className="radio-btn-span"></span>
-                  </label>
-                </div>
-              </div>
-
-              <div className="covoit-form">
-                <p> Vous êtes combien? </p>
-                <input type="text" placeholder="combien de personnes" ref="qty"/>
-              </div>
-
-              <div className="covoit-form">
-                <p> Vous voulez arriver quand? </p>
-                <select name="date" id="presence" ref="date">
-                  <option disabled selected value> -- choisi une option -- </option>
-                  <option value="vendredi matin">vendredi matin</option>
-                  <option value="vendredi aprem">vendredi aprem</option>
-                  <option value="samedi matin">samedi matin</option>
-                </select>
-              </div>
-
-              <div className="covoit-form">
-                <p> As-tu besoin la coivoit pour la route de retour?  </p>
-
-                <div className="covoit-radio-btn">
-                  <label className="radio-btn-style"> oui
-                    <input type="radio" ref="return"name="return" value="oui"/>
-                    <span className="radio-btn-span"></span>
-                  </label>
-                </div>
-
-                <div className="covoit-radio-btn">
-                  <label className="radio-btn-style"> non
-                    <input type="radio" ref="return" name="return" value="non" />
-                    <span className="radio-btn-span"></span>
-                  </label>
-                </div>
-              </div>
-
-              <div className="covoit-form">
-                <p> Dans ce cas-là, on recommence:  </p>
-                <p> Vous êtes combien? </p>
-                <input type="text" placeholder="combien de personnes" ref="returnQty"/>
-              </div>
-
-              <div className="covoit-form">
-                <p> Vous voulez partir quand? </p>
-                <select name="returnWhen" id="presence" ref="returnWhen">
-                  <option disabled selected value> -- choisi une option -- </option>
-                  <option value="dimanche matin">dimanche matin</option>
-                  <option value="dimanche aprem">dimanche aprem</option>
-                </select>
-              </div>
-
-              <button className="button-send">envoyer ta demande de covoit</button>
-            </div>
-          </form>
-
+            <button type="button" className="button-reset-form" onClick={this.handleReset}>j’ai fait une boulette : mettre à jour le formulaire</button>
+            </form>
+          </div>
         </div>
-
-      </div>
-      </React.Fragment>
-    )
+        </React.Fragment>
+      );
+    }
   }
 }
+
 
 
 
