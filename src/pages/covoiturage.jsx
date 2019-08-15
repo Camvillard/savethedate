@@ -73,7 +73,8 @@ createAirtableRecord = (covoiturage) => {
   }, function(err, record) {
       if (err) { console.error(err); return; }
       // redirect to a yay or not yay page
-      // depending on the given answer
+      // redirect to a thank you page
+      window.location.href = "/merci"
 
   });
 }
@@ -131,7 +132,7 @@ createAirtableRecord = (covoiturage) => {
             <div className="main-container small">
               <h2 className="page-title white"><span>transports</span></h2>
               <p className="page-content white"> texte á venir</p>
-              <form onSubmit={this.handleSubmit} action="/success" id="form" className="form-stroked form-white">
+              <form onSubmit={this.handleSubmit} id="form" className="form-stroked form-white">
                 <input type="text" placeholder="nom, prénom, etc" name="name" onChange={this.handleChanges} value={this.state.name} />
                 <div className="covoit-form-container">
                   <FormHasACar onChange={this.handleChanges} />
@@ -159,7 +160,7 @@ createAirtableRecord = (covoiturage) => {
             <div className="main-container small">
               <h2 className="page-title white"><span>transports</span></h2>
               <p className="page-content white"> texte á venir</p>
-              <form onSubmit={this.handleSubmit} action="/success" className="form-stroked form-white" id="form">
+              <form onSubmit={this.handleSubmit} className="form-stroked form-white" id="form">
                 <input type="text" placeholder="nom, prénom, etc" name="name" onChange={this.handleChanges} value={this.state.name} />
                 <div className="covoit-form-container">
                   <FormHasACar onChange={this.handleChanges} />
@@ -169,7 +170,7 @@ createAirtableRecord = (covoiturage) => {
                   {this.state.placePickUp !== null && (<FormReturn onChange={this.handleChanges} />)}
                   <FormHasACarMain onChange={this.handleChanges} value={this.state} />
                 </div>
-                <button type="button" className="button-reset-form" onClick={this.handleReset}>j’ai fait une boulette : mettre à jour le formulaire</button>
+                <button type="button" action="/merci" className="button-reset-form" onClick={this.handleReset}>j’ai fait une boulette : mettre à jour le formulaire</button>
               </form>
             </div>
           </div>
@@ -191,7 +192,7 @@ createAirtableRecord = (covoiturage) => {
             <div className="main-container small">
               <h2 className="page-title white"><span>transports</span></h2>
               <p className="page-content white"> texte á venir</p>
-              <form onSubmit={this.handleSubmit} action="/success" className="form-stroked form-white">
+              <form onSubmit={this.handleSubmit} className="form-stroked form-white">
                 <input type="text" placeholder="nom, prénom, etc" onChange={this.handleChanges} value={this.state.name}/>
                 <div className="covoit-form-container">
                   <FormHasACar onChange={this.handleChanges} />
