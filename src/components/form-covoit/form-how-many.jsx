@@ -4,18 +4,14 @@ import { Link } from 'gatsby';
 
 
 class FormHowMany extends React.Component {
-
   render() {
     return(
-     <div className="covoit-form hidden-input">
+      <div className="covoit-form hidden-input">
         <p> Combien de personnes tu peux prendre dans ta voiture? </p>
-        <input name="howMany" type="text" placeholder="combien de personnes" ref="howMany" onChange={this.props.onChange}/>
+        <input name="howMany" type="text" placeholder="combien de personnes" onChange={this.props.onChange} />
       </div>
     )
-
   }
 }
-
-
 
 export default FormHowMany;
