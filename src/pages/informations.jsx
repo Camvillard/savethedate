@@ -36,13 +36,13 @@ class InformationsPage extends React.Component {
             <div className="infos-summary">
               <ul className="no-bullet-list">
                 <li>
-                  <Link to="/informations/#organisation">1<span className="horizontal-lign"></span> <span className="summary-text">le week-end</span></Link>
+                  <Link to="/informations/#organisation">1<span className="horizontal-lign"></span> <span className="summary-text">le weekend</span></Link>
                 </li>
                 <li>
                   <Link to="/informations/#sleeping">2<span className="horizontal-lign"></span> <span className="summary-text">l'hébergement</span></Link>
                 </li>
                 <li>
-                  <Link to="/informations/#dresscode">3<span className="horizontal-lign"></span> <span className="summary-text">le dress-code</span></Link>
+                  <Link to="/informations/#dresscode">3<span className="horizontal-lign"></span> <span className="summary-text">le dress code</span></Link>
                 </li>
                 <li>
                   <Link to="/informations/#gifts">4<span className="horizontal-lign"></span> <span className="summary-text">les cadeaux (ouais)</span></Link>
@@ -65,7 +65,7 @@ class InformationsPage extends React.Component {
 
             <div className="infos-content">
               <p>le week end du mariage aura lieu du dix-huit (18) octobre en soirée au vingt (20) octobre en fin de journée, à Saint Adolphe d’Howard, une charmante petite bourgade des Laurentides, à 1h30 environ de Montréal.</p>
-              <p>vous pouvez arriver à l’heure qui vous sied le plus sur les lieux, la cérémonie en tant que telle sera célébrée à 16h, le samedi, dans le chalet principal, le Grand Lodge.</p>
+              <p>vous pouvez arriver à l’heure qui vous sied le plus sur les lieux, la cérémonie en tant que telle sera célébrée à 16h, le samedi, au chalet principal, le Grand Lodge.</p>
               <p>le vendredi soir et le samedi matin seront un peu « chacun fait comme il veut », il y a des barbecues sur place, ainsi que tous les trucs normaux utiles en temps normal pour cuisiner. le dimanche matin, afin de se remettre des émotions - et des gin tonics - il y aura un fantastique brunch aux alentours de midi, toujours au Grand Lodge.</p>
               <AnimatedButton link="/location" value="découvrir le lieu" id="btn-infos" />
             </div>
@@ -103,9 +103,9 @@ class InformationsPage extends React.Component {
             </div>
 
             <div className="infos-content">
-              <p>un peu comme chez mac do*, venez comme vous êtes. si vous voulez porter un chapeau, vous pouvez porter un chapeau, si vous voulez porter des baskets, vous pouvez porter des baskets, si vous voulez porter un costume trois pièces, vous pouvez porter un costumes trois pièces, écoutez, même si vous voulez venir en tongs, venez en tongs.</p>
+              <p>un peu comme chez Mc Do*, venez comme vous êtes. si vous voulez porter un chapeau, vous pouvez porter un chapeau, si vous voulez porter des baskets, vous pouvez porter des baskets, si vous voulez porter un costume trois pièces, vous pouvez porter un costumes trois pièces, écoutez, même si vous voulez venir en tongs, venez en tongs.</p>
               <p>gardez tout de même en tête que le mois d'octobre au Québec peut être fantastique, mais peut également être une catastrophe météorologique, alors bon, on vous conseille de prévoir une petite laine, comme on dit.</p>
-              <p>(* mais ce sera meilleur qu'un anniversaire chez mac do)</p>
+              <p>(* mais ce sera meilleur qu'un anniversaire chez Mc Do.)</p>
             </div>
 
           </div>
