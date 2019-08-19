@@ -9,6 +9,7 @@ class FormReturnWhen extends React.Component {
         <p>quand penses-tu être en forme pour partir dimanche ? :)</p>
         <div className="custom-select">
           <select name="returnWhen" id="presence" onChange={this.props.onChange}>
+            <option default-value>préférence de retour</option>
             <option value="dimanche matin">dimanche matin</option>
             <option value="dimanche aprem">dimanche aprèm</option>
           </select>
