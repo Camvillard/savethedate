@@ -12,6 +12,17 @@
   @include button(white, $forest-green, $forest-green);
 }
 
+.back-home-btn {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  text-align: right;
+  a {
+  font-family: $accent-font;
+  font-size: 1.2rem;
+  }
+}
+
 .links-decorated {
   position: relative;
   padding: 0px 24px;
