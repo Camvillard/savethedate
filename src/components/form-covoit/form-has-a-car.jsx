@@ -5,7 +5,7 @@ class FormHasACar extends React.Component {
   render() {
     return(
       <div className="covoit-form">
-        <p> As-tu une voiture à disposition? </p>
+        <p> as-tu une voiture à disposition? </p>
         <div className= "covoit-radio-btn" >
           <label className="radio-btn-style"> oui
             <input type="radio" ref="hasACar" name="hasACar" value="oui" onChange={this.props.onChange} />
