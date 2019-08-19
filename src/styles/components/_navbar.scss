@@ -127,6 +127,18 @@
       padding: 0;
     }
 
+    .list-inline.white a {
+      color: white;
+    }
+
+    .list-inline.green a {
+      color: $forest-green;
+    }
+
+    .list-inline.yellow a {
+      color: $jaune-moutarde;
+    }
+
 
     li {
       margin: 0 16px ;
@@ -135,15 +147,6 @@
 
     li a {
       font-family: $accent-font;
-      font-size: 1.2rem;
-    }
-
-    li a.white{
-      color: white;
-    }
-
-    li a.yellow{
-      color: $jaune-moutarde;
       font-size: 1.2rem;
     }
 

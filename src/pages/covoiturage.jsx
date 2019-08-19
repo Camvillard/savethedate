@@ -2,7 +2,7 @@
 import React from "react";
 
 // internal stuff
-import Header from "../components/header";
+import Navbar from "../components/navbar";
 import SEO from '../components/seo';
 
 //form-components
@@ -125,10 +125,10 @@ createAirtableRecord = (covoiturage) => {
             title="RSVP"
             keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
           />
-          <Header
-            color="light"
-            position="regular"
-            navbarColor="yellow"
+          <Navbar
+            linksColor="white"
+            bgColor="green"
+            sidebarColor="white"
           />
 
           <div className="main-container small">
