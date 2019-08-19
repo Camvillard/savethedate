@@ -1,0 +1,59 @@
+#bien-recu {
+
+  .main-container {
+    text-align: center;
+  }
+
+}
+
+$blob-1-height: 288px;
+$blob-1-width: 335px;
+
+$blob-2-height: 152px;
+$blob-2-width: 171px;
+
+#blob-1 {
+  position: absolute;
+  top: 64px;
+  left: 12px;
+  height: ($blob-1-height / 2);
+  width: ($blob-1-width / 2);
+}
+
+#blob-2 {
+  position: absolute;
+  bottom: 64px;
+  right: 48px;
+  height: ($blob-2-height / 2);
+  width: ($blob-2-width / 2);
+}
+
+@media (min-width: $sm-screen) {
+  // content
+  #blob-1 {
+    top: 64px;
+    left: 12px;
+    height: ($blob-1-height * 1.1);
+    width: ($blob-1-width * 1.1);
+  }
+
+  #blob-2 {
+    bottom: 64px;
+    right: 48px;
+    height: ($blob-2-height * 1.2);
+    width: ($blob-2-width * 1.2);
+  }
+
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+
+
+} // end of md-screen - 992px
+
+
+@media (min-width: $lg-screen) {
+
+
+} // end of lg-screen - 1200px
+

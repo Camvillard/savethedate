@@ -1,8 +1,7 @@
 
 #covoit-container{
-  background: #E39D24;
+  background: $jaune-moutarde;
 }
-
 
 .covoit-form p {
     font-family: $accent-font !important;
@@ -14,6 +13,36 @@
 
 .covoit-form {
   margin-bottom:24px;
+
+  select {
+    height: 3.6rem;
+    border: 1px solid white;
+    border-radius: 0;
+    -webkit-appearance: none;
+    background-color: none !important;
+    position: relative;
+    z-index: 3;
+  }
+
+  .custom-select {
+    position: relative;
+  }
+
+  .custom-select::after {
+    content: "▼";
+    position: absolute;
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    top: 12px;
+    right: 12px;
+    z-index: 0;
+    width: 3.6rem;
+    height: 3.6rem;
+    color: white;
+    // background: red;
+  }
 }
 
 .covoit-form-container {
@@ -61,6 +90,41 @@
 .radio-btn-style:hover .radio-btn-span {
   background-color:$forest-green;
 }
+
+// handles the states for form
+
+form#covoiturage-form {
+  margin: auto;
+
+  ::placeholder {
+    color: white;
+  }
+
+  // states for inputs
+
+  input:hover,
+  input:focus,
+  input:active,
+  input:visited,
+  textarea:focus,
+  textarea:active,
+  textarea:hover,
+  textarea:visited {
+    background: $forest-green;
+    border: 2px solid $forest-green;
+    outline: none;
+    outline-offset: 0px;
+    font-family: $body-font;
+  }
+
+  button {
+    color: $forest-green;
+  }
+
+}
+
+
+
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .radio-btn-span:after {

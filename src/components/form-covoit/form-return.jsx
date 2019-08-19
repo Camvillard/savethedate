@@ -5,7 +5,7 @@ class FormReturn extends React.Component {
   render() {
     return(
       <div className="covoit-form hidden-input">
-        <p>Notre dernière question, est-ce que vous pouvez aussi prendre les gens pour la route de retour?</p>
+        <p>est-ce que vous pouvez aussi ramener des gens après le weekend (uniquement si vous êtes Sam, capitaine de soirée, et que vous êtes sobres) ?</p>
         <div className="covoit-radio-btn">
           <label className="radio-btn-style"> oui
             <input type="radio" name="returnWay" value="oui" onChange={this.props.onChange} />

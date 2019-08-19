@@ -75,7 +75,7 @@ createAirtableRecord = (covoiturage) => {
       if (err) { console.error(err); return; }
       // redirect to a yay or not yay page
       // redirect to a thank you page
-      window.location.href = "/merci"
+      window.location.href = "/bien-recu"
 
   });
 }
@@ -122,7 +122,7 @@ createAirtableRecord = (covoiturage) => {
       <React.Fragment>
         <div className="container-fullpage" id="covoit-container">
           <SEO
-            title="RSVP"
+            title="covoiturage"
             keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
           />
           <Navbar
@@ -133,8 +133,8 @@ createAirtableRecord = (covoiturage) => {
 
           <div className="main-container small">
             <h2 className="page-title white"><span>covoiturage</span></h2>
-            <p className="page-content white">comme le bilan carbone de ce mariage est déjà relativement catastrophique, nous aimerions éviter d'avoir 72 voitures différentes, que nous ne pourrons en plus pas vraiment toutes garer sur place. Voici donc un petit formulaire pour nous permettre de mettre en place un covoiturage du feu de Dieu, permettant ainsi des trajets optimisés pendant lesquels vous pourrez faire connaissance, faire des blind test, ou jouer à des jeux de voiture rigolos.</p>
-            <form onSubmit={this.handleSubmit} id="form" className="form-stroked form-white">
+            <p className="page-content white">comme le bilan carbone de ce mariage est déjà relativement catastrophique, nous aimerions éviter d'avoir 72 voitures différentes, que nous ne pourrons en plus pas vraiment toutes garer sur place. Voici donc un petit formulaire pour nous permettre de mettre en place un covoiturage du feu de dieu, permettant ainsi des trajets optimisés pendant lesquels vous pourrez faire connaissance, faire des blind test, ou jouer à des jeux de voiture rigolos.</p>
+            <form onSubmit={this.handleSubmit} id="covoiturage-form" className="form-stroked form-white">
 
               <input type="text" placeholder="nom, prénom, etc" name="name" onChange={this.handleChanges} value={this.state.name} />
 
@@ -155,21 +155,21 @@ createAirtableRecord = (covoiturage) => {
                     <FormHasACarMain onChange={this.handleChanges} value={this.state} />
                   </React.Fragment>
                 )}
-              {/* end of state.hasACar === true */}
+                {/* end of state.hasACar === true */}
 
 
-              {/* options for state.hasACar === false */}
-              {this.state.hasACar === false && (
-                <React.Fragment>
-                  {/* <FormHasACar onChange={this.handleChanges} /> */}
-                  <FormCarPool onChange={this.handleChanges} />
-                  <FormNoCarMain onChange={this.handleChanges} value={this.state} />
-                </React.Fragment>
-              )}
+                {/* options for state.hasACar === false */}
+                {this.state.hasACar === false && (
+                  <React.Fragment>
+                    {/* <FormHasACar onChange={this.handleChanges} /> */}
+                    <FormCarPool onChange={this.handleChanges} />
+                    <FormNoCarMain onChange={this.handleChanges} value={this.state} />
+                  </React.Fragment>
+                )}
 
               </div>
             </form>
-            <button type="button" className="button-reset-form" onClick={this.handleReset}>j’ai fait une boulette : mettre à jour le formulaire</button>
+            <button type="button" className="button-reset-form" onClick={this.handleReset}>mettre à zéro le formulaire</button>
           </div>
         </div>
       </React.Fragment>
