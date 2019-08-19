@@ -6,6 +6,7 @@ import Header from "../components/header";
 import SEO from '../components/seo';
 
 //form-components
+// import FormIntro from "../components/form-covoit/form-intro";
 import FormHasACar from "../components/form-covoit/form-has-a-car";
 import FormHowMany from "../components/form-covoit/form-how-many";
 import FormCarPool from "../components/form-covoit/form-car-pool";
@@ -116,96 +117,63 @@ createAirtableRecord = (covoiturage) => {
   }
 
   render() {
-    if(this.state.hasACar === null) {
-      return(
-        <React.Fragment>
-          <div className="container-fullpage" id="covoit-container">
-            <SEO
-              title="RSVP"
-              keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
-            />
-            <Header
-              color="light"
-              position="regular"
-              navbarColor="yellow"
-            />
-            <div className="main-container small">
-              <h2 className="page-title white"><span>covoiturage</span></h2>
-              <p className="page-content white">comme le bilan carbone de ce mariage est déjà relativement catastrophique, nous aimerions éviter d'avoir 72 voitures différentes, que nous ne pourrons en plus pas vraiment toutes garer sur place. Voici donc un petit formulaire pour nous permettre de mettre en place un covoiturage du feu de Dieu, permettant ainsi des trajets optimisés pendant lesquels vous pourrez faire connaissance, faire des blind test, ou jouer à des jeux de voiture rigolos.</p>
-              <form onSubmit={this.handleSubmit} id="form" className="form-stroked form-white">
-                <input type="text" placeholder="nom, prénom, etc" name="name" onChange={this.handleChanges} value={this.state.name} />
-                <div className="covoit-form-container">
-                  <FormHasACar onChange={this.handleChanges} />
-                </div>
-              </form>
-            </div>
-          </div>
-        </React.Fragment>
-      );
-    }
 
-    if(this.state.hasACar) {
-      return(
-        <React.Fragment>
-          <div className="container-fullpage" id="covoit-container">
-            <SEO
-              title="RSVP"
-              keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
-            />
-            <Header
-              color="light"
-              position="regular"
-              navbarColor="yellow"
-            />
-            <div className="main-container small">
-              <h2 className="page-title white"><span>covoiturage</span></h2>
-              <p className="page-content white">comme le bilan carbone de ce mariage est déjà relativement catastrophique, nous aimerions éviter d'avoir 72 voitures différentes, que nous ne pourrons en plus pas vraiment toutes garer sur place. Voici donc un petit formulaire pour nous permettre de mettre en place un covoiturage du feu de Dieu, permettant ainsi des trajets optimisés pendant lesquels vous pourrez faire connaissance, faire des blind test, ou jouer à des jeux de voiture rigolos.</p>
-              <form onSubmit={this.handleSubmit} className="form-stroked form-white" id="form">
-                <input type="text" placeholder="nom, prénom, etc" name="name" onChange={this.handleChanges} value={this.state.name} />
-                <div className="covoit-form-container">
-                  <FormHasACar onChange={this.handleChanges} />
-                  <FormHowMany onChange={this.handleChanges} />
-                  {this.state.howMany > 0  && (<FormComeWhen onChange={this.handleChanges} />)}
-                  {this.state.comeWhen !== null && (<FormPickupPlace onChange={this.handleChanges} />)}
-                  {this.state.placePickUp !== null && (<FormReturn onChange={this.handleChanges} />)}
-                  <FormHasACarMain onChange={this.handleChanges} value={this.state} />
-                </div>
-                <button type="button" action="/merci" className="button-reset-form" onClick={this.handleReset}>j’ai fait une boulette : mettre à jour le formulaire</button>
-              </form>
-            </div>
-          </div>
-        </React.Fragment>
-      );
-    } else {
-      return(
-        <React.Fragment>
-          <div className="container-fullpage" id="covoit-container">
-            <SEO
-              title="transports"
-              keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
-            />
-            <Header
-              color="light"
-              position="regular"
-              navbarColor="yellow"
-            />
-            <div className="main-container small">
-              <h2 className="page-title white"><span>covoiturage</span></h2>
-              <p className="page-content white">comme le bilan carbone de ce mariage est déjà relativement catastrophique, nous aimerions éviter d'avoir 72 voitures différentes, que nous ne pourrons en plus pas vraiment toutes garer sur place. Voici donc un petit formulaire pour nous permettre de mettre en place un covoiturage du feu de Dieu, permettant ainsi des trajets optimisés pendant lesquels vous pourrez faire connaissance, faire des blind test, ou jouer à des jeux de voiture rigolos.</p>
-              <form onSubmit={this.handleSubmit} className="form-stroked form-white">
-                <input type="text" placeholder="nom, prénom, etc" onChange={this.handleChanges} value={this.state.name}/>
-                <div className="covoit-form-container">
-                  <FormHasACar onChange={this.handleChanges} />
+    return(
+      <React.Fragment>
+        <div className="container-fullpage" id="covoit-container">
+          <SEO
+            title="RSVP"
+            keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]}
+          />
+          <Header
+            color="light"
+            position="regular"
+            navbarColor="yellow"
+          />
+
+          <div className="main-container small">
+            <h2 className="page-title white"><span>covoiturage</span></h2>
+            <p className="page-content white">comme le bilan carbone de ce mariage est déjà relativement catastrophique, nous aimerions éviter d'avoir 72 voitures différentes, que nous ne pourrons en plus pas vraiment toutes garer sur place. Voici donc un petit formulaire pour nous permettre de mettre en place un covoiturage du feu de Dieu, permettant ainsi des trajets optimisés pendant lesquels vous pourrez faire connaissance, faire des blind test, ou jouer à des jeux de voiture rigolos.</p>
+            <form onSubmit={this.handleSubmit} id="form" className="form-stroked form-white">
+
+              <input type="text" placeholder="nom, prénom, etc" name="name" onChange={this.handleChanges} value={this.state.name} />
+
+              <div className="covoit-form-container">
+
+                {/* default : initial state */}
+                <FormHasACar onChange={this.handleChanges} />
+
+
+                {/* options for state.hasACar === true */}
+                {this.state.hasACar && (
+                  <React.Fragment>
+                    {/* <FormHasACar onChange={this.handleChanges} /> */}
+                    <FormHowMany onChange={this.handleChanges} />
+                    {this.state.howMany > 0  && (<FormComeWhen onChange={this.handleChanges} />)}
+                    {this.state.comeWhen !== null && (<FormPickupPlace onChange={this.handleChanges} />)}
+                    {this.state.placePickUp !== null && (<FormReturn onChange={this.handleChanges} />)}
+                    <FormHasACarMain onChange={this.handleChanges} value={this.state} />
+                  </React.Fragment>
+                )}
+              {/* end of state.hasACar === true */}
+
+
+              {/* options for state.hasACar === false */}
+              {this.state.hasACar === false && (
+                <React.Fragment>
+                  {/* <FormHasACar onChange={this.handleChanges} /> */}
                   <FormCarPool onChange={this.handleChanges} />
                   <FormNoCarMain onChange={this.handleChanges} value={this.state} />
-                </div>
-                <button type="button" className="button-reset-form" onClick={this.handleReset}>j’ai fait une boulette : mettre à jour le formulaire</button>
-              </form>
-            </div>
+                </React.Fragment>
+              )}
+
+              </div>
+            </form>
+            <button type="button" className="button-reset-form" onClick={this.handleReset}>j’ai fait une boulette : mettre à jour le formulaire</button>
           </div>
-        </React.Fragment>
-      );
-    }
+        </div>
+      </React.Fragment>
+    )
   }
 }
 
