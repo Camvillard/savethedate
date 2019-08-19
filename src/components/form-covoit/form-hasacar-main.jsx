@@ -1,6 +1,5 @@
 //libraries
 import React from "react"
-import { Link } from "gatsby"
 
 // imported forms:
 import FormReturnWhen from "./form-return-when";

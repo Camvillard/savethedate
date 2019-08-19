@@ -1,6 +1,5 @@
 // external libs
 import React from "react";
-import { Link } from 'gatsby';
 
 
 class FormPickupPlace extends React.Component {

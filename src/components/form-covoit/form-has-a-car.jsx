@@ -1,6 +1,5 @@
  // external libs
 import React from "react";
-import { Link } from 'gatsby';
 
 class FormHasACar extends React.Component {
   render() {

@@ -1,6 +1,5 @@
 // external libs
 import React from "react";
-import { Link } from 'gatsby';
 
 class FormCarpoolQty extends React.Component {
   render() {
