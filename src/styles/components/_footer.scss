@@ -61,6 +61,10 @@
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
+
+  footer {
+    margin-top: 64px;
+  }
   #footer-links {
     display: none
   }

@@ -50,8 +50,8 @@ class ContactPage extends React.Component {
 
           <Navbar
             linksColor="white"
-            bgColor="green"
-            sidebarColor="yellow"
+            bgColor="yellow"
+            sidebarColor="white"
           />
 
           <div className="main-container small">
