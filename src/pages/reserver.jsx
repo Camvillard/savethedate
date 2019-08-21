@@ -69,7 +69,7 @@ class ReservationPage extends React.Component {
 
             <h2 className="page-title white"><span>réserver l'hébergement</span></h2>
             <p className="page-content white">
-              il y a environ une soixantaine de places disponibles dans les chalets et nous vous demandons une (toute petite) participation financière de 80$ par personne pour le weekend, s’il vous plait. <br/> vous seriez fantastiques si vous répondiez avant le 15 août, mais bon, comme il y a sûrement des  gens en vacances (ou des cancres refusant l'autorité des deadlines), disons que si on pouvait avoir une réponse (et le paiement) avant le 7 septembre (l'anniversaire de cam), ce serait bien.
+              il y a environ une soixantaine de places disponibles dans les chalets et nous vous demandons une (toute petite) participation financière de 80 $ par personne pour le weekend, s’il vous plait. <br/> vous seriez fantastiques si vous répondiez avant le 7 septembre (pour l'anniversaire de Camille), mais bon, comme il y a sûrement des  gens en vacances (ou des cancres refusant l'autorité des deadlines), disons que si on pouvait avoir une réponse (et le paiement) avant le 15 septembre, ce serait bien.
             </p>
 
             <form onSubmit={this.handleSubmit} id="form-reserver" className="form-stroked form-white">

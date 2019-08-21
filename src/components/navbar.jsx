@@ -28,6 +28,7 @@ class Navbar extends React.Component {
         </div>
 
         <ul className={`mobile-menu ${this.state.navbarIsOpen ? 'show-menu' : 'hide-menu' } ${this.props.bgColor}`}>
+          <li><Link to="/" className={`${this.props.linksColor}`}>accueil</Link></li>
           <li><Link to="/informations" className={`${this.props.linksColor}`}>les infos</Link></li>
           <li><Link to="/location" className={`${this.props.linksColor}`}>l'endroit</Link></li>
           <li><Link to="/reserver" className={`${this.props.linksColor}`}>réserver</Link></li>

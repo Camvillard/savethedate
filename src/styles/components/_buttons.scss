@@ -12,6 +12,10 @@
   @include button(white, $forest-green, $forest-green);
 }
 
+.back-home-btn {
+  display: none;
+}
+
 .links-decorated {
   position: relative;
   padding: 0px 24px;
@@ -66,11 +70,11 @@
 // CURSORS
 
 #info-link-cursor:hover {
-  cursor: url(https://res.cloudinary.com/camvillard/image/upload/v1563976031/dixneufoctobre/pizza.png), pointer;
+  cursor: url(https://res.cloudinary.com/camvillard/image/upload/v1566398639/dixneufoctobre/pizza.svg), pointer;
 }
 
 #location-link-cursor:hover {
-  cursor: url(https://res.cloudinary.com/camvillard/image/upload/v1558382877/dixneufoctobre/bed.png), pointer;
+  cursor: url(https://res.cloudinary.com/camvillard/image/upload/v1566398639/dixneufoctobre/location.svg), pointer;
 }
 
 
@@ -91,6 +95,18 @@
 @media (min-width: $lg-screen) {
   .btn-animated {
     max-width: 320px;
+  }
+
+  .back-home-btn {
+    display: block;
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    text-align: right;
+    a {
+    font-family: $accent-font;
+    font-size: 1.2rem;
+    }
   }
 } // end of lg-screen - 1200px
 

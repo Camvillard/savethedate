@@ -22,7 +22,7 @@ class BienRecu extends React.Component {
         <Navbar
           linksColor="white"
           bgColor="yellow"
-          sidebarColor="white"
+          sidebarColor="yellow"
         />
 
         <div className="main-container">

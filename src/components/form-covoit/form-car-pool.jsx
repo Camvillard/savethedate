@@ -4,7 +4,7 @@ class FormCarPool extends React.Component {
   render() {
     return(
       <div className="covoit-form hidden-input">
-        <p>es-tu intéressé par le covoiturage?</p>
+        <p>es-tu intéressé(e) par le covoiturage?</p>
         <div className="covoit-radio-btn">
           <label className="radio-btn-style">oui
             <input type="radio" ref="carPool"name="carPool" value="oui" onChange={this.props.onChange}/>

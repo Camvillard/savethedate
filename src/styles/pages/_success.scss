@@ -1,19 +1,19 @@
 /* ------ PAGES : SUCCESS ------ */
 
 #page-payer {
-  background: $jaune-moutarde;
+  // background: $jaune-moutarde;
 
   h1, h5, p {
-    color: white;
+    color: $forest-green;
   }
 
-  a {
-    color: white;
-  }
+  // a {
+  //   color: $forest-green;
+  // }
 
-  a:last-child {
-    padding-left: 16px;
-  }
+  // a:last-child {
+  //   padding-left: 16px;
+  // }
 
   .page-container {
     width: 92vw;
@@ -24,7 +24,7 @@
     font-weight: 700;
     display: block;
     margin-top: 24px;
-    width: 248px;
+    width: 320px;
   }
 }
 
