@@ -57,7 +57,7 @@ class ContactPage extends React.Component {
           <div className="main-container small">
 
             <h2 className="page-title white"><span>contact</span></h2>
-            <p className="page-content white">si vous avez des trucs à nous demander, ne soyez pas insolents, n'utilisez pas le téléphone (ou alors appelez Alex). Étant donné qu'on est supposément débordés par la préparation de ce mariage, ne vous inquiétez pas si nous mettons plus de 48 heures à vous répondre. Si toutefois vous n'avez pas de réponse au bout d'une semaine, vous êtes en droit de gentiment nous harceler.</p>
+            <p className="page-content white">Si vous avez des trucs à nous demander, ne soyez pas insolents, n'utilisez pas le téléphone (ou alors appelez Alex). Étant donné qu'on est supposément débordés par la préparation de ce mariage, ne vous inquiétez pas si nous mettons plus de 48 heures à vous répondre. Si toutefois vous n'avez pas de réponse au bout d'une semaine, vous êtes en droit de gentiment nous harceler.</p>
 
             <form id="contact-form" className="form-stroked form-white" onSubmit={this.handleSubmit}>
               <input type="hidden" name="bot-field" />

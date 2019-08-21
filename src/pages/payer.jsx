@@ -4,6 +4,15 @@ import { Link } from 'gatsby'
 
 // internal stuff
 import SEO from "../components/seo";
+import Navbar from "../components/navbar";
+import BackHome from "../components/back-home";
+
+// internal stuff
+import AnimatedButton from "../components/animated-button";
+
+// style & assets
+import BlobOne from "../images/blob_homepage-2.svg";
+import BlobTwo from "../images/blob_homepage-1.svg";
 
 // style & assets
 import '../styles/main.scss';
@@ -18,29 +27,41 @@ class SuccessPage extends React.Component {
   }
 
   componentDidMount() {
-  if (typeof window === 'undefined') {
-     return;
+    console.log(this.props)
+  if (!this.props.location.state) {
+     this.setState({
+      numOfPeople: 'des'
+     })
+   } else {
+     this.setState({
+      numOfPeople: this.props.location.state.reservation.people
+     });
    }
-   this.setState({
-    numOfPeople: this.props.location.state.reservation.people
-   });
   }
 
   render() {
+    const people = this.state.numOfPeople
     return(
       <React.Fragment>
         <SEO  title="bien reçu !" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
 
         <div id="page-payer" className="container-fullpage">
 
-        <div className="page-container">
+        <Navbar
+          linksColor="white"
+          bgColor="green"
+          sidebarColor="yellow"
+          toggleColor="green"
+        />
 
-          <h1>todo bueno</h1>
-          <h5>et merci mucho mucho !<br/>on prend note et on vous réserve {this.state.numOfPeople} places.</h5>
-          <p>afin d'être tout à fait tranquilles jusqu'au jour J, vous pouvez payer tout de suite vos places (que la technologie est pratique).</p>
-          <a href={`https://www.paypal.me/CamilleVillard/${this.state.numOfPeople * 80}`} className="button-green">mais oui, payer maintenant</a>
-          <Link to="/">retour à l'accueil</Link>
+        <div className="main-container small">
+          <h1>fantastique</h1>
+          <p>On prend note et on vous réserve {people} places.</p>
+          <p>Afin d'être tout à fait tranquilles jusqu'au jour J, vous pouvez payer tout de suite vos places (que la technologie est pratique).</p>
+          <AnimatedButton link={`https://www.paypal.me/CamilleVillard/${this.state.numOfPeople * 80}`} value="payer l'hébergement" id="btn-hebergement" />
         </div>
+
+        <BackHome />
 
 
         </div>

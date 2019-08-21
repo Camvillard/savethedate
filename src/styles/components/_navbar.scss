@@ -18,11 +18,11 @@
   }
 
   &.green svg.close path{
-    fill: $forest-green;
+    fill: white;
   }
 
   &.green svg.open path{
-    fill: white;
+    fill: $forest-green;
   }
 
   &.yellow svg.close path{
@@ -47,7 +47,7 @@
 
   li a{
     color: white;
-    font-size: 5.6rem;
+    font-size: 2rem;
     font-weight: 600;
     border-bottom: 2px solid white;
   }

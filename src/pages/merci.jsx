@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import SEO from "../components/seo";
-import Header from "../components/header"
+import Navbar from "../components/navbar"
 
 import Blob1 from '../images/blob_homepage-1.svg';
 import Blob2 from '../images/blob_homepage-2.svg';
@@ -32,23 +32,25 @@ class Merci extends React.Component {
 
   render() {
     return(
-      <div id="landing-page">
+      <div id="thanks-page">
         <SEO id="merci" title="Merci beaucoup" keywords={[`savethedate`, `dix neuf octobre`, `graphisme`]} />
 
-        <Header color="dark" tagline="text"/>
+
+        <Navbar
+          linksColor="white"
+          bgColor="yellow"
+          sidebarColor="yellow"
+          toggleColor="yellow"
+        />
 
 
-        <Blob1 id="blob-sm-one"/>
-        <Blob2 id="blob-sm-rsvp"/>
+        <Blob1 id="blob-thanks-one" className="blob"/>
+        <Blob2 id="blob-thanks-two" className="blob"/>
 
         <h1>merci !</h1>
-        <h5>on a bien reçu votre message, on s'en occupe dare-dare.</h5>
+        <p>on a bien reçu votre message, on s'en occupe dare-dare.</p>
 
-        {/* links */}
-        <div id="links">
-          <Link to="/">retour au site</Link>
-        </div>
-        {/* links */}
+        <Link to="/" className="back-button">retour au site</Link>
 
       </div>
     )
