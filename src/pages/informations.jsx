@@ -5,6 +5,7 @@ import { Link } from 'gatsby';
 // internal stuff
 import Navbar from "../components/navbar";
 import Footer from '../components/footer';
+import BackHome from '../components/back-home';
 
 
 // style & assets
@@ -157,6 +158,7 @@ class InformationsPage extends React.Component {
 
 
         <Footer />
+        <BackHome />
 
         <BlobOne id="infos-blob-one" />
         <BlobTwo id="infos-blob-two" />

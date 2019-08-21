@@ -49,9 +49,9 @@ class SuccessPage extends React.Component {
 
         <Navbar
           linksColor="white"
-          bgColor="yellow"
+          bgColor="green"
           sidebarColor="yellow"
-          toggleColor="yellow"
+          toggleColor="green"
         />
 
         <div className="main-container small">
