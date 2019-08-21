@@ -10,12 +10,65 @@
   text-align: center;
   padding: 20px;
 
-  a {
+  .back-button {
     position: fixed;
     bottom: 40px;
-    background: $forest-green;
-    color: white;
-    padding: 10px 20px;
+    border-bottom: 3px solid $jaune-moutarde;
+    color: $jaune-moutarde;
+    padding: 10px 2px;
     z-index: 5;
+    font-weight: bold;
+  }
+
+  .blob {
+    position: absolute;
   }
 }
+
+$blob-1-width: 171px;
+$blob-1-height: 152px;
+$blob-2-width: 335px;
+$blob-2-height: 298px;
+
+
+#blob-thanks-one {
+  top:24px;
+  right: 0;
+  width: $blob-1-width;
+  height: $blob-1-height;
+}
+
+
+#blob-thanks-two {
+  bottom: 128px;
+  left: 12px;
+  width: $blob-2-width * .4;
+  height: $blob-2-height * .4;
+}
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+  #blob-thanks-one {
+    top:24px;
+    right: 0;
+    width: $blob-1-width * 1.2;
+    height: $blob-1-height * 1.2;
+  }
+
+
+  #blob-thanks-two {
+    bottom: 68px;
+    left: 32px;
+    width: $blob-2-width;
+    height: $blob-2-height;
+  }
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px
+

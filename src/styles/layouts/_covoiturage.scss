@@ -1,14 +1,18 @@
 
 #covoit-container{
   background: $jaune-moutarde;
+
+  .page-content {
+    margin-bottom: 48px;
+  }
 }
 
 .covoit-form p {
-    font-family: $accent-font !important;
-    font-weight: 300 !important;
-    font-size: 1.2rem !important;
-    color: white !important;
-    margin-bottom:16px;
+  font-family: $accent-font !important;
+  font-weight: 300 !important;
+  font-size: 1.2rem !important;
+  color: white !important;
+  margin-bottom:16px;
 }
 
 .covoit-form {
@@ -98,6 +102,7 @@ form#covoiturage-form {
 
   ::placeholder {
     color: white;
+    // opacity: 0.7;
   }
 
   // states for inputs
