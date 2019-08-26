@@ -41,7 +41,8 @@ class Covoiturage extends React.Component {
       returnWhen: null,
       returnHowMany: null,
       returnPoolQty: null,
-      returnPoolWhen: null
+      returnPoolWhen: null,
+      isDisabled: true
   }
 
     this.handleChanges = this.handleChanges.bind(this);

@@ -57,7 +57,7 @@ class SuccessPage extends React.Component {
         <div className="main-container small">
           <h1>fantastique</h1>
           <p>On prend note et on vous réserve {people} places.</p>
-          <p>Afin d'être tout à fait tranquilles jusqu'au jour J, vous pouvez payer tout de suite vos places (que la technologie est pratique).</p>
+          <p>Afin d'être tout à fait tranquilles jusqu'au jour J, vous pouvez payer tout de suite vos places (que la technologie est pratique). Le lien vous redirigera vers Paypal, parce  que c'est bien pratique, mais si vous n'avez pas de compte Paypal, vous pouvez tout aussi bien faire un virement Interac ou tout autre moyen de paiement qui vous plaira - on n'est pas vraiment pas compliqués hein.</p>
           <AnimatedButton link={`https://www.paypal.me/CamilleVillard/${this.state.numOfPeople * 80}`} value="payer l'hébergement" id="btn-hebergement" />
         </div>
 
