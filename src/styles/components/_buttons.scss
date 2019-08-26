@@ -77,6 +77,41 @@
   cursor: url(https://res.cloudinary.com/camvillard/image/upload/v1566398639/dixneufoctobre/location.svg), pointer;
 }
 
+// STATES  FOR BUTTONS
+
+.is-disabled {
+  opacity: 0.4;
+  color: rgb(20,20,20)
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
+.button-send {
+  align-self: flex-end;
+  border-radius: 0px;
+  width: 100%;
+  height: 3.8rem;
+  text-align: center;
+  font-family:  $body-font;
+  color: $forest-green;
+  font-weight: 400;
+  font-size: 2rem;
+  outline: none;
+  border: none;
+  background: white;
+  border: 2px solid white;
+
+  &.is-disabled {
+    color: rgb(150,150,150)
+  }
+}
+
+a.button-send {
+  padding: 4px 16px;
+}
+
+
 
 
 @media (min-width: $sm-screen) {
