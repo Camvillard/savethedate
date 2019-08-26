@@ -171,7 +171,7 @@ createAirtableRecord = (covoiturage) => {
 
               </div>
             </form>
-            <FormBtnSubmit disabled={this.state.isDisabled}/>
+
             <button type="button" className="button-reset-form" onClick={this.handleReset}>mettre à zéro le formulaire</button>
           </div>
         </div>
