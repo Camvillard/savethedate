@@ -14,22 +14,12 @@ class FormHasACarMain extends React.Component {
         <div className="covoit-form-container">
           <FormReturnWhen onChange={this.props.onChange} />
           {this.props.value.returnWhen !== null && (<FormReturnQty onChange={this.props.onChange} />)}
-          {this.props.value.returnHowMany > 0 && (<FormBtnSubmit />)}
         </div>
       );
     }
-
-    if (this.props.value.returnWay === null) {
-      return (
-        null
-      );
-    }
-
     else {
       return (
-        <div className="covoit-form-container">
-          <FormBtnSubmit />
-        </div>
+        null
       );
     }
   }

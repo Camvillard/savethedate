@@ -4,7 +4,6 @@
 
 }
 
-
 .form-stroked {
 
   input,
@@ -75,6 +74,42 @@ form {
     font-size: 1.4rem;
   }
 
+  .button-pre-send {
+      // align-self: flex-end;
+  border-radius: 0px;
+  // width: 100%;
+  height: 3.8rem;
+  text-align: center;
+  font-family:  $body-font;
+  color: white !important;
+  font-weight: 400;
+  font-size: 1.6rem;
+  outline: none;
+  border: none;
+  background: none;
+  border-bottom: 2px solid white;
+  margin-top:20px;
+  }
+
+  .button-send {
+    align-self: flex-end;
+    border-radius: 0px;
+    width: 100%;
+    height: 3.8rem;
+    text-align: center;
+    font-family:  $body-font;
+    color: $forest-green;
+    font-weight: 400;
+    font-size: 2rem;
+    outline: none;
+    border: none;
+    background: white;
+    border: 2px solid white;
+  }
+
+  a.button-send {
+    padding: 4px 16px;
+  }
 
   button:hover {
     cursor: pointer;
@@ -82,6 +117,10 @@ form {
 
 }
 
+.btns-footer {
+  display:grid;
+  width:100%;
+}
 
 // reset button de covoiturage
 .button-reset-form {
@@ -91,7 +130,7 @@ form {
   height: 3.8rem;
   text-align: center;
   font-family:  $body-font;
-  color: white;
+  color: white !important;
   font-weight: 400;
   font-size: 1.6rem;
   outline: none;
