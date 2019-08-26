@@ -15,9 +15,11 @@ import FormPickupPlace from "../components/form-covoit/form-pickup-place";
 import FormReturn from "../components/form-covoit/form-return";
 import FormHasACarMain from "../components/form-covoit/form-hasacar-main";
 import FormNoCarMain from "../components/form-covoit/form-nocar-main";
+import FormBtnSubmit from "../components/form-covoit/form-btn-submit";
 
 // style & assets
 import "../styles/main.scss"
+import { runInThisContext } from "vm";
 
 const Airtable = require('airtable');
 // const ApiKey = process.env.AIRTABLE_API;
@@ -113,10 +115,12 @@ createAirtableRecord = (covoiturage) => {
       returnHowMany: null,
       returnPoolQty: null,
       returnPoolWhen: null
-    })
+    });
   }
 
   render() {
+    const { returnWayPool, returnPoolWhen, returnHowMany, returnWay } = this.state;
+    const isEnabled = returnWayPool === false || returnPoolWhen !== null || returnHowMany > 0 ||returnWay === false;
 
     return(
       <React.Fragment>
@@ -168,8 +172,11 @@ createAirtableRecord = (covoiturage) => {
                 )}
 
               </div>
+              <div className="btns-footer">
+                <FormBtnSubmit disabled={!isEnabled} />
+                <button type="button" className="button-reset-form" onClick={this.handleReset}>mettre à zéro le formulaire</button>
+            </div>
             </form>
-            <button type="button" className="button-reset-form" onClick={this.handleReset}>mettre à zéro le formulaire</button>
           </div>
         </div>
       </React.Fragment>
