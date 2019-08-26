@@ -15,6 +15,7 @@ import FormPickupPlace from "../components/form-covoit/form-pickup-place";
 import FormReturn from "../components/form-covoit/form-return";
 import FormHasACarMain from "../components/form-covoit/form-hasacar-main";
 import FormNoCarMain from "../components/form-covoit/form-nocar-main";
+import FormBtnSubmit from "../components/form-covoit/form-btn-submit";
 
 // style & assets
 import "../styles/main.scss"
@@ -39,7 +40,8 @@ class Covoiturage extends React.Component {
       returnWhen: null,
       returnHowMany: null,
       returnPoolQty: null,
-      returnPoolWhen: null
+      returnPoolWhen: null,
+      isDisabled: true
   }
 
     this.handleChanges = this.handleChanges.bind(this);
@@ -169,6 +171,7 @@ createAirtableRecord = (covoiturage) => {
 
               </div>
             </form>
+            <FormBtnSubmit disabled={this.state.isDisabled}/>
             <button type="button" className="button-reset-form" onClick={this.handleReset}>mettre à zéro le formulaire</button>
           </div>
         </div>
