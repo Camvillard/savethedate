@@ -1,0 +1,86 @@
+/*----- PAGES : CHALETS ----- */
+
+.page-chalets {
+  .page-title {
+    margin-top: 0;
+  }
+
+  img {
+    margin: 24px auto;
+  }
+}
+
+.chalet-name {
+  color: $jaune-moutarde;
+  span {
+    border-bottom: 4px solid $jaune-moutarde;
+  }
+}
+
+.chalet-list {
+  list-style: none;
+  padding-left: 8px;
+  li {
+    margin: 0.25em auto;
+    color: $dark-gray;
+  }
+  li:before {
+    content: "- ";
+  }
+}
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+
+  .page-chalets  {
+
+    img {
+      margin: 48px auto;
+    }
+
+    h2 {
+      font-size: 6.4rem;
+    }
+
+    .large-container {
+      width: 88vw;
+    }
+    p {
+      max-width: 40vw;
+      margin-left: 0;
+    }
+  }
+
+  .chalet-card {
+    width: 40%;
+  }
+
+  #grand-lodge {
+    margin-left: 10%;
+  }
+  #grand-shack {
+    margin-left: 50%;
+    margin-top: -220px;
+  }
+  #du-lac {
+    margin-top: -220px;
+  }
+  #log-home {
+    margin-left: 46%;
+    margin-top: -220px;
+  }
+  #hom {
+    margin-left: 46%;
+    margin-top: 0px;
+  }
+
+
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px
