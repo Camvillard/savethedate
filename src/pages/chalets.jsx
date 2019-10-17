@@ -55,7 +55,7 @@ class Chalets extends React.Component {
                 <li>Thomas & Lisa</li>
                 <li>Anna</li>
                 <li>Elsa</li>
-                <li>Katie</li>
+                <li>Katie & Paul</li>
                 <li>Claire L.R.</li>
               </ul>
             </div>
