@@ -70,7 +70,7 @@ class Chalets extends React.Component {
                 <li>Baptiste &  Mathilde</li>
                 <li>Claire &  Arthur</li>
                 <li>Clément</li>
-                <li>Davic</li>
+                <li>David</li>
                 <li>Édouard & Alix</li>
                 <li>Flo</li>
                 <li>Greg & Alice</li>
